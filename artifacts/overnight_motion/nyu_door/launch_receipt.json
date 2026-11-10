@@ -1,0 +1,19 @@
+{
+  "submitted_at": "2026-11-11T00:18:27.560884+03:00",
+  "kernel": "stepanivanov233/multinet-openvla-nyu-door-motion-cs8",
+  "git_commit": "b031f34d594616d0a3226e92133ef251a2e4221e",
+  "timeout_seconds": 28800,
+  "bundle_sha256": "cc658614fbdb6ecc6e8f20832aadd05250baf641e27aa33ef7ebd5dd0112ddc6",
+  "response": {
+    "ref": "/code/stepanivanov233/multinet-openvla-nyu-door-motion-cs8",
+    "url": "https://www.kaggle.com/code/stepanivanov233/multinet-openvla-nyu-door-motion-cs8",
+    "versionNumber": 1,
+    "error": null,
+    "invalidTags": [],
+    "invalidDatasetSources": [],
+    "invalidCompetitionSources": [],
+    "invalidKernelSources": [],
+    "invalidModelSources": [],
+    "kernelId": 144270667
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "submitted_at": "2026-11-11T00:18:25.682776+03:00",
+  "kernel": "stepanivanov233/multinet-openvla-jaco-motion-cs8",
+  "git_commit": "b031f34d594616d0a3226e92133ef251a2e4221e",
+  "timeout_seconds": 28800,
+  "bundle_sha256": "899277cdf6fcd57dab881a635f734920f6208fed395151f57c5cb8e09882dfbe",
+  "response": {
+    "ref": "/code/stepanivanov233/multinet-openvla-jaco-motion-cs8",
+    "url": "https://www.kaggle.com/code/stepanivanov233/multinet-openvla-jaco-motion-cs8",
+    "versionNumber": 1,
+    "error": null,
+    "invalidTags": [],
+    "invalidDatasetSources": [],
+    "invalidCompetitionSources": [],
+    "invalidKernelSources": [],
+    "invalidModelSources": [],
+    "kernelId": 144270659
+  }
+}
