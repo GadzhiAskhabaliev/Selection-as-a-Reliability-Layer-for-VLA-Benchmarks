@@ -1,0 +1,106 @@
+{
+  "status": "complete_pilot",
+  "complete_episodes": 20,
+  "num_timesteps": 1487,
+  "elapsed_seconds": 9491.508347318999,
+  "methods": {
+    "greedy": {
+      "num_timesteps": 1487,
+      "amse": 0.2315849059004032,
+      "namse": 0.2270614505761896,
+      "namse_defined": true,
+      "min_mse": 0.0,
+      "max_mse": 1.0199217230081696,
+      "delta_amse_vs_paired_greedy": 0.0
+    },
+    "sample1": {
+      "num_timesteps": 1487,
+      "amse": 0.23761996291206108,
+      "namse": 0.23227242813463903,
+      "namse_defined": true,
+      "min_mse": 0.0,
+      "max_mse": 1.0230226842693666,
+      "delta_amse_vs_paired_greedy": 0.0060350570116578794
+    },
+    "random8": {
+      "num_timesteps": 1487,
+      "amse": 0.23636251067880312,
+      "namse": 0.22474545985240638,
+      "namse_defined": true,
+      "min_mse": 0.0,
+      "max_mse": 1.0516898131513952,
+      "delta_amse_vs_paired_greedy": 0.004777604778399919
+    },
+    "medoid8": {
+      "num_timesteps": 1487,
+      "amse": 0.2354849167872701,
+      "namse": 0.23088528411055573,
+      "namse_defined": true,
+      "min_mse": 0.0,
+      "max_mse": 1.0199217230081696,
+      "delta_amse_vs_paired_greedy": 0.003900010886866895
+    },
+    "cs8": {
+      "num_timesteps": 1487,
+      "amse": 0.23681616626393934,
+      "namse": 0.23219053082374755,
+      "namse_defined": true,
+      "min_mse": 0.0,
+      "max_mse": 1.0199217230081696,
+      "delta_amse_vs_paired_greedy": 0.005231260363536133
+    }
+  },
+  "episode_bootstrap": {
+    "sample1": {
+      "delta_amse_95pct_episode_bootstrap": [
+        0.0014571580351881454,
+        0.011655561289573952
+      ],
+      "resamples": 2000,
+      "conditioning": "this pilot and one sampling seed"
+    },
+    "random8": {
+      "delta_amse_95pct_episode_bootstrap": [
+        -2.5869600220263383e-05,
+        0.010671753326792691
+      ],
+      "resamples": 2000,
+      "conditioning": "this pilot and one sampling seed"
+    },
+    "medoid8": {
+      "delta_amse_95pct_episode_bootstrap": [
+        0.0005128386407112719,
+        0.00789025821476951
+      ],
+      "resamples": 2000,
+      "conditioning": "this pilot and one sampling seed"
+    },
+    "cs8": {
+      "delta_amse_95pct_episode_bootstrap": [
+        0.0005036846123323316,
+        0.01143880073064343
+      ],
+      "resamples": 2000,
+      "conditioning": "this pilot and one sampling seed"
+    }
+  },
+  "diagnostics": {
+    "sum_unique_candidates": 4161,
+    "cs_medoid_same_index": 1285,
+    "cs_medoid_same_action": 1285,
+    "collapsed_candidate_pools": 571,
+    "clipped_action_tokens": 7573,
+    "sampled_action_tokens": 83272,
+    "greedy_seconds": 1058.4715304400163,
+    "candidate_pool_seconds": 8399.946750838997,
+    "selection_seconds": 0.19842618097885634,
+    "mean_unique_candidates": 2.7982515131136516,
+    "cs_medoid_index_agreement": 0.8641560188298588
+  },
+  "scope": "first 20 test episodes; compare only methods in this paired pilot",
+  "full_dataset_baseline_reproduced": false,
+  "peak_gpu_bytes": [
+    7741895168,
+    7746319872
+  ]
+}

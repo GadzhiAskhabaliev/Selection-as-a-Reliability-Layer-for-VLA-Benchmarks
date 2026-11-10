@@ -1,0 +1,30 @@
+{
+  "description": "Immutable baseline v3 and CS pilot v2 archive; paths relative to repository root.",
+  "sha256": {
+    "artifacts/baseline_audit/current/output/environment-freeze.txt": "cd4006c1b864e09892c6b8606a7f8c40554657fa52d64c393982e79674d6db9d",
+    "artifacts/baseline_audit/current/output/manifest.json": "ed8dfc4c53f361720aff9b011a0d7b256d30268556d54ea47f2495b224bb6f54",
+    "artifacts/baseline_audit/current/output/multinet-openvla-jaco-baseline.log": "b4e092ce542704365398465d59a4024f91afe4753db79fe310a20d3b3dfd8d86",
+    "artifacts/baseline_audit/current/output/predictions.jsonl": "47aef0960e3fe463b64870a595289cc9d82b222b146511f0c69f4829a31c4536",
+    "artifacts/baseline_audit/current/output/result.json": "7cae1a3c3ceee616a3a42cda9bb377ab1d7abef674c616f2be005fadceb43acc",
+    "artifacts/baseline_audit/current/output/upstream_reference_NOT_OUR_RESULT.json": "2eea3ad70e70fda05309902b4128826df9249e73a917774e1dbc0d2101175234",
+    "artifacts/baseline_audit/current/status.json": "ad33e07d6de21a4721ac6aa49b026a2aada7d4fd7e97401d6e6eb43d38e80d1f",
+    "artifacts/baseline_audit/jaco_dataset_info.json": "db00d175e4eb42f46661936cb12ec71abed129830090206be1221f702220f43f",
+    "artifacts/baseline_audit/source_pin.json": "a9e61aca34b5fed09f1c64c28cdaa5255ae2870c04ade72a1bb87448026107fd",
+    "artifacts/baseline_audit/submitted_v3/kernel-metadata.json": "56a1677fe29a13fa1436ef430a05890472d5033982a2e77f3ed6654165a02df1",
+    "artifacts/baseline_audit/submitted_v3/multinet-openvla-jaco-baseline.py": "903a2cff4a14d674cc6b09a5ae4fa07e428896df331df975f231b268e54764b7",
+    "artifacts/baseline_audit/verified_jaco_result.json": "76554f49c7c81408a814b845a6e2fed17e5bd2e18f1cf5d9bdd557a101b2eac8",
+    "artifacts/cs_pilot/submitted_v2/kernel-metadata.json": "68c3a0760e2785c944731985f00fb47f2b5aaff66cc9c3972fe2a0ffba8372fd",
+    "artifacts/cs_pilot/submitted_v2/multinet-openvla-jaco-cs8-pilot.py": "48e06243a541241f802c52f6a713ac6d00f293db59280bba6e8f04b98d3e1b66",
+    "artifacts/cs_pilot/v2/output/bundle_sources.json": "5de1b97ac06fbaa2893235b0beb329f94385b5d8ffb879ede521d64f5273b8d6",
+    "artifacts/cs_pilot/v2/output/candidates.jsonl": "d170a6535e7f81b683f29847972875430e82da5a607461d5f35cf6e3b32d4c42",
+    "artifacts/cs_pilot/v2/output/environment-freeze.txt": "cd4006c1b864e09892c6b8606a7f8c40554657fa52d64c393982e79674d6db9d",
+    "artifacts/cs_pilot/v2/output/episode_errors.json": "5bb471a822e00018e1021ea1695f09e220227cda0369cb010d4c4223e96f0962",
+    "artifacts/cs_pilot/v2/output/manifest.json": "553b565ac4dab9260edd7f0732666060a38ec05f6abfe6aa995d0125881a1c39",
+    "artifacts/cs_pilot/v2/output/multinet-openvla-jaco-cs8-pilot.log": "3073ccd56779324120097d5aafe493b1c515e72daccef871aba949675bbf936e",
+    "artifacts/cs_pilot/v2/output/protocol.json": "51c3e7f043922e6337943ea2f32ac641c5d5cbabd3746f7d022fe62b03a072dc",
+    "artifacts/cs_pilot/v2/output/result.json": "e2d6955fa1cafad382aa1ab70c5f2af13423b2019ac1afd436d5a6c1da8b158b",
+    "artifacts/cs_pilot/v2/output/upstream_reference_NOT_OUR_RESULT.json": "2eea3ad70e70fda05309902b4128826df9249e73a917774e1dbc0d2101175234",
+    "artifacts/cs_pilot/v2/status.json": "0428ad6fe1e60fd39822d0226b486df4934de98138b4599d20d212e426885a94",
+    "artifacts/cs_pilot/verified_v2_result.json": "50572cd38cdaab8451ec3dbcc89fcd76d5bb41dff96dbfcafc50a4aa711c8985"
+  }
+}

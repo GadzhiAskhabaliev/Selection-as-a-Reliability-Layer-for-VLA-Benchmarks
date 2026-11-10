@@ -1,0 +1,141 @@
+{
+  "status": "PASS",
+  "verified_at": "2026-11-10T22:55:54.585211+03:00",
+  "complete_episodes": 20,
+  "num_timesteps": 1487,
+  "candidate_actions": 11896,
+  "all_paired_greedy_actions_match_full_baseline": true,
+  "methods": {
+    "greedy": {
+      "num_timesteps": 1487,
+      "amse": 0.2315849059004032,
+      "namse": 0.2270614505761896,
+      "namse_defined": true,
+      "min_mse": 0.0,
+      "max_mse": 1.0199217230081696,
+      "delta_amse_vs_paired_greedy": 0.0,
+      "amse_change_vs_greedy_percent": 0.0,
+      "coordinate_mse_gripper_x_y_z": [
+        0.9092131809011432,
+        0.004654838993744101,
+        0.003706813904805236,
+        0.008764789801918228
+      ]
+    },
+    "sample1": {
+      "num_timesteps": 1487,
+      "amse": 0.23761996291206108,
+      "namse": 0.23227242813463903,
+      "namse_defined": true,
+      "min_mse": 0.0,
+      "max_mse": 1.0230226842693666,
+      "delta_amse_vs_paired_greedy": 0.0060350570116578794,
+      "amse_change_vs_greedy_percent": 2.605980294006449,
+      "coordinate_mse_gripper_x_y_z": [
+        0.933422999327505,
+        0.00441183860646148,
+        0.0037555546808917322,
+        0.008889459033384079
+      ]
+    },
+    "random8": {
+      "num_timesteps": 1487,
+      "amse": 0.23636251067880312,
+      "namse": 0.22474545985240638,
+      "namse_defined": true,
+      "min_mse": 0.0,
+      "max_mse": 1.0516898131513952,
+      "delta_amse_vs_paired_greedy": 0.004777604778399919,
+      "amse_change_vs_greedy_percent": 2.0630035277232617,
+      "coordinate_mse_gripper_x_y_z": [
+        0.9280430396772025,
+        0.004693186241037038,
+        0.0036534508299789774,
+        0.009060365966992027
+      ]
+    },
+    "medoid8": {
+      "num_timesteps": 1487,
+      "amse": 0.2354849167872701,
+      "namse": 0.23088528411055573,
+      "namse_defined": true,
+      "min_mse": 0.0,
+      "max_mse": 1.0199217230081696,
+      "delta_amse_vs_paired_greedy": 0.003900010886866895,
+      "amse_change_vs_greedy_percent": 1.6840522795317003,
+      "coordinate_mse_gripper_x_y_z": [
+        0.9253530598520511,
+        0.004502905905831354,
+        0.003556715960655197,
+        0.00852698543054139
+      ]
+    },
+    "cs8": {
+      "num_timesteps": 1487,
+      "amse": 0.23681616626393934,
+      "namse": 0.23219053082374755,
+      "namse_defined": true,
+      "min_mse": 0.0,
+      "max_mse": 1.0199217230081696,
+      "delta_amse_vs_paired_greedy": 0.005231260363536133,
+      "amse_change_vs_greedy_percent": 2.258895217370571,
+      "coordinate_mse_gripper_x_y_z": [
+        0.9307330195023538,
+        0.004483612118052171,
+        0.003532334000784476,
+        0.008515699434565684
+      ]
+    }
+  },
+  "paired_amse_contrasts": {
+    "cs8_minus_greedy": {
+      "delta_amse": 0.005231260363536133,
+      "95pct_episode_bootstrap": [
+        0.0005036846123323557,
+        0.011438800730643434
+      ]
+    },
+    "cs8_minus_sample1": {
+      "delta_amse": -0.0008037966481217462,
+      "95pct_episode_bootstrap": [
+        -0.0062013261863873015,
+        0.0038894856742477113
+      ]
+    },
+    "cs8_minus_random8": {
+      "delta_amse": 0.0004536555851362145,
+      "95pct_episode_bootstrap": [
+        -0.0034654759608716,
+        0.0038293692410215074
+      ]
+    },
+    "cs8_minus_medoid8": {
+      "delta_amse": 0.0013312494766692384,
+      "95pct_episode_bootstrap": [
+        -5.6414543252586435e-05,
+        0.0041244997811976936
+      ]
+    }
+  },
+  "evaluation_minutes": 158.19180578865,
+  "diagnostics": {
+    "sum_unique_candidates": 4161,
+    "cs_medoid_same_index": 1285,
+    "cs_medoid_same_action": 1285,
+    "collapsed_candidate_pools": 571,
+    "clipped_action_tokens": 7573,
+    "sampled_action_tokens": 83272,
+    "greedy_seconds": 1058.4715304400163,
+    "candidate_pool_seconds": 8399.946750838997,
+    "selection_seconds": 0.19842618097885634,
+    "mean_unique_candidates": 2.7982515131136516,
+    "cs_medoid_index_agreement": 0.8641560188298588,
+    "invalid_action_tokens": 0,
+    "valid_upper_edge_tokens": 7573,
+    "collapsed_pool_percent": 38.39946200403497,
+    "candidate_pool_to_greedy_latency_ratio": 7.935921287695912
+  },
+  "candidate_log_sha256": "d170a6535e7f81b683f29847972875430e82da5a607461d5f35cf6e3b32d4c42",
+  "limitations": "20 test episodes, one sampling seed and fixed settings; no online success-rate conclusion",
+  "conclusion": "CS does not improve paired greedy AMSE/NAMSE in this pilot; CS AMSE is higher"
+}

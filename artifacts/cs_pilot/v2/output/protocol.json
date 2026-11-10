@@ -1,0 +1,29 @@
+{
+  "name": "jaco_cs8_pilot_v1",
+  "dataset": "jaco_play",
+  "split": "test",
+  "max_episodes": 20,
+  "episode_selection": "first 20 in baseline TFDS/dataloader order",
+  "n_candidates": 8,
+  "execution_horizon": 1,
+  "seed": 7,
+  "temperature": 1.0,
+  "top_k": 10,
+  "top_p": 1.0,
+  "sampling_policy": "fixed exploratory setting; not tuned on validation or test",
+  "methods": [
+    "greedy",
+    "sample1",
+    "random8",
+    "medoid8",
+    "cs8"
+  ],
+  "normalization": "inverse frozen OpenVLA q01/q99 mapping; mask=False unchanged; constants zero",
+  "selector_space": "raw 7D actions before MultiNet conversion; H=R=1",
+  "bandwidth": "median positive pairwise Euclidean distance + 1e-6; fallback 1+1e-6",
+  "sampling_implementation": "8 sequential single-candidate generate calls; no shared visual encoding",
+  "non_action_token_policy": "same clipping as upstream predict_action; count and save token IDs",
+  "early_eos_policy": "abort if fewer than D new action tokens; no silent reuse of prompt tokens",
+  "namse": "MultiNet per-method min-max over evaluated timesteps; pilot is not full-split reference",
+  "limitations": "single seed, exploratory partial test split, no success-rate claim or hyperparameter selection"
+}

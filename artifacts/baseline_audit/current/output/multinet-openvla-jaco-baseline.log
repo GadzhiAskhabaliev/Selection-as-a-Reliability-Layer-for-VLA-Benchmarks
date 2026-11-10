@@ -1,0 +1,329 @@
+[{"stream_name":"stderr","time":2.105697066,"data":"warning: The `--system` flag has no effect, `uv venv` always ignores virtual environments when finding a Python interpreter; did you mean `--no-managed-python`?\n"}
+,{"stream_name":"stderr","time":2.770898554,"data":"Downloading cpython-3.11.17-linux-x86_64-gnu (download) (29.4MiB)\n"}
+,{"stream_name":"stderr","time":3.7111820140000003,"data":" Downloaded cpython-3.11.17-linux-x86_64-gnu (download)\n"}
+,{"stream_name":"stderr","time":3.895331472,"data":"Using CPython 3.11.17\n"}
+,{"stream_name":"stderr","time":3.895355843,"data":"Creating virtual environment at: /kaggle/temp/multinet_baseline/env\n"}
+,{"stream_name":"stderr","time":3.897953495,"data":"Activate with: source /kaggle/temp/multinet_baseline/env/bin/activate\n"}
+,{"stream_name":"stderr","time":4.100882803,"data":"Using Python 3.11.17 environment at: /kaggle/temp/multinet_baseline/env\n"}
+,{"stream_name":"stderr","time":5.045151475,"data":"Resolved 30 packages in 928ms\n"}
+,{"stream_name":"stderr","time":5.082160761,"data":"Downloading numpy (16.1MiB)\n"}
+,{"stream_name":"stderr","time":5.082276701,"data":"Downloading pillow (6.8MiB)\n"}
+,{"stream_name":"stderr","time":5.082591809,"data":"Downloading nvidia-nvjitlink-cu12 (37.9MiB)\n"}
+,{"stream_name":"stderr","time":5.08825013,"data":"Downloading torch (722.2MiB)\n"}
+,{"stream_name":"stderr","time":5.093370387,"data":"Downloading triton (160.1MiB)\n"}
+,{"stream_name":"stderr","time":5.097511644,"data":"Downloading torchvision (6.6MiB)\n"}
+,{"stream_name":"stderr","time":5.14114591,"data":"Downloading sympy (6.0MiB)\n"}
+,{"stream_name":"stderr","time":5.142270543,"data":"Downloading networkx (2.0MiB)\n"}
+,{"stream_name":"stderr","time":5.184230484,"data":"Downloading nvidia-cusparse-cu12 (186.9MiB)\n"}
+,{"stream_name":"stderr","time":5.311022611,"data":"Downloading nvidia-curand-cu12 (53.9MiB)\n"}
+,{"stream_name":"stderr","time":5.3122585,"data":"Downloading nvidia-cuda-cupti-cu12 (13.5MiB)\n"}
+,{"stream_name":"stderr","time":5.316254796,"data":"Downloading nvidia-nccl-cu12 (151.3MiB)\n"}
+,{"stream_name":"stderr","time":5.320313406,"data":"Downloading nvidia-cudnn-cu12 (697.8MiB)\n"}
+,{"stream_name":"stderr","time":5.332589212,"data":"Downloading nvidia-cuda-nvrtc-cu12 (22.6MiB)\n"}
+,{"stream_name":"stderr","time":5.33484879,"data":"Downloading nvidia-cufft-cu12 (116.0MiB)\n"}
+,{"stream_name":"stderr","time":5.430261714,"data":" Downloaded networkx\n"}
+,{"stream_name":"stderr","time":5.484590563,"data":"Downloading nvidia-cusolver-cu12 (118.4MiB)\n"}
+,{"stream_name":"stderr","time":5.567575602,"data":"Downloading nvidia-cublas-cu12 (391.6MiB)\n"}
+,{"stream_name":"stderr","time":5.737738545,"data":" Downloaded pillow\n"}
+,{"stream_name":"stderr","time":5.737875913,"data":" Downloaded sympy\n"}
+,{"stream_name":"stderr","time":5.921069506,"data":" Downloaded torchvision\n"}
+,{"stream_name":"stderr","time":6.330385387,"data":" Downloaded numpy\n"}
+,{"stream_name":"stderr","time":7.837954698,"data":" Downloaded nvidia-nvjitlink-cu12\n"}
+,{"stream_name":"stderr","time":7.956253277,"data":" Downloaded nvidia-cuda-cupti-cu12\n"}
+,{"stream_name":"stderr","time":9.972316524,"data":" Downloaded nvidia-cuda-nvrtc-cu12\n"}
+,{"stream_name":"stderr","time":11.233123876,"data":" Downloaded nvidia-curand-cu12\n"}
+,{"stream_name":"stderr","time":16.786881426,"data":" Downloaded nvidia-cusparse-cu12\n"}
+,{"stream_name":"stderr","time":17.153067777,"data":" Downloaded triton\n"}
+,{"stream_name":"stderr","time":20.922941257,"data":" Downloaded nvidia-nccl-cu12\n"}
+,{"stream_name":"stderr","time":21.468232596,"data":" Downloaded nvidia-cusolver-cu12\n"}
+,{"stream_name":"stderr","time":23.757244788,"data":" Downloaded nvidia-cufft-cu12\n"}
+,{"stream_name":"stderr","time":30.535248827,"data":" Downloaded nvidia-cublas-cu12\n"}
+,{"stream_name":"stderr","time":36.210544421,"data":" Downloaded nvidia-cudnn-cu12\n"}
+,{"stream_name":"stderr","time":36.286022573,"data":" Downloaded torch\n"}
+,{"stream_name":"stderr","time":36.286401922,"data":"Prepared 30 packages in 31.24s\n"}
+,{"stream_name":"stderr","time":36.526333341,"data":"Installed 30 packages in 239ms\n"}
+,{"stream_name":"stderr","time":36.526728008,"data":" + certifi==2022.12.7\n"}
+,{"stream_name":"stderr","time":36.526743886,"data":" + charset-normalizer==2.1.1\n"}
+,{"stream_name":"stderr","time":36.526748889,"data":" + filelock==4.2.4\n"}
+,{"stream_name":"stderr","time":36.52685235,"data":" + fsspec==2026.9.0\n"}
+,{"stream_name":"stderr","time":36.526877384,"data":" + idna==3.4\n"}
+,{"stream_name":"stderr","time":36.526885976,"data":" + jinja2==3.1.6\n"}
+,{"stream_name":"stderr","time":36.526894334,"data":" + markupsafe==3.0.3\n"}
+,{"stream_name":"stderr","time":36.526913906,"data":" + mpmath==1.3.0\n"}
+,{"stream_name":"stderr","time":36.526981338,"data":" + networkx==3.6.1\n"}
+,{"stream_name":"stderr","time":36.527088994,"data":" + numpy==2.4.6\n"}
+,{"stream_name":"stderr","time":36.52718009,"data":" + nvidia-cublas-cu12==12.1.3.1\n"}
+,{"stream_name":"stderr","time":36.527237036,"data":" + nvidia-cuda-cupti-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":36.52729681,"data":" + nvidia-cuda-nvrtc-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":36.527346529,"data":" + nvidia-cuda-runtime-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":36.527420982,"data":" + nvidia-cudnn-cu12==8.9.2.26\n"}
+,{"stream_name":"stderr","time":36.527488833,"data":" + nvidia-cufft-cu12==11.0.2.54\n"}
+,{"stream_name":"stderr","time":36.527576358,"data":" + nvidia-curand-cu12==10.3.2.106\n"}
+,{"stream_name":"stderr","time":36.527665191,"data":" + nvidia-cusolver-cu12==11.4.5.107\n"}
+,{"stream_name":"stderr","time":36.527760159,"data":" + nvidia-cusparse-cu12==12.1.0.106\n"}
+,{"stream_name":"stderr","time":36.527802407,"data":" + nvidia-nccl-cu12==2.19.3\n"}
+,{"stream_name":"stderr","time":36.527841746,"data":" + nvidia-nvjitlink-cu12==12.9.86\n"}
+,{"stream_name":"stderr","time":36.527916826,"data":" + nvidia-nvtx-cu12==12.1.105\n"}
+,{"stream_name":"stderr","time":36.527989741,"data":" + pillow==13.0.0\n"}
+,{"stream_name":"stderr","time":36.528061873,"data":" + requests==2.28.1\n"}
+,{"stream_name":"stderr","time":36.528122309,"data":" + sympy==1.14.0\n"}
+,{"stream_name":"stderr","time":36.528173721,"data":" + torch==2.2.0+cu121\n"}
+,{"stream_name":"stderr","time":36.528234816,"data":" + torchvision==0.17.0+cu121\n"}
+,{"stream_name":"stderr","time":36.528394044,"data":" + triton==2.2.0\n"}
+,{"stream_name":"stderr","time":36.528413102,"data":" + typing-extensions==4.16.0\n"}
+,{"stream_name":"stderr","time":36.528462441,"data":" + urllib3==1.26.13\n"}
+,{"stream_name":"stderr","time":36.542911085,"data":"Using Python 3.11.17 environment at: /kaggle/temp/multinet_baseline/env\n"}
+,{"stream_name":"stderr","time":42.042146204,"data":"Resolved 87 packages in 5.49s\n"}
+,{"stream_name":"stderr","time":42.096457862,"data":"Downloading grpcio (7.0MiB)\n"}
+,{"stream_name":"stderr","time":42.121324402,"data":"Downloading cryptography (4.5MiB)\n"}
+,{"stream_name":"stderr","time":42.130257128,"data":"Downloading tensorflow-datasets (4.8MiB)\n"}
+,{"stream_name":"stderr","time":42.136584268,"data":"   Building promise==2.3\n"}
+,{"stream_name":"stderr","time":42.149586709,"data":"Downloading tensorboard (5.3MiB)\n"}
+,{"stream_name":"stderr","time":42.152106029,"data":"Downloading array-record (3.7MiB)\n"}
+,{"stream_name":"stderr","time":42.159450713,"data":"Downloading sentencepiece (1.2MiB)\n"}
+,{"stream_name":"stderr","time":42.159466127,"data":"Downloading tensorflow-cpu (197.6MiB)\n"}
+,{"stream_name":"stderr","time":42.162509487,"data":"Downloading ml-dtypes (2.1MiB)\n"}
+,{"stream_name":"stderr","time":42.162525359,"data":"Downloading keras (1.6MiB)\n"}
+,{"stream_name":"stderr","time":42.166795898,"data":"Downloading numpy (17.4MiB)\n"}
+,{"stream_name":"stderr","time":42.166827335,"data":"Downloading timm (2.1MiB)\n"}
+,{"stream_name":"stderr","time":42.190524947,"data":"Downloading tensorboard-data-server (6.3MiB)\n"}
+,{"stream_name":"stderr","time":42.19219595,"data":"Downloading libclang (23.4MiB)\n"}
+,{"stream_name":"stderr","time":42.193460421,"data":"Downloading tensorflow-io-gcs-filesystem (4.9MiB)\n"}
+,{"stream_name":"stderr","time":42.197102707,"data":"Downloading h5py (4.8MiB)\n"}
+,{"stream_name":"stderr","time":42.199102475,"data":"Downloading transformers (8.6MiB)\n"}
+,{"stream_name":"stderr","time":42.201433102,"data":"Downloading tokenizers (3.4MiB)\n"}
+,{"stream_name":"stderr","time":42.513072406,"data":" Downloaded sentencepiece\n"}
+,{"stream_name":"stderr","time":42.678658294,"data":" Downloaded keras\n"}
+,{"stream_name":"stderr","time":42.713013737,"data":" Downloaded ml-dtypes\n"}
+,{"stream_name":"stderr","time":42.715155694,"data":" Downloaded timm\n"}
+,{"stream_name":"stderr","time":42.85349768,"data":"      Built promise==2.3\n"}
+,{"stream_name":"stderr","time":42.885062146,"data":" Downloaded tokenizers\n"}
+,{"stream_name":"stderr","time":42.923016618,"data":" Downloaded array-record\n"}
+,{"stream_name":"stderr","time":43.058065531,"data":" Downloaded tensorflow-io-gcs-filesystem\n"}
+,{"stream_name":"stderr","time":43.848473134,"data":" Downloaded tensorboard-data-server\n"}
+,{"stream_name":"stderr","time":43.852306329,"data":" Downloaded h5py\n"}
+,{"stream_name":"stderr","time":43.871045247,"data":" Downloaded cryptography\n"}
+,{"stream_name":"stderr","time":43.889816553,"data":" Downloaded tensorboard\n"}
+,{"stream_name":"stderr","time":43.950788232,"data":" Downloaded grpcio\n"}
+,{"stream_name":"stderr","time":44.014821072,"data":" Downloaded tensorflow-datasets\n"}
+,{"stream_name":"stderr","time":44.260437757,"data":" Downloaded transformers\n"}
+,{"stream_name":"stderr","time":44.900582454,"data":" Downloaded numpy\n"}
+,{"stream_name":"stderr","time":45.265111286,"data":" Downloaded libclang\n"}
+,{"stream_name":"stderr","time":57.731924516,"data":" Downloaded tensorflow-cpu\n"}
+,{"stream_name":"stderr","time":57.732400514,"data":"Prepared 57 packages in 15.68s\n"}
+,{"stream_name":"stderr","time":57.752616589,"data":"Uninstalled 1 package in 19ms\n"}
+,{"stream_name":"stderr","time":58.524615109,"data":"Installed 58 packages in 772ms\n"}
+,{"stream_name":"stderr","time":58.525125394,"data":" + absl-py==2.5.1\n"}
+,{"stream_name":"stderr","time":58.525139919,"data":" + accelerate==0.30.1\n"}
+,{"stream_name":"stderr","time":58.525144416,"data":" + array-record==0.8.6\n"}
+,{"stream_name":"stderr","time":58.525148534,"data":" + astunparse==1.6.3\n"}
+,{"stream_name":"stderr","time":58.525152646,"data":" + attrs==26.1.0\n"}
+,{"stream_name":"stderr","time":58.525206286,"data":" + cffi==2.1.1\n"}
+,{"stream_name":"stderr","time":58.525211969,"data":" + click==8.5.1\n"}
+,{"stream_name":"stderr","time":58.525227416999996,"data":" + cryptography==50.0.2\n"}
+,{"stream_name":"stderr","time":58.52528435,"data":" + dm-tree==0.1.10\n"}
+,{"stream_name":"stderr","time":58.52533239,"data":" + einops==0.8.2\n"}
+,{"stream_name":"stderr","time":58.525410082,"data":" + etils==1.15.0\n"}
+,{"stream_name":"stderr","time":58.525460839,"data":" + flatbuffers==25.12.19\n"}
+,{"stream_name":"stderr","time":58.525541496,"data":" + gast==0.7.0\n"}
+,{"stream_name":"stderr","time":58.525587556,"data":" + google-auth==2.62.1\n"}
+,{"stream_name":"stderr","time":58.525660746,"data":" + google-auth-oauthlib==1.5.0\n"}
+,{"stream_name":"stderr","time":58.525727137,"data":" + google-pasta==0.2.0\n"}
+,{"stream_name":"stderr","time":58.525752837,"data":" + googleapis-common-protos==1.75.0\n"}
+,{"stream_name":"stderr","time":58.525831367,"data":" + grpcio==1.85.1\n"}
+,{"stream_name":"stderr","time":58.525907492,"data":" + h5py==3.16.0\n"}
+,{"stream_name":"stderr","time":58.526110497,"data":" + huggingface-hub==0.23.5\n"}
+,{"stream_name":"stderr","time":58.526124329,"data":" + keras==2.15.0\n"}
+,{"stream_name":"stderr","time":58.526128486,"data":" + libclang==18.1.1\n"}
+,{"stream_name":"stderr","time":58.526156393,"data":" + markdown==3.11.3\n"}
+,{"stream_name":"stderr","time":58.526205647,"data":" + ml-dtypes==0.3.2\n"}
+,{"stream_name":"stderr","time":58.526296072,"data":" - numpy==2.4.6\n"}
+,{"stream_name":"stderr","time":58.526349343,"data":" + numpy==1.26.4\n"}
+,{"stream_name":"stderr","time":58.526447717,"data":" + oauthlib==4.0.1\n"}
+,{"stream_name":"stderr","time":58.526502577,"data":" + opt-einsum==3.4.0\n"}
+,{"stream_name":"stderr","time":58.526600802,"data":" + packaging==26.3\n"}
+,{"stream_name":"stderr","time":58.526634167,"data":" + promise==2.3\n"}
+,{"stream_name":"stderr","time":58.526700625,"data":" + protobuf==4.25.8\n"}
+,{"stream_name":"stderr","time":58.526767973,"data":" + psutil==7.2.2\n"}
+,{"stream_name":"stderr","time":58.526853554,"data":" + pyasn1==0.6.5\n"}
+,{"stream_name":"stderr","time":58.526899256,"data":" + pyasn1-modules==0.4.2\n"}
+,{"stream_name":"stderr","time":58.526997197,"data":" + pycparser==3.12\n"}
+,{"stream_name":"stderr","time":58.527035562,"data":" + pyyaml==6.0.3\n"}
+,{"stream_name":"stderr","time":58.527136507,"data":" + regex==2026.11.9\n"}
+,{"stream_name":"stderr","time":58.52717119,"data":" + requests-oauthlib==2.0.0\n"}
+,{"stream_name":"stderr","time":58.527998491,"data":" + safetensors==0.4.5\n"}
+,{"stream_name":"stderr","time":58.528013125,"data":" + sentencepiece==0.2.0\n"}
+,{"stream_name":"stderr","time":58.528018136,"data":" + setuptools==84.2.1\n"}
+,{"stream_name":"stderr","time":58.528022784,"data":" + six==1.17.0\n"}
+,{"stream_name":"stderr","time":58.528027216,"data":" + tensorboard==2.15.2\n"}
+,{"stream_name":"stderr","time":58.528030906,"data":" + tensorboard-data-server==0.7.2\n"}
+,{"stream_name":"stderr","time":58.528034983,"data":" + tensorflow-cpu==2.15.1\n"}
+,{"stream_name":"stderr","time":58.52803964,"data":" + tensorflow-datasets==4.9.3\n"}
+,{"stream_name":"stderr","time":58.528044015,"data":" + tensorflow-estimator==2.15.0\n"}
+,{"stream_name":"stderr","time":58.528048462,"data":" + tensorflow-io-gcs-filesystem==0.37.1\n"}
+,{"stream_name":"stderr","time":58.528053485,"data":" + tensorflow-metadata==1.15.0\n"}
+,{"stream_name":"stderr","time":58.528057789,"data":" + termcolor==3.3.0\n"}
+,{"stream_name":"stderr","time":58.528062273,"data":" + timm==0.9.10\n"}
+,{"stream_name":"stderr","time":58.528078215,"data":" + tokenizers==0.19.1\n"}
+,{"stream_name":"stderr","time":58.528083085,"data":" + toml==0.10.2\n"}
+,{"stream_name":"stderr","time":58.528086837000004,"data":" + tqdm==4.70.1\n"}
+,{"stream_name":"stderr","time":58.52809052,"data":" + transformers==4.40.1\n"}
+,{"stream_name":"stderr","time":58.528094189,"data":" + werkzeug==3.1.9\n"}
+,{"stream_name":"stderr","time":58.528105636,"data":" + wheel==0.48.0\n"}
+,{"stream_name":"stderr","time":58.52812573,"data":" + wrapt==1.14.2\n"}
+,{"stream_name":"stderr","time":58.528187662,"data":" + zipp==4.1.2\n"}
+,{"stream_name":"stderr","time":58.554413816,"data":"Using Python 3.11.17 environment at: /kaggle/temp/multinet_baseline/env\n"}
+,{"stream_name":"stdout","time":76.558808016,"data":"Downloading jaco_play-test.tfrecord-00000-of-00008\n"}
+,{"stream_name":"stdout","time":77.651356927,"data":"Downloading jaco_play-test.tfrecord-00001-of-00008\n"}
+,{"stream_name":"stdout","time":79.059036027,"data":"Downloading jaco_play-test.tfrecord-00002-of-00008\n"}
+,{"stream_name":"stdout","time":80.240033445,"data":"Downloading jaco_play-test.tfrecord-00003-of-00008\n"}
+,{"stream_name":"stdout","time":83.950748936,"data":"Downloading jaco_play-test.tfrecord-00004-of-00008\n"}
+,{"stream_name":"stdout","time":85.899903207,"data":"Downloading jaco_play-test.tfrecord-00005-of-00008\n"}
+,{"stream_name":"stdout","time":87.790597953,"data":"Downloading jaco_play-test.tfrecord-00006-of-00008\n"}
+,{"stream_name":"stdout","time":89.160023716,"data":"Downloading jaco_play-test.tfrecord-00007-of-00008\n"}
+,{"stream_name":"stdout","time":102.259369547,"data":"Downloading pinned model 47a0ec7fc4ec123775a391911046cf33cf9ed83f\n"}
+,{"stream_name":"stderr","time":193.788951286,"data":"\rFetching 13 files:   0%|          | 0/13 [00:00\u003c?, ?it/s]\rFetching 13 files:  62%|██████▏   | 8/13 [00:00\u003c00:00, 20.54it/s]\rFetching 13 files:  85%|████████▍ | 11/13 [00:20\u003c00:03,  1.82s/it]\rFetching 13 files:  92%|█████████▏| 12/13 [01:09\u003c00:05,  5.82s/it]\rFetching 13 files: 100%|██████████| 13/13 [01:31\u003c00:00,  7.03s/it]\rFetching 13 files: 100%|██████████| 13/13 [01:31\u003c00:00,  7.03s/it]\n"}
+,{"stream_name":"stderr","time":195.45714343,"data":"WARNING:accelerate.utils.modeling:The model weights are not tied. Please use the `tie_weights` method before using the `infer_auto_device` function.\n"}
+,{"stream_name":"stderr","time":226.631539282,"data":"\rLoading checkpoint shards:   0%|          | 0/3 [00:00\u003c?, ?it/s]\rLoading checkpoint shards:  33%|███▎      | 1/3 [00:09\u003c00:18,  9.33s/it]\rLoading checkpoint shards:  67%|██████▋   | 2/3 [00:21\u003c00:11, 11.14s/it]\rLoading checkpoint shards: 100%|██████████| 3/3 [00:30\u003c00:00, 10.23s/it]\rLoading checkpoint shards: 100%|██████████| 3/3 [00:30\u003c00:00, 10.29s/it]\n"}
+,{"stream_name":"stdout","time":304.436697092,"data":"{\"num_timesteps\": 86, \"amse\": 0.20002436689226213, \"namse\": 0.7315192038235011, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 0.27343693213626624, \"status\": \"partial\", \"complete_episodes\": 1, \"elapsed_seconds\": 77.44001753499998}\n"}
+,{"stream_name":"stdout","time":338.096817143,"data":"{\"num_timesteps\": 135, \"amse\": 0.2519941216240733, \"namse\": 0.24951846856788254, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0099217227101462, \"status\": \"partial\", \"complete_episodes\": 2, \"elapsed_seconds\": 111.10017119699995}\n"}
+,{"stream_name":"stdout","time":387.955503493,"data":"{\"num_timesteps\": 207, \"amse\": 0.23718797224376584, \"namse\": 0.23255507446610815, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 3, \"elapsed_seconds\": 160.95870947999998}\n"}
+,{"stream_name":"stdout","time":440.463545085,"data":"{\"num_timesteps\": 283, \"amse\": 0.22182384622721113, \"namse\": 0.2174910497768022, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 4, \"elapsed_seconds\": 213.46677905300004}\n"}
+,{"stream_name":"stdout","time":494.912616654,"data":"{\"num_timesteps\": 362, \"amse\": 0.217547601321025, \"namse\": 0.2132983310517084, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 5, \"elapsed_seconds\": 267.915987024}\n"}
+,{"stream_name":"stdout","time":542.015529892,"data":"{\"num_timesteps\": 430, \"amse\": 0.2274510181897688, \"namse\": 0.2230083084404971, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 6, \"elapsed_seconds\": 315.01876000199996}\n"}
+,{"stream_name":"stdout","time":583.602379121,"data":"{\"num_timesteps\": 490, \"amse\": 0.2240721152252625, \"namse\": 0.21969540423590728, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 7, \"elapsed_seconds\": 356.60578767600003}\n"}
+,{"stream_name":"stdout","time":630.831069323,"data":"{\"num_timesteps\": 558, \"amse\": 0.22632665268787144, \"namse\": 0.22190590472015956, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 8, \"elapsed_seconds\": 403.834363073}\n"}
+,{"stream_name":"stdout","time":664.19516401,"data":"{\"num_timesteps\": 606, \"amse\": 0.22393796827970397, \"namse\": 0.21956387752897258, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 9, \"elapsed_seconds\": 437.198457623}\n"}
+,{"stream_name":"stdout","time":714.202000391,"data":"{\"num_timesteps\": 678, \"amse\": 0.2356621453184262, \"namse\": 0.2310590509077126, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 10, \"elapsed_seconds\": 487.20526641299995}\n"}
+,{"stream_name":"stdout","time":776.706868123,"data":"{\"num_timesteps\": 768, \"amse\": 0.2339060013775168, \"namse\": 0.229337209023877, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 11, \"elapsed_seconds\": 549.7100325480001}\n"}
+,{"stream_name":"stdout","time":833.247566505,"data":"{\"num_timesteps\": 849, \"amse\": 0.2389035379458242, \"namse\": 0.23423713070959967, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 12, \"elapsed_seconds\": 606.2507561999998}\n"}
+,{"stream_name":"stdout","time":890.0745763,"data":"{\"num_timesteps\": 931, \"amse\": 0.24201131343094992, \"namse\": 0.23728420325940267, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 13, \"elapsed_seconds\": 663.077910754}\n"}
+,{"stream_name":"stdout","time":946.393135681,"data":"{\"num_timesteps\": 1012, \"amse\": 0.23916209562429563, \"namse\": 0.2344906380843706, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 14, \"elapsed_seconds\": 719.39638453}\n"}
+,{"stream_name":"stdout","time":978.5329915,"data":"{\"num_timesteps\": 1058, \"amse\": 0.24283274834055704, \"namse\": 0.23808959340952546, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 15, \"elapsed_seconds\": 751.536318255}\n"}
+,{"stream_name":"stdout","time":1027.840626793,"data":"{\"num_timesteps\": 1129, \"amse\": 0.23679702367379063, \"namse\": 0.23217176213815585, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 16, \"elapsed_seconds\": 800.843904416}\n"}
+,{"stream_name":"stdout","time":1113.887287114,"data":"{\"num_timesteps\": 1253, \"amse\": 0.23672737232296753, \"namse\": 0.23210347125930447, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 17, \"elapsed_seconds\": 886.8905077449999}\n"}
+,{"stream_name":"stdout","time":1158.485010135,"data":"{\"num_timesteps\": 1317, \"amse\": 0.2356790185667472, \"namse\": 0.23107559457762294, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 18, \"elapsed_seconds\": 931.488234469}\n"}
+,{"stream_name":"stdout","time":1221.070970355,"data":"{\"num_timesteps\": 1407, \"amse\": 0.23278283582086592, \"namse\": 0.22823598181073348, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 19, \"elapsed_seconds\": 994.0743233609999}\n"}
+,{"stream_name":"stdout","time":1276.826888721,"data":"{\"num_timesteps\": 1487, \"amse\": 0.2315849059004032, \"namse\": 0.2270614505761896, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 20, \"elapsed_seconds\": 1049.830247439}\n"}
+,{"stream_name":"stdout","time":1352.102826838,"data":"{\"num_timesteps\": 1595, \"amse\": 0.22953792417252572, \"namse\": 0.2250544517235322, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 21, \"elapsed_seconds\": 1125.106132697}\n"}
+,{"stream_name":"stdout","time":1403.949572558,"data":"{\"num_timesteps\": 1669, \"amse\": 0.22804599755067925, \"namse\": 0.2235916663075631, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 22, \"elapsed_seconds\": 1176.95296392}\n"}
+,{"stream_name":"stdout","time":1445.441024058,"data":"{\"num_timesteps\": 1728, \"amse\": 0.22746220072566412, \"namse\": 0.2230192725523901, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 23, \"elapsed_seconds\": 1218.44433501}\n"}
+,{"stream_name":"stdout","time":1474.433308405,"data":"{\"num_timesteps\": 1769, \"amse\": 0.22597932620266045, \"namse\": 0.22156536242423813, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 24, \"elapsed_seconds\": 1247.436621113}\n"}
+,{"stream_name":"stdout","time":1514.476559604,"data":"{\"num_timesteps\": 1826, \"amse\": 0.22480458091647837, \"namse\": 0.22041356296778822, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 25, \"elapsed_seconds\": 1287.4799320769998}\n"}
+,{"stream_name":"stdout","time":1548.289624339,"data":"{\"num_timesteps\": 1874, \"amse\": 0.2241063768662621, \"namse\": 0.21972899665797657, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 26, \"elapsed_seconds\": 1321.2928646169999}\n"}
+,{"stream_name":"stdout","time":1589.06182705,"data":"{\"num_timesteps\": 1932, \"amse\": 0.22727358253230157, \"namse\": 0.22283433856274357, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 27, \"elapsed_seconds\": 1362.065179906}\n"}
+,{"stream_name":"stdout","time":1621.643579786,"data":"{\"num_timesteps\": 1978, \"amse\": 0.2301192989590698, \"namse\": 0.22562447074894215, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 28, \"elapsed_seconds\": 1394.646821357}\n"}
+,{"stream_name":"stdout","time":1680.318419838,"data":"{\"num_timesteps\": 2062, \"amse\": 0.23291653288908706, \"namse\": 0.2283670674276043, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 29, \"elapsed_seconds\": 1453.321737905}\n"}
+,{"stream_name":"stdout","time":1728.188280971,"data":"{\"num_timesteps\": 2130, \"amse\": 0.2348870875005117, \"namse\": 0.23029913198410062, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0199217230081696, \"status\": \"partial\", \"complete_episodes\": 30, \"elapsed_seconds\": 1501.191487912}\n"}
+,{"stream_name":"stdout","time":1778.699381533,"data":"{\"num_timesteps\": 2202, \"amse\": 0.2337370519798048, \"namse\": 0.22354771855370995, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 31, \"elapsed_seconds\": 1551.702675408}\n"}
+,{"stream_name":"stdout","time":1834.003447905,"data":"{\"num_timesteps\": 2281, \"amse\": 0.23182827263784034, \"namse\": 0.22172214890822856, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 32, \"elapsed_seconds\": 1607.006651108}\n"}
+,{"stream_name":"stdout","time":1872.052674271,"data":"{\"num_timesteps\": 2335, \"amse\": 0.23018678908869036, \"namse\": 0.22015222279104754, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 33, \"elapsed_seconds\": 1645.055934384}\n"}
+,{"stream_name":"stdout","time":1939.175367417,"data":"{\"num_timesteps\": 2431, \"amse\": 0.22919486059735877, \"namse\": 0.21920353558323252, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 34, \"elapsed_seconds\": 1712.1786400820001}\n"}
+,{"stream_name":"stdout","time":1994.8594206,"data":"{\"num_timesteps\": 2510, \"amse\": 0.2278221505661495, \"namse\": 0.21789066630079199, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 35, \"elapsed_seconds\": 1767.8627011519998}\n"}
+,{"stream_name":"stdout","time":2053.935782082,"data":"{\"num_timesteps\": 2594, \"amse\": 0.22712894662790908, \"namse\": 0.21722768130301953, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 36, \"elapsed_seconds\": 1826.9391360609998}\n"}
+,{"stream_name":"stdout","time":2132.52899022,"data":"{\"num_timesteps\": 2706, \"amse\": 0.2280320418080371, \"namse\": 0.21809140772313354, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 37, \"elapsed_seconds\": 1905.532171203}\n"}
+,{"stream_name":"stdout","time":2166.722744238,"data":"{\"num_timesteps\": 2754, \"amse\": 0.22749976811860428, \"namse\": 0.2175823375183416, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 38, \"elapsed_seconds\": 1939.726053901}\n"}
+,{"stream_name":"stdout","time":2196.251986141,"data":"{\"num_timesteps\": 2795, \"amse\": 0.22759195463729673, \"namse\": 0.21767050533666799, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 39, \"elapsed_seconds\": 1969.255336628}\n"}
+,{"stream_name":"stdout","time":2277.38235322,"data":"{\"num_timesteps\": 2911, \"amse\": 0.22756965775493124, \"namse\": 0.21764918044555037, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 40, \"elapsed_seconds\": 2050.385636042}\n"}
+,{"stream_name":"stdout","time":2363.230193324,"data":"{\"num_timesteps\": 3034, \"amse\": 0.22844413512670703, \"namse\": 0.21848553659760897, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 41, \"elapsed_seconds\": 2136.233468888}\n"}
+,{"stream_name":"stdout","time":2400.228268734,"data":"{\"num_timesteps\": 3086, \"amse\": 0.22778821587759035, \"namse\": 0.21785821093206512, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 42, \"elapsed_seconds\": 2173.231607754}\n"}
+,{"stream_name":"stdout","time":2452.484767821,"data":"{\"num_timesteps\": 3160, \"amse\": 0.22753197611097248, \"namse\": 0.21761314146299743, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 43, \"elapsed_seconds\": 2225.488088946}\n"}
+,{"stream_name":"stdout","time":2486.767909322,"data":"{\"num_timesteps\": 3208, \"amse\": 0.22892796467158724, \"namse\": 0.21894827449051363, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 44, \"elapsed_seconds\": 2259.771183893}\n"}
+,{"stream_name":"stdout","time":2563.917741045,"data":"{\"num_timesteps\": 3318, \"amse\": 0.2286726148573511, \"namse\": 0.21870405617800373, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 45, \"elapsed_seconds\": 2336.921028185}\n"}
+,{"stream_name":"stdout","time":2638.214716469,"data":"{\"num_timesteps\": 3424, \"amse\": 0.22899617485203536, \"namse\": 0.21901351117460927, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 46, \"elapsed_seconds\": 2411.217902848}\n"}
+,{"stream_name":"stdout","time":2669.791268173,"data":"{\"num_timesteps\": 3468, \"amse\": 0.2298791913019285, \"namse\": 0.2198580341595063, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 47, \"elapsed_seconds\": 2442.794486602}\n"}
+,{"stream_name":"stdout","time":2728.320000132,"data":"{\"num_timesteps\": 3551, \"amse\": 0.22953944274176116, \"namse\": 0.2195330963079161, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 48, \"elapsed_seconds\": 2501.3233453469998}\n"}
+,{"stream_name":"stdout","time":2781.379965982,"data":"{\"num_timesteps\": 3626, \"amse\": 0.231143308318539, \"namse\": 0.2210670443384857, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 49, \"elapsed_seconds\": 2554.383223969}\n"}
+,{"stream_name":"stdout","time":2827.811296031,"data":"{\"num_timesteps\": 3691, \"amse\": 0.2320483797947956, \"namse\": 0.22193266090176253, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 50, \"elapsed_seconds\": 2600.814596183}\n"}
+,{"stream_name":"stdout","time":2851.849304197,"data":"{\"num_timesteps\": 3724, \"amse\": 0.23070942855348786, \"namse\": 0.22065207875736667, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 51, \"elapsed_seconds\": 2624.85259903}\n"}
+,{"stream_name":"stdout","time":2902.529212553,"data":"{\"num_timesteps\": 3795, \"amse\": 0.22994159746298246, \"namse\": 0.21991771983967184, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 52, \"elapsed_seconds\": 2675.532368067}\n"}
+,{"stream_name":"stdout","time":2951.196969854,"data":"{\"num_timesteps\": 3863, \"amse\": 0.2295690530359628, \"namse\": 0.2195614157962404, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 53, \"elapsed_seconds\": 2724.200246146}\n"}
+,{"stream_name":"stdout","time":3004.43855402,"data":"{\"num_timesteps\": 3938, \"amse\": 0.23054181803055282, \"namse\": 0.22049177490442465, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 54, \"elapsed_seconds\": 2777.441875124}\n"}
+,{"stream_name":"stdout","time":3068.131139484,"data":"{\"num_timesteps\": 4028, \"amse\": 0.23305873281659412, \"namse\": 0.22289896945679802, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 55, \"elapsed_seconds\": 2841.134419791}\n"}
+,{"stream_name":"stdout","time":3107.371033979,"data":"{\"num_timesteps\": 4083, \"amse\": 0.23437448026535188, \"namse\": 0.22415735933495942, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 56, \"elapsed_seconds\": 2880.3743677889997}\n"}
+,{"stream_name":"stdout","time":3164.894440529,"data":"{\"num_timesteps\": 4164, \"amse\": 0.23396002398053886, \"namse\": 0.2237609705034695, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 57, \"elapsed_seconds\": 2937.897676996}\n"}
+,{"stream_name":"stdout","time":3234.688530847,"data":"{\"num_timesteps\": 4263, \"amse\": 0.232789858482395, \"namse\": 0.222641816200698, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 58, \"elapsed_seconds\": 3007.691808622}\n"}
+,{"stream_name":"stdout","time":3290.967814194,"data":"{\"num_timesteps\": 4342, \"amse\": 0.23371279483124918, \"namse\": 0.2235245188505735, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 59, \"elapsed_seconds\": 3063.971203911}\n"}
+,{"stream_name":"stdout","time":3340.143739664,"data":"{\"num_timesteps\": 4411, \"amse\": 0.23508487474324627, \"namse\": 0.22483678548268102, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 60, \"elapsed_seconds\": 3113.1468975}\n"}
+,{"stream_name":"stdout","time":3426.651790859,"data":"{\"num_timesteps\": 4534, \"amse\": 0.23474700913880645, \"namse\": 0.22451364850285452, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 61, \"elapsed_seconds\": 3199.655035034}\n"}
+,{"stream_name":"stdout","time":3463.594687582,"data":"{\"num_timesteps\": 4585, \"amse\": 0.23412556326002384, \"namse\": 0.22391929340497949, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 62, \"elapsed_seconds\": 3236.597869177}\n"}
+,{"stream_name":"stdout","time":3510.742843505,"data":"{\"num_timesteps\": 4651, \"amse\": 0.23397473041150818, \"namse\": 0.22377503583484665, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 63, \"elapsed_seconds\": 3283.74612162}\n"}
+,{"stream_name":"stdout","time":3565.627920631,"data":"{\"num_timesteps\": 4728, \"amse\": 0.23349043258012578, \"namse\": 0.22331185006952226, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 64, \"elapsed_seconds\": 3338.631177054}\n"}
+,{"stream_name":"stdout","time":3634.417622417,"data":"{\"num_timesteps\": 4825, \"amse\": 0.2333579612198924, \"namse\": 0.2231851535526329, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 65, \"elapsed_seconds\": 3407.420882726}\n"}
+,{"stream_name":"stdout","time":3669.265590665,"data":"{\"num_timesteps\": 4873, \"amse\": 0.2326449979820724, \"namse\": 0.22250327062531272, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 66, \"elapsed_seconds\": 3442.268887921}\n"}
+,{"stream_name":"stdout","time":3722.850670405,"data":"{\"num_timesteps\": 4948, \"amse\": 0.23296112456504167, \"namse\": 0.22280561625600523, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 67, \"elapsed_seconds\": 3495.85398178}\n"}
+,{"stream_name":"stdout","time":3762.136704514,"data":"{\"num_timesteps\": 5002, \"amse\": 0.23228810560105106, \"namse\": 0.22216193630595407, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 68, \"elapsed_seconds\": 3535.1400387999997}\n"}
+,{"stream_name":"stdout","time":3804.242979048,"data":"{\"num_timesteps\": 5060, \"amse\": 0.2340785089926385, \"namse\": 0.22387429038114282, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 69, \"elapsed_seconds\": 3577.246347229}\n"}
+,{"stream_name":"stdout","time":3855.779653582,"data":"{\"num_timesteps\": 5132, \"amse\": 0.23521899048388947, \"namse\": 0.22496505469626663, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 70, \"elapsed_seconds\": 3628.782891473}\n"}
+,{"stream_name":"stdout","time":3937.628903319,"data":"{\"num_timesteps\": 5248, \"amse\": 0.23652842783598493, \"namse\": 0.22621740955473132, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 71, \"elapsed_seconds\": 3710.632166054}\n"}
+,{"stream_name":"stdout","time":4001.935193759,"data":"{\"num_timesteps\": 5338, \"amse\": 0.23558033535433603, \"namse\": 0.22531064740703063, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 72, \"elapsed_seconds\": 3774.938442329}\n"}
+,{"stream_name":"stdout","time":4054.856137292,"data":"{\"num_timesteps\": 5412, \"amse\": 0.23615264935946956, \"namse\": 0.22585801244419687, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 73, \"elapsed_seconds\": 3827.8594527230002}\n"}
+,{"stream_name":"stdout","time":4095.627722338,"data":"{\"num_timesteps\": 5468, \"amse\": 0.23593907716165932, \"namse\": 0.22565375053038128, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 74, \"elapsed_seconds\": 3868.631019266}\n"}
+,{"stream_name":"stdout","time":4178.950089968,"data":"{\"num_timesteps\": 5586, \"amse\": 0.2353677823018348, \"namse\": 0.22510736021077507, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 75, \"elapsed_seconds\": 3951.953441774}\n"}
+,{"stream_name":"stdout","time":4233.718685218,"data":"{\"num_timesteps\": 5662, \"amse\": 0.23508891706250246, \"namse\": 0.22484065158452746, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 76, \"elapsed_seconds\": 4006.722000266}\n"}
+,{"stream_name":"stdout","time":4263.259090926,"data":"{\"num_timesteps\": 5702, \"amse\": 0.234484374380802, \"namse\": 0.224262462820197, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 77, \"elapsed_seconds\": 4036.26229612}\n"}
+,{"stream_name":"stdout","time":4307.010193253,"data":"{\"num_timesteps\": 5762, \"amse\": 0.23557928146973023, \"namse\": 0.2253096394645716, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 78, \"elapsed_seconds\": 4080.013529751}\n"}
+,{"stream_name":"stdout","time":4362.407371304,"data":"{\"num_timesteps\": 5839, \"amse\": 0.23531539056449582, \"namse\": 0.2250572523940903, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 79, \"elapsed_seconds\": 4135.410709584}\n"}
+,{"stream_name":"stdout","time":4438.387351304,"data":"{\"num_timesteps\": 5946, \"amse\": 0.23448943854020246, \"namse\": 0.22426730621695834, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 80, \"elapsed_seconds\": 4211.390569952}\n"}
+,{"stream_name":"stdout","time":4509.12764197,"data":"{\"num_timesteps\": 6045, \"amse\": 0.23618584715295432, \"namse\": 0.22588976304142552, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 81, \"elapsed_seconds\": 4282.130922993}\n"}
+,{"stream_name":"stdout","time":4530.67375183,"data":"{\"num_timesteps\": 6073, \"amse\": 0.23609925690800235, \"namse\": 0.2258069475376617, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 82, \"elapsed_seconds\": 4303.677056177}\n"}
+,{"stream_name":"stdout","time":4587.022064682,"data":"{\"num_timesteps\": 6151, \"amse\": 0.2374269703863689, \"namse\": 0.22707678180855648, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 83, \"elapsed_seconds\": 4360.025385559001}\n"}
+,{"stream_name":"stdout","time":4618.455346547,"data":"{\"num_timesteps\": 6193, \"amse\": 0.23697569177578623, \"namse\": 0.22664517585231908, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 84, \"elapsed_seconds\": 4391.458654148}\n"}
+,{"stream_name":"stdout","time":4695.433632737,"data":"{\"num_timesteps\": 6301, \"amse\": 0.23668694498290246, \"namse\": 0.22636901644052643, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 85, \"elapsed_seconds\": 4468.436981919001}\n"}
+,{"stream_name":"stdout","time":4744.734040597,"data":"{\"num_timesteps\": 6369, \"amse\": 0.23670805866480005, \"namse\": 0.22638920971060764, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 86, \"elapsed_seconds\": 4517.737359213001}\n"}
+,{"stream_name":"stdout","time":4782.979093157,"data":"{\"num_timesteps\": 6421, \"amse\": 0.23650315278737694, \"namse\": 0.2261932363250098, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 87, \"elapsed_seconds\": 4555.982472715001}\n"}
+,{"stream_name":"stdout","time":4845.305275199,"data":"{\"num_timesteps\": 6508, \"amse\": 0.23701848151139285, \"namse\": 0.22668610024873576, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 88, \"elapsed_seconds\": 4618.308570105}\n"}
+,{"stream_name":"stdout","time":4900.18152988,"data":"{\"num_timesteps\": 6584, \"amse\": 0.23664973549298862, \"namse\": 0.22633342902933842, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 89, \"elapsed_seconds\": 4673.184783259}\n"}
+,{"stream_name":"stdout","time":4929.699008444,"data":"{\"num_timesteps\": 6623, \"amse\": 0.23750304786595872, \"namse\": 0.2271495428314737, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 90, \"elapsed_seconds\": 4702.7021602}\n"}
+,{"stream_name":"stdout","time":4990.145586699,"data":"{\"num_timesteps\": 6707, \"amse\": 0.23792793159804532, \"namse\": 0.22755590454500652, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 91, \"elapsed_seconds\": 4763.1489430540005}\n"}
+,{"stream_name":"stdout","time":5049.387790786,"data":"{\"num_timesteps\": 6789, \"amse\": 0.23751658336041745, \"namse\": 0.2271624882711472, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 92, \"elapsed_seconds\": 4822.391007865001}\n"}
+,{"stream_name":"stdout","time":5092.777067573,"data":"{\"num_timesteps\": 6848, \"amse\": 0.23770758327979724, \"namse\": 0.2273451619031605, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 93, \"elapsed_seconds\": 4865.780347272001}\n"}
+,{"stream_name":"stdout","time":5124.410028681,"data":"{\"num_timesteps\": 6890, \"amse\": 0.23759734871770546, \"namse\": 0.22723973281242507, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 94, \"elapsed_seconds\": 4897.413364648}\n"}
+,{"stream_name":"stdout","time":5185.496413713,"data":"{\"num_timesteps\": 6975, \"amse\": 0.2388551271655777, \"namse\": 0.22844268074081847, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 95, \"elapsed_seconds\": 4958.499566999}\n"}
+,{"stream_name":"stdout","time":5213.384707752,"data":"{\"num_timesteps\": 7012, \"amse\": 0.23855225455503876, \"namse\": 0.2281530113002017, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 96, \"elapsed_seconds\": 4986.387916331}\n"}
+,{"stream_name":"stdout","time":5242.121402754,"data":"{\"num_timesteps\": 7050, \"amse\": 0.23816978431131097, \"namse\": 0.22778721413763878, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 97, \"elapsed_seconds\": 5015.1247042820005}\n"}
+,{"stream_name":"stdout","time":5281.437014594,"data":"{\"num_timesteps\": 7103, \"amse\": 0.23788984142655442, \"namse\": 0.22751947484392146, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 98, \"elapsed_seconds\": 5054.440295024}\n"}
+,{"stream_name":"stdout","time":5311.023670018,"data":"{\"num_timesteps\": 7142, \"amse\": 0.23738005315915764, \"namse\": 0.22703190985088065, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 99, \"elapsed_seconds\": 5084.027095651}\n"}
+,{"stream_name":"stdout","time":5375.654958321,"data":"{\"num_timesteps\": 7232, \"amse\": 0.23819502085366184, \"namse\": 0.2278113505397158, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 100, \"elapsed_seconds\": 5148.658256026}\n"}
+,{"stream_name":"stdout","time":5434.21121938,"data":"{\"num_timesteps\": 7313, \"amse\": 0.23908675034206248, \"namse\": 0.22866420673436094, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 101, \"elapsed_seconds\": 5207.2144910980005}\n"}
+,{"stream_name":"stdout","time":5465.990759404,"data":"{\"num_timesteps\": 7355, \"amse\": 0.2396421939251053, \"namse\": 0.2291954367842087, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 102, \"elapsed_seconds\": 5238.994112989}\n"}
+,{"stream_name":"stdout","time":5529.476633991,"data":"{\"num_timesteps\": 7443, \"amse\": 0.23922943567538502, \"namse\": 0.22880067196512002, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 103, \"elapsed_seconds\": 5302.479998814}\n"}
+,{"stream_name":"stdout","time":5575.77483264,"data":"{\"num_timesteps\": 7506, \"amse\": 0.23901564514223636, \"namse\": 0.2285962012338904, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 104, \"elapsed_seconds\": 5348.778219374}\n"}
+,{"stream_name":"stdout","time":5610.864064597,"data":"{\"num_timesteps\": 7553, \"amse\": 0.23811014781834527, \"namse\": 0.22773017738701765, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 105, \"elapsed_seconds\": 5383.867433553}\n"}
+,{"stream_name":"stdout","time":5668.393572808,"data":"{\"num_timesteps\": 7632, \"amse\": 0.23852976562745223, \"namse\": 0.22813150273572014, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 106, \"elapsed_seconds\": 5441.396812192001}\n"}
+,{"stream_name":"stdout","time":5717.111772073,"data":"{\"num_timesteps\": 7698, \"amse\": 0.23827188010525355, \"namse\": 0.22788485925473473, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 107, \"elapsed_seconds\": 5490.115123454}\n"}
+,{"stream_name":"stdout","time":5762.759320517,"data":"{\"num_timesteps\": 7760, \"amse\": 0.23790779805819542, \"namse\": 0.22753664868949972, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 108, \"elapsed_seconds\": 5535.762620702}\n"}
+,{"stream_name":"stdout","time":5819.585145976,"data":"{\"num_timesteps\": 7838, \"amse\": 0.237987188510227, \"namse\": 0.2276125782619673, \"namse_defined\": true, \"min_mse\": 0.0, \"max_mse\": 1.0455801271067087, \"status\": \"partial\", \"complete_episodes\": 109, \"elapsed_seconds\": 5592.588469558001}\n"}
+,{"stream_name":"stdout","time":5819.587738997,"data":"{\n"}
+,{"stream_name":"stdout","time":5819.587762647,"data":"  \"num_timesteps\": 7838,\n"}
+,{"stream_name":"stdout","time":5819.58776834,"data":"  \"amse\": 0.237987188510227,\n"}
+,{"stream_name":"stdout","time":5819.587773464,"data":"  \"namse\": 0.2276125782619673,\n"}
+,{"stream_name":"stdout","time":5819.587778041,"data":"  \"namse_defined\": true,\n"}
+,{"stream_name":"stdout","time":5819.587782242,"data":"  \"min_mse\": 0.0,\n"}
+,{"stream_name":"stdout","time":5819.587786496,"data":"  \"max_mse\": 1.0455801271067087,\n"}
+,{"stream_name":"stdout","time":5819.587790711,"data":"  \"status\": \"complete\",\n"}
+,{"stream_name":"stdout","time":5819.587795726,"data":"  \"complete_episodes\": 109,\n"}
+,{"stream_name":"stdout","time":5819.587800916,"data":"  \"elapsed_seconds\": 5592.590595679,\n"}
+,{"stream_name":"stdout","time":5819.587805991,"data":"  \"offline_final_action_exact_match_percent\": 29.357798165137616,\n"}
+,{"stream_name":"stdout","time":5819.587811589,"data":"  \"peak_gpu_bytes\": [\n"}
+,{"stream_name":"stdout","time":5819.587816731,"data":"    7741203968,\n"}
+,{"stream_name":"stdout","time":5819.587820511,"data":"    7746819584\n"}
+,{"stream_name":"stdout","time":5819.587824638,"data":"  ],\n"}
+,{"stream_name":"stdout","time":5819.58782875,"data":"  \"delta_amse_vs_published\": -0.0006577663521372956,\n"}
+,{"stream_name":"stdout","time":5819.587833543,"data":"  \"delta_namse_vs_published\": -0.0006290922475321314\n"}
+,{"stream_name":"stdout","time":5819.587838267,"data":"}\n"}
+,{"stream_name":"stderr","time":5820.167181065,"data":"Exception ignored in: \u003cfunction AtomicFunction.__del__ at 0x794b18c004a0\u003e\n"}
+,{"stream_name":"stderr","time":5820.167226772,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":5820.167234352,"data":"  File \"/kaggle/temp/multinet_baseline/env/lib/python3.11/site-packages/tensorflow/python/eager/polymorphic_function/atomic_function.py\", line 291, in __del__\n"}
+,{"stream_name":"stderr","time":5820.16724002,"data":"TypeError: 'NoneType' object is not subscriptable\n"}
+,{"stream_name":"stderr","time":5820.167264307,"data":"Exception ignored in: \u003cfunction AtomicFunction.__del__ at 0x794b18c004a0\u003e\n"}
+,{"stream_name":"stderr","time":5820.167268384,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":5820.16727172,"data":"  File \"/kaggle/temp/multinet_baseline/env/lib/python3.11/site-packages/tensorflow/python/eager/polymorphic_function/atomic_function.py\", line 291, in __del__\n"}
+,{"stream_name":"stderr","time":5820.16807164,"data":"TypeError: 'NoneType' object is not subscriptable\n"}
+,{"stream_name":"stderr","time":5825.754758088,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":5825.754816212,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":5826.404731503,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":5826.404779836,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":5830.083527302,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":5831.58141277,"data":"[NbConvertApp] Writing 344745 bytes to __results__.html\n"}
+]

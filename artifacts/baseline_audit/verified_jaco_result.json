@@ -1,0 +1,50 @@
+{
+  "verified_at": "2026-11-10T18:12:17.391255+03:00",
+  "status": "PASS",
+  "dataset": "jaco_play",
+  "num_timesteps": 7838,
+  "complete_episodes": 109,
+  "metrics": {
+    "amse": {
+      "ours": 0.237987188510227,
+      "upstream": 0.23864495486236428,
+      "absolute_delta": -0.0006577663521372956,
+      "relative_delta_percent": -0.27562550086870363
+    },
+    "namse": {
+      "ours": 0.2276125782619673,
+      "upstream": 0.22824167050949942,
+      "absolute_delta": -0.0006290922475321314,
+      "relative_delta_percent": -0.27562550086837057
+    }
+  },
+  "evaluation_minutes": 93.20984326131666,
+  "dtype": "torch.float16",
+  "attention": "eager",
+  "gpus": [
+    {
+      "name": "Tesla T4",
+      "bytes": 15636037632
+    },
+    {
+      "name": "Tesla T4",
+      "bytes": 15636037632
+    }
+  ],
+  "first_two_episode_lengths": [
+    86,
+    49
+  ],
+  "cs_saved_steps_matching_baseline": 117,
+  "checks": [
+    "full split coverage",
+    "contiguous unique episode/step IDs",
+    "real episode boundaries",
+    "original Jaco action conversion",
+    "finite 4D actions and per-step MSE",
+    "independent AMSE/NAMSE aggregation",
+    "CS partial cache uses identical images, instructions, targets and greedy predictions"
+  ],
+  "prediction_log_sha256": "47aef0960e3fe463b64870a595289cc9d82b222b146511f0c69f4829a31c4536",
+  "interpretation": "close numerical reproduction on one dataset; not bitwise or all-dataset replication"
+}

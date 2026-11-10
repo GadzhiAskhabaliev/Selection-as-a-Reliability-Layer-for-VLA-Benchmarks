@@ -1,0 +1,2 @@
+# CPU-only result verification; GPU inference pins live in baseline.py.
+numpy==1.26.4

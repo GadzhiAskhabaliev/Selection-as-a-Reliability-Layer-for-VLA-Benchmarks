@@ -1,0 +1,15 @@
+{
+  "id": "stepanivanov233/multinet-openvla-jaco-cs8-pilot",
+  "title": "MultiNet OpenVLA Jaco CS8 Pilot",
+  "code_file": "cs.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": [],
+  "model_sources": []
+}

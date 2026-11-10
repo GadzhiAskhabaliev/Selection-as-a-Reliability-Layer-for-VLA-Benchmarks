@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/ManifoldRG/MultiNet",
+  "commit": "546a1c77f9a4cc0544c5e4b41565949778d32441",
+  "sha256": {
+    "src/eval/profiling/openvla/experiments/robot/openvla_openx_eval.py": "122282e00a51a6a8a528066f212d9d297ce9971e014e2e494e0672ebf0d85ded",
+    "src/eval/profiling/openvla/experiments/robot/openvla_utils.py": "25cce80ba9761fdcac11fd99dccd87eb2df681bdd468b575c77332a588674ad0",
+    "src/eval/profiling/openvla/experiments/robot/multinet_openvla_utils.py": "3a622112491b17ebadb3ff986d8154f7771e4787c49dea1fb0e2f0115613edf4",
+    "src/eval/profiling/openvla/data/dataset_statistics.json": "3bcf7ec112d2442f7fcc859c812d704a88f9b736faf0415a00d1f998ebcf89db",
+    "src/eval/profiling/openvla/results/openvla_openx_eval_results.json": "3ea61f5b943c8bfb20b9bf8e3d9481462a84163cfa707a26a9b309d2f343ac56",
+    "src/eval/profiling/openvla/experiments/robot/openvla_openx_dataloader.py": "7a7bd22602bd2f02261a020a5568c9868455b3e0245b40ffffaac65d02db8302"
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "status": "complete_one_dataset",
+  "kind": "baseline_only",
+  "multinet_commit": "546a1c77f9a4cc0544c5e4b41565949778d32441",
+  "model": "openvla/openvla-7b",
+  "revision": "47a0ec7fc4ec123775a391911046cf33cf9ed83f",
+  "dataset": "jaco_play",
+  "version": "0.1.0",
+  "split": "test",
+  "seed": 7,
+  "expected_episodes": 109,
+  "expected_steps": 7838,
+  "python": "3.11.17",
+  "sampling": false,
+  "quantization": null,
+  "center_crop_area": 0.9,
+  "scope": "one dataset of 20; not a full benchmark",
+  "exact_paper_reproduction": false,
+  "qualification": "Kaggle runtime adaptation; compare with pinned upstream reference",
+  "dtype": "torch.float16",
+  "attention": "eager",
+  "gpus": [
+    {
+      "name": "Tesla T4",
+      "bytes": 15636037632
+    },
+    {
+      "name": "Tesla T4",
+      "bytes": 15636037632
+    }
+  ],
+  "packages": {
+    "torch": "2.2.0+cu121",
+    "torchvision": "0.17.0+cu121",
+    "transformers": "4.40.1",
+    "timm": "0.9.10",
+    "tensorflow-datasets": "4.9.3"
+  },
+  "statistics_sha256": "3bcf7ec112d2442f7fcc859c812d704a88f9b736faf0415a00d1f998ebcf89db",
+  "source_sha256": {
+    "experiments/robot/openvla_utils.py": "25cce80ba9761fdcac11fd99dccd87eb2df681bdd468b575c77332a588674ad0",
+    "experiments/robot/openvla_openx_profiling.py": "27d08dc98f0a8109c2e10ad40b5a7f3e87a4e8f3f6adc82125ed0f767b106a88",
+    "experiments/robot/multinet_openvla_utils.py": "3a622112491b17ebadb3ff986d8154f7771e4787c49dea1fb0e2f0115613edf4",
+    "experiments/robot/openvla_openx_dataloader.py": "7a7bd22602bd2f02261a020a5568c9868455b3e0245b40ffffaac65d02db8302",
+    "experiments/robot/openvla_openx_eval.py": "122282e00a51a6a8a528066f212d9d297ce9971e014e2e494e0672ebf0d85ded",
+    "experiments/robot/robot_utils.py": "1d780ad3a2da8b5b4ba95630d38033b90cbb430f46b53ad9fb3a45ad7c9043f8"
+  },
+  "data_files": [
+    {
+      "name": "jaco_play-test.tfrecord-00000-of-00008",
+      "bytes": 109242762,
+      "sha256": "602fc31d7f3f76f98043e084be97186f439ecb531d84f7150b836abb81f00230"
+    },
+    {
+      "name": "jaco_play-test.tfrecord-00001-of-00008",
+      "bytes": 155183771,
+      "sha256": "889942dcc9a8be6a84c03e444d3c722a8185a93c2c7d98a3ad6c5bfaf0b9ea03"
+    },
+    {
+      "name": "jaco_play-test.tfrecord-00002-of-00008",
+      "bytes": 86643604,
+      "sha256": "29dfd7e83f3c61745cad9451d951f624d62166377ff8f72dc64df44ec04718ed"
+    },
+    {
+      "name": "jaco_play-test.tfrecord-00003-of-00008",
+      "bytes": 120316577,
+      "sha256": "6f1ae8241165bd734692f8f285b109830b866d78411a262756197924b08b71b6"
+    },
+    {
+      "name": "jaco_play-test.tfrecord-00004-of-00008",
+      "bytes": 146393972,
+      "sha256": "92cf81d4c985cc267a437aa9443ab308591a3ec9e550950ae046e441f4215e3e"
+    },
+    {
+      "name": "jaco_play-test.tfrecord-00005-of-00008",
+      "bytes": 160281918,
+      "sha256": "142c77e2a670bf9a285022d84566bbf1dd34ddfbb012b44d326ff987a2242e4f"
+    },
+    {
+      "name": "jaco_play-test.tfrecord-00006-of-00008",
+      "bytes": 116312212,
+      "sha256": "b1cd33c1aa0df7d0174206d06958b22a1d3f1c99443d5fb3f875f94dccb2e627"
+    },
+    {
+      "name": "jaco_play-test.tfrecord-00007-of-00008",
+      "bytes": 109444453,
+      "sha256": "8e3206c3190269e3b427d6749443989d8cf6c9b2d0c000d66e1ecfb2154530b5"
+    }
+  ],
+  "device_map": {
+    "vision_backbone": "0",
+    "projector": "0",
+    "language_model.model.embed_tokens": "0",
+    "language_model.model.layers.0": "0",
+    "language_model.model.layers.1": "0",
+    "language_model.model.layers.2": "0",
+    "language_model.model.layers.3": "0",
+    "language_model.model.layers.4": "0",
+    "language_model.model.layers.5": "0",
+    "language_model.model.layers.6": "0",
+    "language_model.model.layers.7": "0",
+    "language_model.model.layers.8": "0",
+    "language_model.model.layers.9": "0",
+    "language_model.model.layers.10": "0",
+    "language_model.model.layers.11": "0",
+    "language_model.model.layers.12": "0",
+    "language_model.model.layers.13": "0",
+    "language_model.model.layers.14": "1",
+    "language_model.model.layers.15": "1",
+    "language_model.model.layers.16": "1",
+    "language_model.model.layers.17": "1",
+    "language_model.model.layers.18": "1",
+    "language_model.model.layers.19": "1",
+    "language_model.model.layers.20": "1",
+    "language_model.model.layers.21": "1",
+    "language_model.model.layers.22": "1",
+    "language_model.model.layers.23": "1",
+    "language_model.model.layers.24": "1",
+    "language_model.model.layers.25": "1",
+    "language_model.model.layers.26": "1",
+    "language_model.model.layers.27": "1",
+    "language_model.model.layers.28": "1",
+    "language_model.model.layers.29": "1",
+    "language_model.model.layers.30": "1",
+    "language_model.model.layers.31": "1",
+    "language_model.model.norm": "1",
+    "language_model.lm_head": "1"
+  }
+}

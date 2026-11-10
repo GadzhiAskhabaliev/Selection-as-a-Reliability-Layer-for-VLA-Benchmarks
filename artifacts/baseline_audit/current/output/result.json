@@ -1,0 +1,18 @@
+{
+  "num_timesteps": 7838,
+  "amse": 0.237987188510227,
+  "namse": 0.2276125782619673,
+  "namse_defined": true,
+  "min_mse": 0.0,
+  "max_mse": 1.0455801271067087,
+  "status": "complete",
+  "complete_episodes": 109,
+  "elapsed_seconds": 5592.590595679,
+  "offline_final_action_exact_match_percent": 29.357798165137616,
+  "peak_gpu_bytes": [
+    7741203968,
+    7746819584
+  ],
+  "delta_amse_vs_published": -0.0006577663521372956,
+  "delta_namse_vs_published": -0.0006290922475321314
+}
