@@ -23,3 +23,5 @@ jobs:
           python scripts/build_cs_kernel.py --smoke
           # Compressed bytes can differ across zlib versions; source hashes cannot.
           git diff --exit-code -- kaggle/openvla_cs kaggle/openvla_cs_smoke/source-hashes.json
+          python scripts/build_motion_kernels.py
+          git diff --exit-code -- kaggle/motion_jaco/source-hashes.json kaggle/motion_nyu_door/source-hashes.json
