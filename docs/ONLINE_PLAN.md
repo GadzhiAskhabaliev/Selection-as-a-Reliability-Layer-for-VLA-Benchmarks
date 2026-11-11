@@ -36,6 +36,14 @@ measure an effect? If single-action selection does not help, does chunk-level se
 Greedy, CS-8 (temperature 1, full vocabulary), CS-8 with majority-vote gripper.
 Stage 0 is exploratory: whatever it shows, the confirmed claim comes from S2.
 
+Result (100 paired episodes each): greedy 55.0%, CS-8 55.0% (20 wins / 20 losses,
+McNemar p = 1.0), CS-8 with majority-vote gripper 47.0% (p = 0.30). Greedy matches the
+published OpenVLA LIBERO-Long result (53.7%), which validates the pipeline.
+
+Added after the pilot, on the same S0 states: `sample` (one temperature-1 sample, full
+vocabulary, no selection). The AAMAS comparison used a single sample as the base, not greedy
+decoding; this control separates the effect of selection from the noise of sampling.
+
 ## Stage 1 - one-factor ablations (S1)
 
 Each run changes exactly one factor relative to the Stage 0 CS-8 configuration and is

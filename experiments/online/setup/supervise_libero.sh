@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 # Keeps one LIBERO client running until all episodes are recorded. A client whose policy input
 # has not changed for STALL_SECONDS gets SIGUSR1 (stack dump to its log), is killed and restarted;
-# completed episodes are skipped on restart. Usage: supervise_libero.sh OUT TRIALS METHOD
+# completed episodes are skipped on restart. Each attempt waits until the VLA server answers,
+# so a server paused by gpu_keeper.sh does not burn restarts. Usage: supervise_libero.sh OUT TRIALS METHOD
 set -uo pipefail
 source "$(dirname "$0")/env.sh"
 export PYTHONPATH=$RM/LIBERO
@@ -12,7 +13,9 @@ mkdir -p "$dir"
 for attempt in $(seq 0 "$MAX_RESTARTS"); do
   done_n=$(wc -l < "$dir/episodes.jsonl" 2>/dev/null || echo 0)
   [ "$done_n" -ge "$total" ] && { echo "$(date -u +%FT%TZ) $method complete ($done_n)" >> "$log"; exit 0; }
+  until curl -s -m 5 localhost:3201/health | grep -q true; do sleep 30; done
   echo "$(date -u +%FT%TZ) supervisor: start attempt $attempt at $done_n/$total" >> "$log"
+  touch "$dir/policy_input.png"
   "$RM/envs/libero/bin/python" "$RM/selection/experiments/online/libero/run_eval.py" \
     --method "$method" --n-pool 8 --trials "$trials" --out "$dir" \
     --norm-stats "$RM/stats/libero_10.json" --vla-port 3201 >> "$log" 2>&1 < /dev/null &
