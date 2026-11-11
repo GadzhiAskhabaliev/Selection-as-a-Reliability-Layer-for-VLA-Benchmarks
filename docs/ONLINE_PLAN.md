@@ -48,8 +48,14 @@ concurrently.
 | sample | one temperature-1 sample, no selection | separates sampling noise from selection |
 | cs8 | Stage 0 configuration, replicated | estimate of run-to-run variation |
 | cs8-topk10 | sampling top-k 10 (as in the AAMAS paper) | less noisy candidates sharpen the mode |
+| cs8-t05 | sampling temperature 0.5 | same, via a sharper sampling distribution |
 | cs16 | 16 candidates | the paper reports CS-16 > CS-8 on LIBERO-Long |
 | cs8-greedygrip | CS over motion, gripper from greedy | tests the offline gripper diagnosis online |
+
+Gripper handling across variants: `cs8`, `cs8-topk10`, `cs8-t05` and `cs16` execute the selected
+candidate unchanged, so the gripper command stays coupled to the chosen motion (the paper's
+argument against mixing candidates). Stage 0 `cs_majgrip` (majority vote) and `cs8-greedygrip`
+are the decoupled alternatives.
 
 After Stage 1, at most one combined configuration (best setting of each factor) is run on
 S1 to check for interactions, then frozen.
