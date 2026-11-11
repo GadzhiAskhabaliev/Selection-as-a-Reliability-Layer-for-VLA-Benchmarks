@@ -1,0 +1,57 @@
+{
+  "source": "https://storage.googleapis.com/gresearch/robotics/nyu_door_opening_surprising_effectiveness/0.1.0/nyu_door_opening_surprising_effectiveness-test.tfrecord-00000-of-00008",
+  "records": [
+    {
+      "record": 0,
+      "bytes": 5990511,
+      "flags": {
+        "steps/is_last": {
+          "count": 37,
+          "true_indices": [
+            35,
+            36
+          ]
+        },
+        "steps/is_terminal": {
+          "count": 37,
+          "true_indices": [
+            35,
+            36
+          ]
+        },
+        "steps/is_first": {
+          "count": 37,
+          "true_indices": [
+            0
+          ]
+        }
+      }
+    },
+    {
+      "record": 1,
+      "bytes": 20848044,
+      "flags": {
+        "steps/is_last": {
+          "count": 35,
+          "true_indices": [
+            33,
+            34
+          ]
+        },
+        "steps/is_first": {
+          "count": 35,
+          "true_indices": [
+            0
+          ]
+        },
+        "steps/is_terminal": {
+          "count": 35,
+          "true_indices": [
+            33,
+            34
+          ]
+        }
+      }
+    }
+  ]
+}

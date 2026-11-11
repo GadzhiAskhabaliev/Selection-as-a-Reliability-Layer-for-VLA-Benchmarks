@@ -61,3 +61,19 @@ artifacts/**
 !artifacts/overnight_motion/nyu_door/
 !artifacts/overnight_motion/nyu_door/launch_receipt.json
 !artifacts/overnight_motion/nyu_door/status.json
+
+# NYU boundary-repair evidence and versioned failed-run provenance.
+!artifacts/overnight_motion/nyu_door/data_audit/
+!artifacts/overnight_motion/nyu_door/data_audit/first_shard_record_boundaries.json
+!artifacts/overnight_motion/nyu_door/data_audit/full_split_record_boundaries.json
+!artifacts/overnight_motion/nyu_door/data_audit/real_tfds_boundary_fix_check.json
+!artifacts/overnight_motion/nyu_door/v1/
+!artifacts/overnight_motion/nyu_door/v1/output/
+!artifacts/overnight_motion/nyu_door/v1/launch_receipt.json
+!artifacts/overnight_motion/nyu_door/v1/status.json
+!artifacts/overnight_motion/nyu_door/v1/output/failure.json
+!artifacts/overnight_motion/nyu_door/v1/output/protocol.json
+!artifacts/overnight_motion/nyu_door/v2/
+!artifacts/overnight_motion/nyu_door/v2/launch_receipt.json
+!artifacts/overnight_motion/nyu_door/v2/status.json
+!artifacts/overnight_motion/jaco/verified_v1_result.json

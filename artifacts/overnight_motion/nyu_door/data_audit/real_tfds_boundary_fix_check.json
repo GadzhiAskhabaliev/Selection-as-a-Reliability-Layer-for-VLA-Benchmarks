@@ -1,0 +1,16 @@
+{
+  "status": "PASS",
+  "tensorflow": "2.15.1",
+  "tensorflow_datasets": "4.9.3",
+  "source_episodes": 2,
+  "steps": 72,
+  "raw_last_markers": 4,
+  "corrected_last_markers": 2,
+  "multinet_loader_episode_lengths": [
+    37,
+    35
+  ],
+  "image_instruction_action_sha256_before": "3ae513e69d27cc24cf2f204b6804810b4397e9734bc21f89b7f498eb7f46d9bb",
+  "image_instruction_action_sha256_after": "3ae513e69d27cc24cf2f204b6804810b4397e9734bc21f89b7f498eb7f46d9bb",
+  "no_changed_or_dropped_images_instructions_actions": true
+}

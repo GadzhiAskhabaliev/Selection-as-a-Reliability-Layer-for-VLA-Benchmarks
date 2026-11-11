@@ -1,0 +1,1342 @@
+{
+  "status": "PASS",
+  "source": "official test TFRecords, outer record per episode",
+  "shards": [
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00000-of-00008",
+      "sha256": "91d62fdf4ca615e36936674a85428e8b0e482e04e189f765c751a9697b7a2f61",
+      "bytes": 26838587,
+      "records": [
+        {
+          "record_in_shard": 0,
+          "flags": {
+            "steps/is_last": {
+              "count": 37,
+              "true_indices": [
+                35,
+                36
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 37,
+              "true_indices": [
+                35,
+                36
+              ]
+            },
+            "steps/is_first": {
+              "count": 37,
+              "true_indices": [
+                0
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 1,
+          "flags": {
+            "steps/is_last": {
+              "count": 35,
+              "true_indices": [
+                33,
+                34
+              ]
+            },
+            "steps/is_first": {
+              "count": 35,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 35,
+              "true_indices": [
+                33,
+                34
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00001-of-00008",
+      "sha256": "9ca9feda61f11d3c2999a587a5164be7aa10632ce7cd859896b63baf64f72201",
+      "bytes": 106607625,
+      "records": [
+        {
+          "record_in_shard": 0,
+          "flags": {
+            "steps/is_terminal": {
+              "count": 56,
+              "true_indices": [
+                54,
+                55
+              ]
+            },
+            "steps/is_first": {
+              "count": 56,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_last": {
+              "count": 56,
+              "true_indices": [
+                54,
+                55
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 1,
+          "flags": {
+            "steps/is_terminal": {
+              "count": 41,
+              "true_indices": [
+                39,
+                40
+              ]
+            },
+            "steps/is_first": {
+              "count": 41,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_last": {
+              "count": 41,
+              "true_indices": [
+                39,
+                40
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 2,
+          "flags": {
+            "steps/is_first": {
+              "count": 56,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_last": {
+              "count": 56,
+              "true_indices": [
+                54,
+                55
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 56,
+              "true_indices": [
+                54,
+                55
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 3,
+          "flags": {
+            "steps/is_first": {
+              "count": 37,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_last": {
+              "count": 37,
+              "true_indices": [
+                35,
+                36
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 37,
+              "true_indices": [
+                35,
+                36
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 4,
+          "flags": {
+            "steps/is_terminal": {
+              "count": 65,
+              "true_indices": [
+                63,
+                64
+              ]
+            },
+            "steps/is_first": {
+              "count": 65,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_last": {
+              "count": 65,
+              "true_indices": [
+                63,
+                64
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00002-of-00008",
+      "sha256": "ff508ae1ea0497dcd18aa8a0a144c9648212c62e6ce91cf940eec8df4e1bc014",
+      "bytes": 114514239,
+      "records": [
+        {
+          "record_in_shard": 0,
+          "flags": {
+            "steps/is_terminal": {
+              "count": 36,
+              "true_indices": [
+                34,
+                35
+              ]
+            },
+            "steps/is_first": {
+              "count": 36,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_last": {
+              "count": 36,
+              "true_indices": [
+                34,
+                35
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 1,
+          "flags": {
+            "steps/is_terminal": {
+              "count": 37,
+              "true_indices": [
+                35,
+                36
+              ]
+            },
+            "steps/is_first": {
+              "count": 37,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_last": {
+              "count": 37,
+              "true_indices": [
+                35,
+                36
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 2,
+          "flags": {
+            "steps/is_first": {
+              "count": 34,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_last": {
+              "count": 34,
+              "true_indices": [
+                32,
+                33
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 34,
+              "true_indices": [
+                32,
+                33
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 3,
+          "flags": {
+            "steps/is_first": {
+              "count": 42,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_last": {
+              "count": 42,
+              "true_indices": [
+                40,
+                41
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 42,
+              "true_indices": [
+                40,
+                41
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 4,
+          "flags": {
+            "steps/is_first": {
+              "count": 65,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 65,
+              "true_indices": [
+                63,
+                64
+              ]
+            },
+            "steps/is_last": {
+              "count": 65,
+              "true_indices": [
+                63,
+                64
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00003-of-00008",
+      "sha256": "5c414d2b6776a18db20a42cf6214836b0ffa241d3203401a8cbf740f1f217049",
+      "bytes": 134654380,
+      "records": [
+        {
+          "record_in_shard": 0,
+          "flags": {
+            "steps/is_terminal": {
+              "count": 62,
+              "true_indices": [
+                60,
+                61
+              ]
+            },
+            "steps/is_last": {
+              "count": 62,
+              "true_indices": [
+                60,
+                61
+              ]
+            },
+            "steps/is_first": {
+              "count": 62,
+              "true_indices": [
+                0
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 1,
+          "flags": {
+            "steps/is_first": {
+              "count": 38,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 38,
+              "true_indices": [
+                36,
+                37
+              ]
+            },
+            "steps/is_last": {
+              "count": 38,
+              "true_indices": [
+                36,
+                37
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 2,
+          "flags": {
+            "steps/is_last": {
+              "count": 39,
+              "true_indices": [
+                37,
+                38
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 39,
+              "true_indices": [
+                37,
+                38
+              ]
+            },
+            "steps/is_first": {
+              "count": 39,
+              "true_indices": [
+                0
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 3,
+          "flags": {
+            "steps/is_last": {
+              "count": 37,
+              "true_indices": [
+                35,
+                36
+              ]
+            },
+            "steps/is_first": {
+              "count": 37,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 37,
+              "true_indices": [
+                35,
+                36
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 4,
+          "flags": {
+            "steps/is_last": {
+              "count": 62,
+              "true_indices": [
+                60,
+                61
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 62,
+              "true_indices": [
+                60,
+                61
+              ]
+            },
+            "steps/is_first": {
+              "count": 62,
+              "true_indices": [
+                0
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 5,
+          "flags": {
+            "steps/is_terminal": {
+              "count": 36,
+              "true_indices": [
+                34,
+                35
+              ]
+            },
+            "steps/is_last": {
+              "count": 36,
+              "true_indices": [
+                34,
+                35
+              ]
+            },
+            "steps/is_first": {
+              "count": 36,
+              "true_indices": [
+                0
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 6,
+          "flags": {
+            "steps/is_first": {
+              "count": 31,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_last": {
+              "count": 31,
+              "true_indices": [
+                29,
+                30
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 31,
+              "true_indices": [
+                29,
+                30
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 7,
+          "flags": {
+            "steps/is_first": {
+              "count": 35,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 35,
+              "true_indices": [
+                33,
+                34
+              ]
+            },
+            "steps/is_last": {
+              "count": 35,
+              "true_indices": [
+                33,
+                34
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00004-of-00008",
+      "sha256": "3e6439aa59ade3ee9df1d1c21cf52ba78ff46131479e48566e42ff00122dd3aa",
+      "bytes": 184479346,
+      "records": [
+        {
+          "record_in_shard": 0,
+          "flags": {
+            "steps/is_first": {
+              "count": 37,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 37,
+              "true_indices": [
+                35,
+                36
+              ]
+            },
+            "steps/is_last": {
+              "count": 37,
+              "true_indices": [
+                35,
+                36
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 1,
+          "flags": {
+            "steps/is_first": {
+              "count": 45,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 45,
+              "true_indices": [
+                43,
+                44
+              ]
+            },
+            "steps/is_last": {
+              "count": 45,
+              "true_indices": [
+                43,
+                44
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 2,
+          "flags": {
+            "steps/is_last": {
+              "count": 33,
+              "true_indices": [
+                31,
+                32
+              ]
+            },
+            "steps/is_first": {
+              "count": 33,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 33,
+              "true_indices": [
+                31,
+                32
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 3,
+          "flags": {
+            "steps/is_first": {
+              "count": 35,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 35,
+              "true_indices": [
+                33,
+                34
+              ]
+            },
+            "steps/is_last": {
+              "count": 35,
+              "true_indices": [
+                33,
+                34
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 4,
+          "flags": {
+            "steps/is_first": {
+              "count": 62,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 62,
+              "true_indices": [
+                60,
+                61
+              ]
+            },
+            "steps/is_last": {
+              "count": 62,
+              "true_indices": [
+                60,
+                61
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 5,
+          "flags": {
+            "steps/is_terminal": {
+              "count": 38,
+              "true_indices": [
+                36,
+                37
+              ]
+            },
+            "steps/is_last": {
+              "count": 38,
+              "true_indices": [
+                36,
+                37
+              ]
+            },
+            "steps/is_first": {
+              "count": 38,
+              "true_indices": [
+                0
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 6,
+          "flags": {
+            "steps/is_terminal": {
+              "count": 38,
+              "true_indices": [
+                36,
+                37
+              ]
+            },
+            "steps/is_last": {
+              "count": 38,
+              "true_indices": [
+                36,
+                37
+              ]
+            },
+            "steps/is_first": {
+              "count": 38,
+              "true_indices": [
+                0
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 7,
+          "flags": {
+            "steps/is_first": {
+              "count": 55,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_last": {
+              "count": 55,
+              "true_indices": [
+                53,
+                54
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 55,
+              "true_indices": [
+                53,
+                54
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 8,
+          "flags": {
+            "steps/is_last": {
+              "count": 33,
+              "true_indices": [
+                31,
+                32
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 33,
+              "true_indices": [
+                31,
+                32
+              ]
+            },
+            "steps/is_first": {
+              "count": 33,
+              "true_indices": [
+                0
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 9,
+          "flags": {
+            "steps/is_terminal": {
+              "count": 60,
+              "true_indices": [
+                58,
+                59
+              ]
+            },
+            "steps/is_first": {
+              "count": 60,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_last": {
+              "count": 60,
+              "true_indices": [
+                58,
+                59
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00005-of-00008",
+      "sha256": "e1014b24808407059efd3008e5c31ba7f3ea127c2849d4138724241127c5005e",
+      "bytes": 113796447,
+      "records": [
+        {
+          "record_in_shard": 0,
+          "flags": {
+            "steps/is_last": {
+              "count": 61,
+              "true_indices": [
+                59,
+                60
+              ]
+            },
+            "steps/is_first": {
+              "count": 61,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 61,
+              "true_indices": [
+                59,
+                60
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 1,
+          "flags": {
+            "steps/is_last": {
+              "count": 55,
+              "true_indices": [
+                53,
+                54
+              ]
+            },
+            "steps/is_first": {
+              "count": 55,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 55,
+              "true_indices": [
+                53,
+                54
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 2,
+          "flags": {
+            "steps/is_last": {
+              "count": 53,
+              "true_indices": [
+                51,
+                52
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 53,
+              "true_indices": [
+                51,
+                52
+              ]
+            },
+            "steps/is_first": {
+              "count": 53,
+              "true_indices": [
+                0
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 3,
+          "flags": {
+            "steps/is_last": {
+              "count": 34,
+              "true_indices": [
+                32,
+                33
+              ]
+            },
+            "steps/is_first": {
+              "count": 34,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 34,
+              "true_indices": [
+                32,
+                33
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 4,
+          "flags": {
+            "steps/is_last": {
+              "count": 32,
+              "true_indices": [
+                30,
+                31
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 32,
+              "true_indices": [
+                30,
+                31
+              ]
+            },
+            "steps/is_first": {
+              "count": 32,
+              "true_indices": [
+                0
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 5,
+          "flags": {
+            "steps/is_last": {
+              "count": 36,
+              "true_indices": [
+                34,
+                35
+              ]
+            },
+            "steps/is_first": {
+              "count": 36,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 36,
+              "true_indices": [
+                34,
+                35
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00006-of-00008",
+      "sha256": "dcf96432f45f5ac755cbf8936ef6ff82695e59110e7c2222ae7d49992c86b36f",
+      "bytes": 83012560,
+      "records": [
+        {
+          "record_in_shard": 0,
+          "flags": {
+            "steps/is_first": {
+              "count": 63,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 63,
+              "true_indices": [
+                61,
+                62
+              ]
+            },
+            "steps/is_last": {
+              "count": 63,
+              "true_indices": [
+                61,
+                62
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 1,
+          "flags": {
+            "steps/is_first": {
+              "count": 66,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_last": {
+              "count": 66,
+              "true_indices": [
+                64,
+                65
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 66,
+              "true_indices": [
+                64,
+                65
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 2,
+          "flags": {
+            "steps/is_last": {
+              "count": 36,
+              "true_indices": [
+                34,
+                35
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 36,
+              "true_indices": [
+                34,
+                35
+              ]
+            },
+            "steps/is_first": {
+              "count": 36,
+              "true_indices": [
+                0
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 3,
+          "flags": {
+            "steps/is_terminal": {
+              "count": 38,
+              "true_indices": [
+                36,
+                37
+              ]
+            },
+            "steps/is_first": {
+              "count": 38,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_last": {
+              "count": 38,
+              "true_indices": [
+                36,
+                37
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00007-of-00008",
+      "sha256": "ed2ab275e871e464522e58a20fbeccac2e72136f415e5c41adc80fe940534ca7",
+      "bytes": 140911916,
+      "records": [
+        {
+          "record_in_shard": 0,
+          "flags": {
+            "steps/is_terminal": {
+              "count": 32,
+              "true_indices": [
+                30,
+                31
+              ]
+            },
+            "steps/is_last": {
+              "count": 32,
+              "true_indices": [
+                30,
+                31
+              ]
+            },
+            "steps/is_first": {
+              "count": 32,
+              "true_indices": [
+                0
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 1,
+          "flags": {
+            "steps/is_last": {
+              "count": 42,
+              "true_indices": [
+                40,
+                41
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 42,
+              "true_indices": [
+                40,
+                41
+              ]
+            },
+            "steps/is_first": {
+              "count": 42,
+              "true_indices": [
+                0
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 2,
+          "flags": {
+            "steps/is_last": {
+              "count": 39,
+              "true_indices": [
+                37,
+                38
+              ]
+            },
+            "steps/is_first": {
+              "count": 39,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 39,
+              "true_indices": [
+                37,
+                38
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 3,
+          "flags": {
+            "steps/is_first": {
+              "count": 65,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 65,
+              "true_indices": [
+                63,
+                64
+              ]
+            },
+            "steps/is_last": {
+              "count": 65,
+              "true_indices": [
+                63,
+                64
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 4,
+          "flags": {
+            "steps/is_last": {
+              "count": 36,
+              "true_indices": [
+                34,
+                35
+              ]
+            },
+            "steps/is_first": {
+              "count": 36,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 36,
+              "true_indices": [
+                34,
+                35
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 5,
+          "flags": {
+            "steps/is_first": {
+              "count": 61,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 61,
+              "true_indices": [
+                59,
+                60
+              ]
+            },
+            "steps/is_last": {
+              "count": 61,
+              "true_indices": [
+                59,
+                60
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 6,
+          "flags": {
+            "steps/is_first": {
+              "count": 33,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_last": {
+              "count": 33,
+              "true_indices": [
+                31,
+                32
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 33,
+              "true_indices": [
+                31,
+                32
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 7,
+          "flags": {
+            "steps/is_first": {
+              "count": 55,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 55,
+              "true_indices": [
+                53,
+                54
+              ]
+            },
+            "steps/is_last": {
+              "count": 55,
+              "true_indices": [
+                53,
+                54
+              ]
+            }
+          }
+        },
+        {
+          "record_in_shard": 8,
+          "flags": {
+            "steps/is_first": {
+              "count": 55,
+              "true_indices": [
+                0
+              ]
+            },
+            "steps/is_terminal": {
+              "count": 55,
+              "true_indices": [
+                53,
+                54
+              ]
+            },
+            "steps/is_last": {
+              "count": 55,
+              "true_indices": [
+                53,
+                54
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "episode_lengths": [
+    37,
+    35,
+    56,
+    41,
+    56,
+    37,
+    65,
+    36,
+    37,
+    34,
+    42,
+    65,
+    62,
+    38,
+    39,
+    37,
+    62,
+    36,
+    31,
+    35,
+    37,
+    45,
+    33,
+    35,
+    62,
+    38,
+    38,
+    55,
+    33,
+    60,
+    61,
+    55,
+    53,
+    34,
+    32,
+    36,
+    63,
+    66,
+    36,
+    38,
+    32,
+    42,
+    39,
+    65,
+    36,
+    61,
+    33,
+    55,
+    55
+  ],
+  "num_episodes": 49,
+  "num_steps": 2209,
+  "raw_is_last_count": 98,
+  "first_flags_valid": true
+}
