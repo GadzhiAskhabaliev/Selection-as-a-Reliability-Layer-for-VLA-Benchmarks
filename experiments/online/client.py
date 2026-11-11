@@ -7,11 +7,12 @@ import numpy as np
 import requests
 
 
-def query_vla(port, instruction, image_path, n, temperature):
+def query_vla(port, instruction, image_path, n, temperature, top_k=0):
     """Return (token ids [n, 7], actions [n, 7], server GPU seconds, client wall seconds)."""
     start = time.perf_counter()
     response = requests.post(f'http://127.0.0.1:{port}/sample', timeout=600, data=json_numpy.dumps(
-        {'instruction': instruction, 'image_path': image_path, 'n': n, 'temperature': temperature}))
+        {'instruction': instruction, 'image_path': image_path, 'n': n, 'temperature': temperature,
+         'top_k': top_k}))
     response.raise_for_status()
     body = json_numpy.loads(response.text)
     return np.array(body['output_ids']), np.array(body['actions']), body['seconds'], time.perf_counter() - start

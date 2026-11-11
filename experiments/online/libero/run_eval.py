@@ -32,6 +32,8 @@ def parse_args():
     p.add_argument('--n-pool', type=int, default=8)
     p.add_argument('--task-ids', type=int, nargs='+', default=list(range(10)))
     p.add_argument('--trials', type=int, default=50, help='initial states per task, in benchmark order')
+    p.add_argument('--first-trial', type=int, default=0, help='index of the first initial state')
+    p.add_argument('--top-k', type=int, default=0, help='sampling top-k; 0 = full vocabulary')
     p.add_argument('--seed', type=int, default=7)
     p.add_argument('--out', type=Path, required=True)
     p.add_argument('--norm-stats', type=Path, required=True, help='libero_10 action stats JSON')
@@ -83,7 +85,7 @@ def main():
         env = OffScreenRenderEnv(bddl_file_name=os.path.join(
             get_libero_path('bddl_files'), task.problem_folder, task.bddl_file), camera_heights=256, camera_widths=256)
         env.seed(0)
-        for trial in range(args.trials):
+        for trial in range(args.first_trial, args.first_trial + args.trials):
             if (task_id, trial) in done:
                 continue
             rng = np.random.default_rng([args.seed, task_id, trial])
@@ -97,7 +99,8 @@ def main():
                         continue
                     path = policy_image(obs, image_path)
                     policy_start = time.perf_counter()
-                    ids, actions, gpu_s, sample_s = query_vla(args.vla_port, task.language, path, n, temperature)
+                    ids, actions, gpu_s, sample_s = query_vla(args.vla_port, task.language, path, n, temperature,
+                                                              args.top_k)
                     record = {'task_id': task_id, 'trial': trial, 't': t, 'sample_s': sample_s, 'vla_gpu_s': gpu_s}
                     if args.method in POOL_METHODS:
                         select_start = time.perf_counter()
