@@ -6,8 +6,8 @@ implementation so that every selection method draws from the same model code.
 The upstream `generate` path rejects batch size > 1, so candidates are decoded
 with an explicit loop: one multimodal prefill (vision encoded once), the KV cache
 replicated to n rows, then seven batched decode steps of the Llama backbone.
-temperature == 0 is greedy; otherwise ancestral sampling, by default over the full
-vocabulary (top_k=0), matching SGLang's defaults used by RoboMonkey. EOS is masked so
+temperature == 0 is greedy; otherwise ancestral sampling over the full vocabulary
+(no top-k / top-p), matching SGLang's defaults used by RoboMonkey. EOS is masked so
 that exactly seven tokens are produced; out-of-range tokens are returned unchanged
 and filtered by the client, as upstream does. At start-up the greedy loop is checked
 token-for-token against the reference `generate` call.
@@ -66,30 +66,27 @@ def _repeat_cache(cache, n):
     return tuple((k.repeat_interleave(n, 0), v.repeat_interleave(n, 0)) for k, v in legacy)
 
 
-def _pick(logits, temperature, top_k=0):
+def _pick(logits, temperature):
     logits = logits.float()
     logits[:, EOS_ID] = -float('inf')
     if temperature <= 0:
         return logits.argmax(dim=-1)
-    if top_k > 0:
-        kth = torch.topk(logits, top_k, dim=-1).values[:, -1:]
-        logits = logits.masked_fill(logits < kth, -float('inf'))
     probs = torch.softmax(logits / temperature, dim=-1)
     return torch.multinomial(probs, 1, generator=state['generator']).squeeze(-1)
 
 
 @torch.inference_mode()
-def sample(instruction, image_path, n, temperature, top_k=0):
+def sample(instruction, image_path, n, temperature):
     model = state['model']
     input_ids, pixel_values = prepare(instruction, image_path)
     out = model(input_ids=input_ids, pixel_values=pixel_values, use_cache=True)
     cache = _repeat_cache(out.past_key_values, n)
-    token = _pick(out.logits[:, -1].expand(n, -1).clone(), temperature, top_k)
+    token = _pick(out.logits[:, -1].expand(n, -1).clone(), temperature)
     tokens = [token]
     for _ in range(ACTION_DIM - 1):
         out = model.language_model(input_ids=token[:, None], past_key_values=cache, use_cache=True)
         cache = out.past_key_values
-        token = _pick(out.logits[:, -1], temperature, top_k)
+        token = _pick(out.logits[:, -1], temperature)
         tokens.append(token)
     return torch.stack(tokens, dim=1).cpu().numpy()
 
@@ -110,8 +107,7 @@ async def sample_endpoint(request: Request):
     with lock:
         torch.cuda.synchronize()
         start = time.perf_counter()
-        ids = sample(body['instruction'], body['image_path'], int(body['n']), float(body['temperature']),
-                     int(body.get('top_k', 0)))
+        ids = sample(body['instruction'], body['image_path'], int(body['n']), float(body['temperature']))
         torch.cuda.synchronize()
         seconds = time.perf_counter() - start
     return {'output_ids': ids.tolist(), 'actions': tokens_to_actions(ids).tolist(), 'seconds': seconds}
