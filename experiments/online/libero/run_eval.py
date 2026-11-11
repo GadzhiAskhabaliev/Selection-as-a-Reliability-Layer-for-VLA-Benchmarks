@@ -7,8 +7,10 @@ JPEG round-trip + lanczos resize to 224, centre crop 0.9, binarized and inverted
 The policy runs in ../vla_server.py; the image is passed losslessly (PNG).
 """
 import argparse
+import faulthandler
 import json
 import os
+import signal
 import sys
 import time
 from pathlib import Path
@@ -61,6 +63,7 @@ def to_env_action(action):
 
 def main():
     args = parse_args()
+    faulthandler.register(signal.SIGUSR1, all_threads=True)
     from libero.libero import benchmark, get_libero_path
     from libero.libero.envs import OffScreenRenderEnv
 
