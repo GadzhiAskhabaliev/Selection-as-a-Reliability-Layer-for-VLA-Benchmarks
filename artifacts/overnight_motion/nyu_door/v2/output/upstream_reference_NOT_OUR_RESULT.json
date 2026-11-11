@@ -1,0 +1,8 @@
+{
+  "action_success_rate": 0.0,
+  "total_dataset_amse": 267.16954471441414,
+  "eval_time": 1211.6341559886932,
+  "num_timesteps": 2209,
+  "avg_dataset_amse": 0.12094592336551116,
+  "normalized_amse": 0.30438891622746617
+}

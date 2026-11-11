@@ -1,5 +1,5 @@
 {
-  "description": "Immutable baseline v3 and CS pilot v2 archive; paths relative to repository root.",
+  "description": "Immutable baseline v3, CS pilot v2, motion Jaco v1 and NYU v2 result archives; paths relative to repository root.",
   "sha256": {
     "artifacts/baseline_audit/current/output/environment-freeze.txt": "cd4006c1b864e09892c6b8606a7f8c40554657fa52d64c393982e79674d6db9d",
     "artifacts/baseline_audit/current/output/manifest.json": "ed8dfc4c53f361720aff9b011a0d7b256d30268556d54ea47f2495b224bb6f54",
@@ -25,6 +25,27 @@
     "artifacts/cs_pilot/v2/output/result.json": "e2d6955fa1cafad382aa1ab70c5f2af13423b2019ac1afd436d5a6c1da8b158b",
     "artifacts/cs_pilot/v2/output/upstream_reference_NOT_OUR_RESULT.json": "2eea3ad70e70fda05309902b4128826df9249e73a917774e1dbc0d2101175234",
     "artifacts/cs_pilot/v2/status.json": "0428ad6fe1e60fd39822d0226b486df4934de98138b4599d20d212e426885a94",
-    "artifacts/cs_pilot/verified_v2_result.json": "50572cd38cdaab8451ec3dbcc89fcd76d5bb41dff96dbfcafc50a4aa711c8985"
+    "artifacts/cs_pilot/verified_v2_result.json": "50572cd38cdaab8451ec3dbcc89fcd76d5bb41dff96dbfcafc50a4aa711c8985",
+    "artifacts/overnight_motion/jaco/output/bundle_sources.json": "f9c3dcf0e151f9f9cc88174821019b9b1b1ba5f5e7356f0b97bb3fe5109f54fc",
+    "artifacts/overnight_motion/jaco/output/candidates.jsonl": "5faeec237fcd00dd6d790144b777f4c8254b1de52569de4fa297b6f70bad19bb",
+    "artifacts/overnight_motion/jaco/output/environment-freeze.txt": "a36d6b9a8083ef98045715db7e588d8a339d8d887c7d647df8a013f539ff9dad",
+    "artifacts/overnight_motion/jaco/output/episode_errors.json": "f1d705e01b40f61d1f3e5eb1a9dd0f7a180013f5d803b6be06e0f974172a1897",
+    "artifacts/overnight_motion/jaco/output/manifest.json": "81e4ea1a594dff94068d0fa5aab438e7842f2a11eff1299d96c993e9db226e89",
+    "artifacts/overnight_motion/jaco/output/protocol.json": "6ff5e9367c0216078e83af3e87ec346a3c3023379ebdf48fbbf72ae83fb2206b",
+    "artifacts/overnight_motion/jaco/output/result.json": "d7a62d261e10dc31f418524b20d826b528125d1f8b24f6ea43907b70bf962c98",
+    "artifacts/overnight_motion/jaco/output/startup_checks.json": "f1c409b90edd42776a2e49070f23073ad580b9cf13fba914a3187ee55523ac7b",
+    "artifacts/overnight_motion/jaco/output/upstream_reference_NOT_OUR_RESULT.json": "2eea3ad70e70fda05309902b4128826df9249e73a917774e1dbc0d2101175234",
+    "artifacts/overnight_motion/jaco/verified_result.json": "0fd6a8563a4ef749271d55691b199585c57404151b6dd315b8c64737805a67e4",
+    "artifacts/overnight_motion/nyu_door/v2/output/bundle_sources.json": "1c48fd36f36f652a72835cd7bfee128f96cd9201f7e8d71988f757e459c1b554",
+    "artifacts/overnight_motion/nyu_door/v2/output/candidates.jsonl": "b86b95c1b4f4683add85cf47280831c9ffa34e034ec293410a9eac76c90c7ca6",
+    "artifacts/overnight_motion/nyu_door/v2/output/data_boundary_audit.json": "59168a649fe6def2af8c9c9512a155cc942c6b1ef9a5172c2ad6f837a39677d9",
+    "artifacts/overnight_motion/nyu_door/v2/output/environment-freeze.txt": "a36d6b9a8083ef98045715db7e588d8a339d8d887c7d647df8a013f539ff9dad",
+    "artifacts/overnight_motion/nyu_door/v2/output/episode_errors.json": "7622dcebd48970933c786daf9e19322f6977fb05bb5471f15c302b3868106789",
+    "artifacts/overnight_motion/nyu_door/v2/output/manifest.json": "4a81872975dd87bdf04491c504522a862e4200fe1c7f1e8d62fbfc3acc0f5816",
+    "artifacts/overnight_motion/nyu_door/v2/output/protocol.json": "d2cf1f176c94750e7be4b99ae165b10eaca323c90d378370b9d0ed77fa4ac49e",
+    "artifacts/overnight_motion/nyu_door/v2/output/result.json": "b94aeba47942dc56bff35780a9fe8ca9c2fe762eadc32ac41b579f015e41b43e",
+    "artifacts/overnight_motion/nyu_door/v2/output/startup_checks.json": "f1c409b90edd42776a2e49070f23073ad580b9cf13fba914a3187ee55523ac7b",
+    "artifacts/overnight_motion/nyu_door/v2/output/upstream_reference_NOT_OUR_RESULT.json": "a79d2a901f4d1ad4fb15bae547038e97cf863e3cb4edf24537e2e18313718b10",
+    "artifacts/overnight_motion/nyu_door/v2/verified_result.json": "eb81389ea2dfd62c1c93c7501dfc08a0753b00bc2f6cbaff308a882574d7e8d1"
   }
 }

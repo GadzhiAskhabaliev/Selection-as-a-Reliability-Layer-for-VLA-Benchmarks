@@ -1,0 +1,265 @@
+{
+  "status": "PASS",
+  "dataset": "nyu_door_opening_surprising_effectiveness",
+  "complete_episodes": 49,
+  "num_timesteps": 2209,
+  "candidate_actions": 17672,
+  "checks": [
+    "coverage_and_boundaries",
+    "source_hashes_and_protocol",
+    "action_token_decoding",
+    "normalization",
+    "full_and_motion_cs_medoid_geometry",
+    "random_and_pool_seeds",
+    "hybrid_gripper_and_action_conversion",
+    "all_step_and_aggregate_errors",
+    "episode_totals_and_paired_bootstrap"
+  ],
+  "paired_greedy_matches_original_baseline": null,
+  "amse_change_vs_greedy_percent": -0.0012948040569060737,
+  "motion_mse_change_vs_greedy_percent": -0.47342217855560476,
+  "namse_change_vs_greedy_percent": 0.03697297415550249,
+  "methods": {
+    "greedy": {
+      "num_timesteps": 2209,
+      "amse": 0.12100721956266305,
+      "namse": 0.30568900802299537,
+      "namse_defined": true,
+      "min_mse": 0.0008663284390440255,
+      "max_mse": 0.3938830479495518,
+      "delta_amse_vs_greedy": 0.0,
+      "coordinate_mse": [
+        0.8447338637418792,
+        5.289595572096429e-05,
+        0.0015673030276851505,
+        0.00015579052012855982,
+        0.00029350285979473775,
+        0.00020815158375567754,
+        3.902924967862254e-05
+      ],
+      "gripper_mse": 0.8447338637418792,
+      "motion_mse": 0.00038611219946061874
+    },
+    "sample1": {
+      "num_timesteps": 2209,
+      "amse": 0.12093221224386018,
+      "namse": 0.2950268882648729,
+      "namse_defined": true,
+      "min_mse": 0.0004667762689438828,
+      "max_mse": 0.4087869693313572,
+      "delta_amse_vs_greedy": -7.500731880287492e-05,
+      "coordinate_mse": [
+        0.8442097541506236,
+        5.279101543989526e-05,
+        0.0015656858462908326,
+        0.000155692362394232,
+        0.00029578363941403375,
+        0.00020667282946379458,
+        3.9105863394658556e-05
+      ],
+      "gripper_mse": 0.8442097541506236,
+      "motion_mse": 0.00038595525939957447
+    },
+    "random8": {
+      "num_timesteps": 2209,
+      "amse": 0.12084209071983125,
+      "namse": 0.29500810536193944,
+      "namse_defined": true,
+      "min_mse": 0.0003263890918488328,
+      "max_mse": 0.4088429668995143,
+      "delta_amse_vs_greedy": -0.00016512884283180485,
+      "coordinate_mse": [
+        0.8435799715955866,
+        5.1945923968801905e-05,
+        0.0015641705961628295,
+        0.00016049036659279405,
+        0.0002940095312720804,
+        0.0002049983432312799,
+        3.904868200625364e-05
+      ],
+      "gripper_mse": 0.8435799715955866,
+      "motion_mse": 0.0003857772405390066
+    },
+    "medoid8": {
+      "num_timesteps": 2209,
+      "amse": 0.12093073228665732,
+      "namse": 0.3064937894749867,
+      "namse_defined": true,
+      "min_mse": 0.0003263890918488328,
+      "max_mse": 0.39382324722198975,
+      "delta_amse_vs_greedy": -7.648727600573224e-05,
+      "coordinate_mse": [
+        0.8442112934996555,
+        5.0954153803351233e-05,
+        0.0015601652174220082,
+        0.00015437778408109565,
+        0.00029297087514979777,
+        0.00020673074279121267,
+        3.8633733697365816e-05
+      ],
+      "gripper_mse": 0.8442112934996555,
+      "motion_mse": 0.0003839720844908052
+    },
+    "cs8": {
+      "num_timesteps": 2209,
+      "amse": 0.1209061462999792,
+      "namse": 0.30643130870501323,
+      "namse_defined": true,
+      "min_mse": 0.0003263890918488328,
+      "max_mse": 0.39382324722198975,
+      "delta_amse_vs_greedy": -0.00010107326268385397,
+      "coordinate_mse": [
+        0.8440375831328102,
+        5.106500630110889e-05,
+        0.00156128042734333,
+        0.00015473400546406297,
+        0.0002928242357093986,
+        0.0002069819168359929,
+        3.8555375389333516e-05
+      ],
+      "gripper_mse": 0.8440375831328102,
+      "motion_mse": 0.00038424016117387117
+    },
+    "sample1_greedy_gripper": {
+      "num_timesteps": 2209,
+      "amse": 0.12100708504261087,
+      "namse": 0.3059136172275209,
+      "namse_defined": true,
+      "min_mse": 0.0007841062283761068,
+      "max_mse": 0.39378059949928546,
+      "delta_amse_vs_greedy": -1.3452005218073104e-07,
+      "coordinate_mse": [
+        0.8447338637418792,
+        5.279101543989526e-05,
+        0.0015656858462908326,
+        0.000155692362394232,
+        0.00029578363941403375,
+        0.00020667282946379458,
+        3.9105863394658556e-05
+      ],
+      "gripper_mse": 0.8447338637418792,
+      "motion_mse": 0.00038595525939957447
+    },
+    "random8_greedy_gripper": {
+      "num_timesteps": 2209,
+      "amse": 0.12100693245501587,
+      "namse": 0.3056975561219254,
+      "namse_defined": true,
+      "min_mse": 0.0008815282525933661,
+      "max_mse": 0.39383659706744256,
+      "delta_amse_vs_greedy": -2.8710764718442583e-07,
+      "coordinate_mse": [
+        0.8447338637418792,
+        5.1945923968801905e-05,
+        0.0015641705961628295,
+        0.00016049036659279405,
+        0.0002940095312720804,
+        0.0002049983432312799,
+        3.904868200625364e-05
+      ],
+      "gripper_mse": 0.8447338637418792,
+      "motion_mse": 0.0003857772405390066
+    },
+    "motion_medoid8_greedy_gripper": {
+      "num_timesteps": 2209,
+      "amse": 0.12100545425264309,
+      "namse": 0.30580152523854076,
+      "namse_defined": true,
+      "min_mse": 0.0008264273095109403,
+      "max_mse": 0.39382324722198975,
+      "delta_amse_vs_greedy": -1.7653100199688243e-06,
+      "coordinate_mse": [
+        0.8447338637418792,
+        5.0951469203017735e-05,
+        0.001560541959303659,
+        0.000154375731677422,
+        0.0002929997166761971,
+        0.00020681964486946296,
+        3.862750489230178e-05
+      ],
+      "gripper_mse": 0.8447338637418792,
+      "motion_mse": 0.00038405267110367677
+    },
+    "motion_cs8_greedy_gripper": {
+      "num_timesteps": 2209,
+      "amse": 0.121005652756275,
+      "namse": 0.30580203034092795,
+      "namse_defined": true,
+      "min_mse": 0.0008264273095109403,
+      "max_mse": 0.39382324722198975,
+      "delta_amse_vs_greedy": -1.5668063880480698e-06,
+      "coordinate_mse": [
+        0.8447338637418792,
+        5.105396825727436e-05,
+        0.0015615133898828789,
+        0.00015469600045262807,
+        0.000292845260994841,
+        0.00020703515081416882,
+        3.856178164378868e-05
+      ],
+      "gripper_mse": 0.8447338637418792,
+      "motion_mse": 0.0003842842586742633
+    }
+  },
+  "paired_contrasts": {
+    "motion_cs8_greedy_gripper_minus_greedy": {
+      "delta_amse": -1.5668063880480698e-06,
+      "95pct_episode_bootstrap": [
+        -3.926901292403313e-06,
+        8.414525899626628e-07
+      ],
+      "resamples": 2000
+    },
+    "motion_cs8_greedy_gripper_minus_cs8": {
+      "delta_amse": 9.95064562958059e-05,
+      "95pct_episode_bootstrap": [
+        -4.684540417511926e-05,
+        0.0002582084024580578
+      ],
+      "resamples": 2000
+    },
+    "motion_cs8_greedy_gripper_minus_sample1_greedy_gripper": {
+      "delta_amse": -1.4322863358673388e-06,
+      "95pct_episode_bootstrap": [
+        -3.6386992712523286e-06,
+        6.598263484557417e-07
+      ],
+      "resamples": 2000
+    },
+    "motion_cs8_greedy_gripper_minus_random8_greedy_gripper": {
+      "delta_amse": -1.279698740863644e-06,
+      "95pct_episode_bootstrap": [
+        -3.8083939126279985e-06,
+        9.569690618708543e-07
+      ],
+      "resamples": 2000
+    },
+    "motion_cs8_greedy_gripper_minus_motion_medoid8_greedy_gripper": {
+      "delta_amse": 1.9850363192075449e-07,
+      "95pct_episode_bootstrap": [
+        -2.947511545100838e-07,
+        6.890951463624592e-07
+      ],
+      "resamples": 2000
+    }
+  },
+  "evaluation_hours": 3.6996579195711106,
+  "diagnostics": {
+    "greedy_seconds": 1489.1493011979996,
+    "pool_seconds": 11728.978692500017,
+    "selection_seconds": 0.5475535300033698,
+    "motion_unique_sum": 17656,
+    "motion_collapsed_pools": 0,
+    "motion_cs_medoid_same_index": 2028,
+    "valid_edge_token_count": 3,
+    "candidate_actions": 17672,
+    "startup_checks_passed": 3,
+    "cs_medoid_agreement_percent": 91.80624717066546,
+    "mean_unique_motion_candidates": 7.992756903576279,
+    "pool_to_greedy_latency_ratio": 7.876294662371476
+  },
+  "candidate_log_sha256": "b86b95c1b4f4683add85cf47280831c9ffa34e034ec293410a9eac76c90c7ca6",
+  "limitations": "One sampling seed; offline only; no online success-rate evidence.",
+  "greedy_amse_vs_upstream_percent": 0.05068066409039673,
+  "greedy_namse_vs_upstream_percent": 0.42711535348995966
+}

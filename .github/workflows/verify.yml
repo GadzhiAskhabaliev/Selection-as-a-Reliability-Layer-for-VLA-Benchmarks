@@ -17,6 +17,7 @@ jobs:
       - run: python scripts/verify_artifacts.py
       - run: python scripts/verify_baseline_results.py
       - run: python scripts/verify_cs_results.py
+      - run: python scripts/verify_motion_results.py
       - name: Check generated Kaggle bundles
         run: |
           python scripts/build_cs_kernel.py

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "observations_checked": 3,
+  "checks": [
+    "upstream_greedy_parity",
+    "independent_numpy_geometry",
+    "greedy_gripper_preserved"
+  ]
+}

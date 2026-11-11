@@ -1,0 +1,799 @@
+{
+  "status": "PASS",
+  "boundary_policy": "tfds_outer_record_v2",
+  "num_source_episodes": 49,
+  "num_source_steps": 2209,
+  "raw_is_last_count": 98,
+  "effective_is_last_count": 49,
+  "interior_is_last_markers": 49,
+  "dropped_steps": 0,
+  "episode_lengths": [
+    37,
+    35,
+    56,
+    41,
+    56,
+    37,
+    65,
+    36,
+    37,
+    34,
+    42,
+    65,
+    62,
+    38,
+    39,
+    37,
+    62,
+    36,
+    31,
+    35,
+    37,
+    45,
+    33,
+    35,
+    62,
+    38,
+    38,
+    55,
+    33,
+    60,
+    61,
+    55,
+    53,
+    34,
+    32,
+    36,
+    63,
+    66,
+    36,
+    38,
+    32,
+    42,
+    39,
+    65,
+    36,
+    61,
+    33,
+    55,
+    55
+  ],
+  "records": [
+    {
+      "episode": 0,
+      "num_steps": 37,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        35,
+        36
+      ],
+      "is_terminal_indices": [
+        35,
+        36
+      ]
+    },
+    {
+      "episode": 1,
+      "num_steps": 35,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        33,
+        34
+      ],
+      "is_terminal_indices": [
+        33,
+        34
+      ]
+    },
+    {
+      "episode": 2,
+      "num_steps": 56,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        54,
+        55
+      ],
+      "is_terminal_indices": [
+        54,
+        55
+      ]
+    },
+    {
+      "episode": 3,
+      "num_steps": 41,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        39,
+        40
+      ],
+      "is_terminal_indices": [
+        39,
+        40
+      ]
+    },
+    {
+      "episode": 4,
+      "num_steps": 56,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        54,
+        55
+      ],
+      "is_terminal_indices": [
+        54,
+        55
+      ]
+    },
+    {
+      "episode": 5,
+      "num_steps": 37,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        35,
+        36
+      ],
+      "is_terminal_indices": [
+        35,
+        36
+      ]
+    },
+    {
+      "episode": 6,
+      "num_steps": 65,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        63,
+        64
+      ],
+      "is_terminal_indices": [
+        63,
+        64
+      ]
+    },
+    {
+      "episode": 7,
+      "num_steps": 36,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        34,
+        35
+      ],
+      "is_terminal_indices": [
+        34,
+        35
+      ]
+    },
+    {
+      "episode": 8,
+      "num_steps": 37,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        35,
+        36
+      ],
+      "is_terminal_indices": [
+        35,
+        36
+      ]
+    },
+    {
+      "episode": 9,
+      "num_steps": 34,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        32,
+        33
+      ],
+      "is_terminal_indices": [
+        32,
+        33
+      ]
+    },
+    {
+      "episode": 10,
+      "num_steps": 42,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        40,
+        41
+      ],
+      "is_terminal_indices": [
+        40,
+        41
+      ]
+    },
+    {
+      "episode": 11,
+      "num_steps": 65,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        63,
+        64
+      ],
+      "is_terminal_indices": [
+        63,
+        64
+      ]
+    },
+    {
+      "episode": 12,
+      "num_steps": 62,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        60,
+        61
+      ],
+      "is_terminal_indices": [
+        60,
+        61
+      ]
+    },
+    {
+      "episode": 13,
+      "num_steps": 38,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        36,
+        37
+      ],
+      "is_terminal_indices": [
+        36,
+        37
+      ]
+    },
+    {
+      "episode": 14,
+      "num_steps": 39,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        37,
+        38
+      ],
+      "is_terminal_indices": [
+        37,
+        38
+      ]
+    },
+    {
+      "episode": 15,
+      "num_steps": 37,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        35,
+        36
+      ],
+      "is_terminal_indices": [
+        35,
+        36
+      ]
+    },
+    {
+      "episode": 16,
+      "num_steps": 62,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        60,
+        61
+      ],
+      "is_terminal_indices": [
+        60,
+        61
+      ]
+    },
+    {
+      "episode": 17,
+      "num_steps": 36,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        34,
+        35
+      ],
+      "is_terminal_indices": [
+        34,
+        35
+      ]
+    },
+    {
+      "episode": 18,
+      "num_steps": 31,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        29,
+        30
+      ],
+      "is_terminal_indices": [
+        29,
+        30
+      ]
+    },
+    {
+      "episode": 19,
+      "num_steps": 35,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        33,
+        34
+      ],
+      "is_terminal_indices": [
+        33,
+        34
+      ]
+    },
+    {
+      "episode": 20,
+      "num_steps": 37,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        35,
+        36
+      ],
+      "is_terminal_indices": [
+        35,
+        36
+      ]
+    },
+    {
+      "episode": 21,
+      "num_steps": 45,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        43,
+        44
+      ],
+      "is_terminal_indices": [
+        43,
+        44
+      ]
+    },
+    {
+      "episode": 22,
+      "num_steps": 33,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        31,
+        32
+      ],
+      "is_terminal_indices": [
+        31,
+        32
+      ]
+    },
+    {
+      "episode": 23,
+      "num_steps": 35,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        33,
+        34
+      ],
+      "is_terminal_indices": [
+        33,
+        34
+      ]
+    },
+    {
+      "episode": 24,
+      "num_steps": 62,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        60,
+        61
+      ],
+      "is_terminal_indices": [
+        60,
+        61
+      ]
+    },
+    {
+      "episode": 25,
+      "num_steps": 38,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        36,
+        37
+      ],
+      "is_terminal_indices": [
+        36,
+        37
+      ]
+    },
+    {
+      "episode": 26,
+      "num_steps": 38,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        36,
+        37
+      ],
+      "is_terminal_indices": [
+        36,
+        37
+      ]
+    },
+    {
+      "episode": 27,
+      "num_steps": 55,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        53,
+        54
+      ],
+      "is_terminal_indices": [
+        53,
+        54
+      ]
+    },
+    {
+      "episode": 28,
+      "num_steps": 33,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        31,
+        32
+      ],
+      "is_terminal_indices": [
+        31,
+        32
+      ]
+    },
+    {
+      "episode": 29,
+      "num_steps": 60,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        58,
+        59
+      ],
+      "is_terminal_indices": [
+        58,
+        59
+      ]
+    },
+    {
+      "episode": 30,
+      "num_steps": 61,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        59,
+        60
+      ],
+      "is_terminal_indices": [
+        59,
+        60
+      ]
+    },
+    {
+      "episode": 31,
+      "num_steps": 55,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        53,
+        54
+      ],
+      "is_terminal_indices": [
+        53,
+        54
+      ]
+    },
+    {
+      "episode": 32,
+      "num_steps": 53,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        51,
+        52
+      ],
+      "is_terminal_indices": [
+        51,
+        52
+      ]
+    },
+    {
+      "episode": 33,
+      "num_steps": 34,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        32,
+        33
+      ],
+      "is_terminal_indices": [
+        32,
+        33
+      ]
+    },
+    {
+      "episode": 34,
+      "num_steps": 32,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        30,
+        31
+      ],
+      "is_terminal_indices": [
+        30,
+        31
+      ]
+    },
+    {
+      "episode": 35,
+      "num_steps": 36,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        34,
+        35
+      ],
+      "is_terminal_indices": [
+        34,
+        35
+      ]
+    },
+    {
+      "episode": 36,
+      "num_steps": 63,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        61,
+        62
+      ],
+      "is_terminal_indices": [
+        61,
+        62
+      ]
+    },
+    {
+      "episode": 37,
+      "num_steps": 66,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        64,
+        65
+      ],
+      "is_terminal_indices": [
+        64,
+        65
+      ]
+    },
+    {
+      "episode": 38,
+      "num_steps": 36,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        34,
+        35
+      ],
+      "is_terminal_indices": [
+        34,
+        35
+      ]
+    },
+    {
+      "episode": 39,
+      "num_steps": 38,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        36,
+        37
+      ],
+      "is_terminal_indices": [
+        36,
+        37
+      ]
+    },
+    {
+      "episode": 40,
+      "num_steps": 32,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        30,
+        31
+      ],
+      "is_terminal_indices": [
+        30,
+        31
+      ]
+    },
+    {
+      "episode": 41,
+      "num_steps": 42,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        40,
+        41
+      ],
+      "is_terminal_indices": [
+        40,
+        41
+      ]
+    },
+    {
+      "episode": 42,
+      "num_steps": 39,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        37,
+        38
+      ],
+      "is_terminal_indices": [
+        37,
+        38
+      ]
+    },
+    {
+      "episode": 43,
+      "num_steps": 65,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        63,
+        64
+      ],
+      "is_terminal_indices": [
+        63,
+        64
+      ]
+    },
+    {
+      "episode": 44,
+      "num_steps": 36,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        34,
+        35
+      ],
+      "is_terminal_indices": [
+        34,
+        35
+      ]
+    },
+    {
+      "episode": 45,
+      "num_steps": 61,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        59,
+        60
+      ],
+      "is_terminal_indices": [
+        59,
+        60
+      ]
+    },
+    {
+      "episode": 46,
+      "num_steps": 33,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        31,
+        32
+      ],
+      "is_terminal_indices": [
+        31,
+        32
+      ]
+    },
+    {
+      "episode": 47,
+      "num_steps": 55,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        53,
+        54
+      ],
+      "is_terminal_indices": [
+        53,
+        54
+      ]
+    },
+    {
+      "episode": 48,
+      "num_steps": 55,
+      "is_first_indices": [
+        0
+      ],
+      "is_last_indices": [
+        53,
+        54
+      ],
+      "is_terminal_indices": [
+        53,
+        54
+      ]
+    }
+  ],
+  "mapped_pipeline_verified": true
+}

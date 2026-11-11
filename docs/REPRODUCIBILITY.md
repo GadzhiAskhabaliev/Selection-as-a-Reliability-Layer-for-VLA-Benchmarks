@@ -16,6 +16,7 @@ python -m unittest discover -s tests -v
 python scripts/verify_artifacts.py
 python scripts/verify_baseline_results.py
 python scripts/verify_cs_results.py
+python scripts/verify_motion_results.py
 ```
 
 Не использовать `python -O`: часть проверок — assertions. Эти команды не меняют
@@ -23,7 +24,10 @@ python scripts/verify_cs_results.py
 производных audit JSON; для проверки опубликованного снимка флаг не нужен.
 
 Ожидается: все unit tests проходят; SHA-256 archive check — `PASS`; baseline
-7838 шагов — `PASS`; CS 1487 шагов — `PASS`.
+7838 шагов — `PASS`; CS 1487 шагов — `PASS`; motion Jaco 2924 и NYU 2209 — `PASS`.
+`verify_motion_results.py` проверяет границы, токены, геометрию селекторов,
+сборку действий, метрики и bootstrap; `--write-reports` обновляет производные
+аудиты, без этого флага проверка ничего не записывает.
 
 GitHub Actions запускает эти же проверки и проверяет исходные hashes
 пересобираемых Kaggle bundles. Здесь нет обучения или платного GPU-запуска.

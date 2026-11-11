@@ -4,8 +4,10 @@
 provenance и независимыми audit reports. Все числа можно проверить без доступа
 к приватным Kaggle kernels. Скачанные outputs не редактировались.
 
-Ночные jobs 11 ноября пока представлены только [квитанциями запуска и статусами](overnight_motion/).
-Их будущие результаты не входят в завершённый архив ниже.
+В архив также включены завершённые motion-запуски 11 ноября: Jaco v1
+(40 эпизодов / 2924 шага) и исправленный NYU v2 (49 / 2209), с исходными
+кандидатами и независимыми аудитами. NYU v1 с ошибкой сохранён отдельно;
+его частичные результаты не считаются завершённым экспериментом.
 
 ## Основные файлы
 
@@ -22,6 +24,10 @@ provenance и независимыми audit reports. Все числа можн
 | [cs_pilot/v2/status.json](cs_pilot/v2/status.json) | Последний сохранённый статус CS `COMPLETE` |
 | [cs_pilot/verified_v2_result.json](cs_pilot/verified_v2_result.json) | Независимый аудит CS, contrasts, per-coordinate errors и диагностика |
 | [checksums.json](checksums.json) | SHA-256 всех включённых исходных артефактов |
+| [overnight_motion/jaco/output/](overnight_motion/jaco/output/) | Завершённый motion Jaco: 2924 × 8 кандидатов и девять методов |
+| [overnight_motion/jaco/verified_result.json](overnight_motion/jaco/verified_result.json) | Независимый пересчёт Jaco и совпадение greedy с исходным baseline |
+| [overnight_motion/nyu_door/v2/output/](overnight_motion/nyu_door/v2/output/) | Завершённый motion NYU: 2209 × 8 кандидатов, девять методов и аудит границ |
+| [overnight_motion/nyu_door/v2/verified_result.json](overnight_motion/nyu_door/v2/verified_result.json) | Независимый пересчёт NYU, bootstrap и сравнение greedy с reference |
 
 Файлы `upstream_reference_NOT_OUR_RESULT.json` содержат **авторские** результаты
 MultiNet. Их нельзя выдавать за новый запуск. Поле `cs_saved_steps_matching_baseline`
@@ -60,6 +66,7 @@ TFRecord hashes, action statistics, device map и версии среды. В CS
 python scripts/verify_artifacts.py
 python scripts/verify_baseline_results.py
 python scripts/verify_cs_results.py
+python scripts/verify_motion_results.py
 ```
 
 SHA-256 проверяет целостность опубликованного архива; метрики отдельно

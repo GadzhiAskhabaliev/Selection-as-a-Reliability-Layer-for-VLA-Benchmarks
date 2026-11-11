@@ -1,0 +1,602 @@
+[
+  {
+    "episode": 20,
+    "num_steps": 108,
+    "error_sums": {
+      "greedy": 21.74623398127844,
+      "sample1": 21.75148443729834,
+      "random8": 21.72361222530125,
+      "medoid8": 21.76618628761628,
+      "cs8": 21.75677763466536,
+      "sample1_greedy_gripper": 21.75148443729834,
+      "random8_greedy_gripper": 21.72361222530125,
+      "motion_medoid8_greedy_gripper": 21.76024629262141,
+      "motion_cs8_greedy_gripper": 21.75166078016679
+    }
+  },
+  {
+    "episode": 21,
+    "num_steps": 74,
+    "error_sums": {
+      "greedy": 14.495780856905064,
+      "sample1": 14.562340564243874,
+      "random8": 14.54210295995978,
+      "medoid8": 14.513573780175319,
+      "cs8": 14.511234080429283,
+      "sample1_greedy_gripper": 14.562340564243874,
+      "random8_greedy_gripper": 14.54210295995978,
+      "motion_medoid8_greedy_gripper": 14.513573780175319,
+      "motion_cs8_greedy_gripper": 14.511234080429283
+    }
+  },
+  {
+    "episode": 22,
+    "num_steps": 59,
+    "error_sums": {
+      "greedy": 12.445912941863687,
+      "sample1": 12.455394617121897,
+      "random8": 12.47067806947559,
+      "medoid8": 12.45284907637511,
+      "cs8": 12.452079684175455,
+      "sample1_greedy_gripper": 12.455394617121897,
+      "random8_greedy_gripper": 12.47067806947559,
+      "motion_medoid8_greedy_gripper": 12.45284907637511,
+      "motion_cs8_greedy_gripper": 12.452061229734305
+    }
+  },
+  {
+    "episode": 23,
+    "num_steps": 41,
+    "error_sums": {
+      "greedy": 6.702745198558513,
+      "sample1": 6.708760179356421,
+      "random8": 6.686717171043639,
+      "medoid8": 6.6950746728676815,
+      "cs8": 6.6950746728676815,
+      "sample1_greedy_gripper": 6.708760179356421,
+      "random8_greedy_gripper": 6.686717171043639,
+      "motion_medoid8_greedy_gripper": 6.6950746728676815,
+      "motion_cs8_greedy_gripper": 6.6950746728676815
+    }
+  },
+  {
+    "episode": 24,
+    "num_steps": 57,
+    "error_sums": {
+      "greedy": 10.735736700983082,
+      "sample1": 11.719127899985951,
+      "random8": 11.771901719009191,
+      "medoid8": 11.743086129574142,
+      "cs8": 11.728160381838466,
+      "sample1_greedy_gripper": 10.719127899985954,
+      "random8_greedy_gripper": 10.771901719009195,
+      "motion_medoid8_greedy_gripper": 10.745049408585775,
+      "motion_cs8_greedy_gripper": 10.728160381838467
+    }
+  },
+  {
+    "episode": 25,
+    "num_steps": 48,
+    "error_sums": {
+      "greedy": 9.482185493885542,
+      "sample1": 9.540390757125335,
+      "random8": 9.384865014038464,
+      "medoid8": 9.475971741540919,
+      "cs8": 9.483302502722655,
+      "sample1_greedy_gripper": 9.540390757125335,
+      "random8_greedy_gripper": 9.384865014038464,
+      "motion_medoid8_greedy_gripper": 9.475971741540919,
+      "motion_cs8_greedy_gripper": 9.483302502722655
+    }
+  },
+  {
+    "episode": 26,
+    "num_steps": 58,
+    "error_sums": {
+      "greedy": 19.1172112050313,
+      "sample1": 19.097390234869742,
+      "random8": 19.153817506929038,
+      "medoid8": 19.113399909999387,
+      "cs8": 19.106949794783013,
+      "sample1_greedy_gripper": 19.097390234869742,
+      "random8_greedy_gripper": 19.153817506929038,
+      "motion_medoid8_greedy_gripper": 19.113399909999387,
+      "motion_cs8_greedy_gripper": 19.106949794783013
+    }
+  },
+  {
+    "episode": 27,
+    "num_steps": 46,
+    "error_sums": {
+      "greedy": 16.08341188863328,
+      "sample1": 16.091181109997674,
+      "random8": 16.08162896348087,
+      "medoid8": 16.094031173123362,
+      "cs8": 16.082565676134404,
+      "sample1_greedy_gripper": 16.091181109997674,
+      "random8_greedy_gripper": 16.08162896348087,
+      "motion_medoid8_greedy_gripper": 16.094031173123362,
+      "motion_cs8_greedy_gripper": 16.082565676134404
+    }
+  },
+  {
+    "episode": 28,
+    "num_steps": 84,
+    "error_sums": {
+      "greedy": 25.097917476257535,
+      "sample1": 25.132359637480885,
+      "random8": 25.107481397324236,
+      "medoid8": 25.10003647522929,
+      "cs8": 25.101252769830833,
+      "sample1_greedy_gripper": 25.132359637480885,
+      "random8_greedy_gripper": 25.107481397324236,
+      "motion_medoid8_greedy_gripper": 25.10003647522929,
+      "motion_cs8_greedy_gripper": 25.101252769830833
+    }
+  },
+  {
+    "episode": 29,
+    "num_steps": 68,
+    "error_sums": {
+      "greedy": 20.035605558792618,
+      "sample1": 21.049521219967268,
+      "random8": 21.04189829653428,
+      "medoid8": 21.029629618782312,
+      "cs8": 21.022720729264506,
+      "sample1_greedy_gripper": 20.049521219967268,
+      "random8_greedy_gripper": 20.04189829653428,
+      "motion_medoid8_greedy_gripper": 20.029629618782312,
+      "motion_cs8_greedy_gripper": 20.022720729264506
+    }
+  },
+  {
+    "episode": 30,
+    "num_steps": 72,
+    "error_sums": {
+      "greedy": 14.379492083440246,
+      "sample1": 16.36942424088197,
+      "random8": 15.397202115343413,
+      "medoid8": 15.342471078416974,
+      "cs8": 15.327875043082148,
+      "sample1_greedy_gripper": 14.369424240881973,
+      "random8_greedy_gripper": 14.397202115343413,
+      "motion_medoid8_greedy_gripper": 14.346239802861588,
+      "motion_cs8_greedy_gripper": 14.321897034445705
+    }
+  },
+  {
+    "episode": 31,
+    "num_steps": 79,
+    "error_sums": {
+      "greedy": 14.111301427383395,
+      "sample1": 17.08394204145145,
+      "random8": 17.08731309326723,
+      "medoid8": 16.12501011278615,
+      "cs8": 17.112597703719413,
+      "sample1_greedy_gripper": 14.083942041451454,
+      "random8_greedy_gripper": 14.087313093267234,
+      "motion_medoid8_greedy_gripper": 14.125381662201299,
+      "motion_cs8_greedy_gripper": 14.119877365604955
+    }
+  },
+  {
+    "episode": 32,
+    "num_steps": 54,
+    "error_sums": {
+      "greedy": 8.685862635177275,
+      "sample1": 8.702700747199751,
+      "random8": 8.670611885011116,
+      "medoid8": 8.678202476573452,
+      "cs8": 8.676684491054186,
+      "sample1_greedy_gripper": 8.702700747199751,
+      "random8_greedy_gripper": 8.670611885011116,
+      "motion_medoid8_greedy_gripper": 8.677402168975592,
+      "motion_cs8_greedy_gripper": 8.676684491054186
+    }
+  },
+  {
+    "episode": 33,
+    "num_steps": 96,
+    "error_sums": {
+      "greedy": 19.686553590086184,
+      "sample1": 19.67264280361777,
+      "random8": 19.675515366117928,
+      "medoid8": 19.658901843254558,
+      "cs8": 19.64427743424257,
+      "sample1_greedy_gripper": 19.67264280361777,
+      "random8_greedy_gripper": 19.675515366117928,
+      "motion_medoid8_greedy_gripper": 19.667690388759834,
+      "motion_cs8_greedy_gripper": 19.647835107700185
+    }
+  },
+  {
+    "episode": 34,
+    "num_steps": 79,
+    "error_sums": {
+      "greedy": 14.660891808856158,
+      "sample1": 14.740505838678132,
+      "random8": 14.729567134648086,
+      "medoid8": 14.713107996595525,
+      "cs8": 14.717881545372927,
+      "sample1_greedy_gripper": 14.740505838678132,
+      "random8_greedy_gripper": 14.729567134648086,
+      "motion_medoid8_greedy_gripper": 14.714318607934949,
+      "motion_cs8_greedy_gripper": 14.71521057259052
+    }
+  },
+  {
+    "episode": 35,
+    "num_steps": 84,
+    "error_sums": {
+      "greedy": 17.3388896317603,
+      "sample1": 17.349946915255547,
+      "random8": 17.3642571669584,
+      "medoid8": 17.33394628014767,
+      "cs8": 17.33372831483481,
+      "sample1_greedy_gripper": 17.349946915255547,
+      "random8_greedy_gripper": 17.3642571669584,
+      "motion_medoid8_greedy_gripper": 17.33577677326041,
+      "motion_cs8_greedy_gripper": 17.334093300279303
+    }
+  },
+  {
+    "episode": 36,
+    "num_steps": 112,
+    "error_sums": {
+      "greedy": 27.8822175797514,
+      "sample1": 27.915152013153506,
+      "random8": 27.88155618057158,
+      "medoid8": 27.82878831593752,
+      "cs8": 27.822829899023,
+      "sample1_greedy_gripper": 27.915152013153506,
+      "random8_greedy_gripper": 27.88155618057158,
+      "motion_medoid8_greedy_gripper": 27.82878831593752,
+      "motion_cs8_greedy_gripper": 27.822829899023
+    }
+  },
+  {
+    "episode": 37,
+    "num_steps": 48,
+    "error_sums": {
+      "greedy": 9.479656266087753,
+      "sample1": 9.479656266087753,
+      "random8": 9.479656266087753,
+      "medoid8": 9.479656266087753,
+      "cs8": 9.479656266087753,
+      "sample1_greedy_gripper": 9.479656266087753,
+      "random8_greedy_gripper": 9.479656266087753,
+      "motion_medoid8_greedy_gripper": 9.479656266087753,
+      "motion_cs8_greedy_gripper": 9.479656266087753
+    }
+  },
+  {
+    "episode": 38,
+    "num_steps": 41,
+    "error_sums": {
+      "greedy": 9.585151812607991,
+      "sample1": 10.596443993806009,
+      "random8": 10.616964323333278,
+      "medoid8": 10.598108060591196,
+      "cs8": 10.591444392718447,
+      "sample1_greedy_gripper": 9.596443993806009,
+      "random8_greedy_gripper": 9.616964323333278,
+      "motion_medoid8_greedy_gripper": 9.598108060591196,
+      "motion_cs8_greedy_gripper": 9.591444392718447
+    }
+  },
+  {
+    "episode": 39,
+    "num_steps": 116,
+    "error_sums": {
+      "greedy": 26.33576051336013,
+      "sample1": 26.379860401120162,
+      "random8": 26.368164277555717,
+      "medoid8": 26.329838539259995,
+      "cs8": 26.331580321818308,
+      "sample1_greedy_gripper": 26.379860401120162,
+      "random8_greedy_gripper": 26.368164277555717,
+      "motion_medoid8_greedy_gripper": 26.329768412383626,
+      "motion_cs8_greedy_gripper": 26.33404728148927
+    }
+  },
+  {
+    "episode": 40,
+    "num_steps": 123,
+    "error_sums": {
+      "greedy": 30.644232249824626,
+      "sample1": 30.643502887041862,
+      "random8": 31.593790180208998,
+      "medoid8": 31.659402759231664,
+      "cs8": 30.633267507502758,
+      "sample1_greedy_gripper": 30.643502887041862,
+      "random8_greedy_gripper": 30.593790180208998,
+      "motion_medoid8_greedy_gripper": 30.657695917017907,
+      "motion_cs8_greedy_gripper": 30.63472818697327
+    }
+  },
+  {
+    "episode": 41,
+    "num_steps": 52,
+    "error_sums": {
+      "greedy": 9.854928223814813,
+      "sample1": 10.833706445690648,
+      "random8": 11.819648140884642,
+      "medoid8": 9.836777225485141,
+      "cs8": 9.845400008291294,
+      "sample1_greedy_gripper": 9.833706445690645,
+      "random8_greedy_gripper": 9.819648140884642,
+      "motion_medoid8_greedy_gripper": 9.835120536513427,
+      "motion_cs8_greedy_gripper": 9.843363916330505
+    }
+  },
+  {
+    "episode": 42,
+    "num_steps": 74,
+    "error_sums": {
+      "greedy": 16.046610312429053,
+      "sample1": 16.038841676991435,
+      "random8": 16.09092789624082,
+      "medoid8": 16.042430878467187,
+      "cs8": 16.03951590166149,
+      "sample1_greedy_gripper": 16.038841676991435,
+      "random8_greedy_gripper": 16.09092789624082,
+      "motion_medoid8_greedy_gripper": 16.042430878467187,
+      "motion_cs8_greedy_gripper": 16.03951590166149
+    }
+  },
+  {
+    "episode": 43,
+    "num_steps": 48,
+    "error_sums": {
+      "greedy": 15.399866155778465,
+      "sample1": 15.405209801220932,
+      "random8": 15.410033457199107,
+      "medoid8": 15.3887997967911,
+      "cs8": 15.38571852026713,
+      "sample1_greedy_gripper": 15.405209801220932,
+      "random8_greedy_gripper": 15.410033457199107,
+      "motion_medoid8_greedy_gripper": 15.3887997967911,
+      "motion_cs8_greedy_gripper": 15.38571852026713
+    }
+  },
+  {
+    "episode": 44,
+    "num_steps": 110,
+    "error_sums": {
+      "greedy": 24.33482543023837,
+      "sample1": 23.349965700263564,
+      "random8": 23.325464701429578,
+      "medoid8": 22.342239371988786,
+      "cs8": 23.324597630161808,
+      "sample1_greedy_gripper": 24.349965700263564,
+      "random8_greedy_gripper": 24.325464701429578,
+      "motion_medoid8_greedy_gripper": 24.340159744545975,
+      "motion_cs8_greedy_gripper": 24.321126687554578
+    }
+  },
+  {
+    "episode": 45,
+    "num_steps": 106,
+    "error_sums": {
+      "greedy": 25.34716659667824,
+      "sample1": 26.307403246400302,
+      "random8": 25.360864103151954,
+      "medoid8": 25.311945666776854,
+      "cs8": 26.30743267274551,
+      "sample1_greedy_gripper": 25.307403246400302,
+      "random8_greedy_gripper": 25.360864103151954,
+      "motion_medoid8_greedy_gripper": 25.31155381747644,
+      "motion_cs8_greedy_gripper": 25.30743267274551
+    }
+  },
+  {
+    "episode": 46,
+    "num_steps": 44,
+    "error_sums": {
+      "greedy": 13.138132741718811,
+      "sample1": 13.11908132707612,
+      "random8": 14.117552848758198,
+      "medoid8": 13.116025229302513,
+      "cs8": 13.117173095542027,
+      "sample1_greedy_gripper": 13.11908132707612,
+      "random8_greedy_gripper": 13.117552848758198,
+      "motion_medoid8_greedy_gripper": 13.116025229302513,
+      "motion_cs8_greedy_gripper": 13.117173095542027
+    }
+  },
+  {
+    "episode": 47,
+    "num_steps": 83,
+    "error_sums": {
+      "greedy": 17.873525740905354,
+      "sample1": 17.815127532149326,
+      "random8": 17.842315845501933,
+      "medoid8": 17.863236944470074,
+      "cs8": 17.825792536171786,
+      "sample1_greedy_gripper": 17.815127532149326,
+      "random8_greedy_gripper": 17.842315845501933,
+      "motion_medoid8_greedy_gripper": 17.856186521992313,
+      "motion_cs8_greedy_gripper": 17.83175862249231
+    }
+  },
+  {
+    "episode": 48,
+    "num_steps": 75,
+    "error_sums": {
+      "greedy": 23.03107478702854,
+      "sample1": 24.049693014553746,
+      "random8": 24.019022099181715,
+      "medoid8": 24.02702588030886,
+      "cs8": 24.02335249041678,
+      "sample1_greedy_gripper": 23.049693014553746,
+      "random8_greedy_gripper": 23.01902209918172,
+      "motion_medoid8_greedy_gripper": 23.024061605422116,
+      "motion_cs8_greedy_gripper": 23.021740408667743
+    }
+  },
+  {
+    "episode": 49,
+    "num_steps": 65,
+    "error_sums": {
+      "greedy": 18.364933859568207,
+      "sample1": 19.367925576733143,
+      "random8": 18.350126473759673,
+      "medoid8": 19.355355418707006,
+      "cs8": 19.35054300869175,
+      "sample1_greedy_gripper": 18.367925576733143,
+      "random8_greedy_gripper": 18.350126473759673,
+      "motion_medoid8_greedy_gripper": 18.35487314264496,
+      "motion_cs8_greedy_gripper": 18.35054300869175
+    }
+  },
+  {
+    "episode": 50,
+    "num_steps": 33,
+    "error_sums": {
+      "greedy": 2.671342110597721,
+      "sample1": 2.6703769433255897,
+      "random8": 3.727108971160126,
+      "medoid8": 3.6926815960472212,
+      "cs8": 3.679131730207033,
+      "sample1_greedy_gripper": 2.6703769433255893,
+      "random8_greedy_gripper": 2.727108971160126,
+      "motion_medoid8_greedy_gripper": 2.679658912075878,
+      "motion_cs8_greedy_gripper": 2.666109046235689
+    }
+  },
+  {
+    "episode": 51,
+    "num_steps": 71,
+    "error_sums": {
+      "greedy": 13.466450438829654,
+      "sample1": 13.432248705560214,
+      "random8": 13.475796082504427,
+      "medoid8": 13.420729035204324,
+      "cs8": 13.405657119349417,
+      "sample1_greedy_gripper": 13.432248705560214,
+      "random8_greedy_gripper": 13.475796082504427,
+      "motion_medoid8_greedy_gripper": 13.416607788671744,
+      "motion_cs8_greedy_gripper": 13.405657119349417
+    }
+  },
+  {
+    "episode": 52,
+    "num_steps": 68,
+    "error_sums": {
+      "greedy": 14.19688950590596,
+      "sample1": 14.193107343169936,
+      "random8": 14.233451013575841,
+      "medoid8": 14.15360288017203,
+      "cs8": 14.152266298973272,
+      "sample1_greedy_gripper": 14.193107343169936,
+      "random8_greedy_gripper": 14.233451013575841,
+      "motion_medoid8_greedy_gripper": 14.15360288017203,
+      "motion_cs8_greedy_gripper": 14.152266298973272
+    }
+  },
+  {
+    "episode": 53,
+    "num_steps": 75,
+    "error_sums": {
+      "greedy": 21.048427526392796,
+      "sample1": 21.07036250140143,
+      "random8": 21.06862076603109,
+      "medoid8": 21.048664138723915,
+      "cs8": 21.0391957144291,
+      "sample1_greedy_gripper": 21.07036250140143,
+      "random8_greedy_gripper": 21.06862076603109,
+      "motion_medoid8_greedy_gripper": 21.04816186869392,
+      "motion_cs8_greedy_gripper": 21.037358262349873
+    }
+  },
+  {
+    "episode": 54,
+    "num_steps": 90,
+    "error_sums": {
+      "greedy": 30.8868963809238,
+      "sample1": 31.89853389775,
+      "random8": 30.882329358162327,
+      "medoid8": 30.877509680441868,
+      "cs8": 30.88494451601364,
+      "sample1_greedy_gripper": 30.89853389775,
+      "random8_greedy_gripper": 30.882329358162327,
+      "motion_medoid8_greedy_gripper": 30.877275924187305,
+      "motion_cs8_greedy_gripper": 30.886836711379527
+    }
+  },
+  {
+    "episode": 55,
+    "num_steps": 55,
+    "error_sums": {
+      "greedy": 18.19042713819014,
+      "sample1": 18.194422076656473,
+      "random8": 17.20057722809698,
+      "medoid8": 18.190721127200092,
+      "cs8": 18.18724483206988,
+      "sample1_greedy_gripper": 18.194422076656473,
+      "random8_greedy_gripper": 18.20057722809698,
+      "motion_medoid8_greedy_gripper": 18.190721127200092,
+      "motion_cs8_greedy_gripper": 18.18724483206988
+    }
+  },
+  {
+    "episode": 56,
+    "num_steps": 81,
+    "error_sums": {
+      "greedy": 17.258536931531978,
+      "sample1": 17.25423319060422,
+      "random8": 17.26201189404704,
+      "medoid8": 17.197836863400894,
+      "cs8": 17.17960508001183,
+      "sample1_greedy_gripper": 17.25423319060422,
+      "random8_greedy_gripper": 17.26201189404704,
+      "motion_medoid8_greedy_gripper": 17.197836863400894,
+      "motion_cs8_greedy_gripper": 17.18417885948394
+    }
+  },
+  {
+    "episode": 57,
+    "num_steps": 99,
+    "error_sums": {
+      "greedy": 18.173626855485825,
+      "sample1": 18.141262552579768,
+      "random8": 18.13081800667363,
+      "medoid8": 18.133797368552838,
+      "cs8": 18.122003344943543,
+      "sample1_greedy_gripper": 18.141262552579768,
+      "random8_greedy_gripper": 18.13081800667363,
+      "motion_medoid8_greedy_gripper": 18.133797368552838,
+      "motion_cs8_greedy_gripper": 18.122003344943543
+    }
+  },
+  {
+    "episode": 58,
+    "num_steps": 79,
+    "error_sums": {
+      "greedy": 22.39778844683387,
+      "sample1": 22.42562553529623,
+      "random8": 22.43102110852454,
+      "medoid8": 22.39440873694267,
+      "cs8": 22.383677402577405,
+      "sample1_greedy_gripper": 22.42562553529623,
+      "random8_greedy_gripper": 22.43102110852454,
+      "motion_medoid8_greedy_gripper": 22.394237057221474,
+      "motion_cs8_greedy_gripper": 22.383677402577405
+    }
+  },
+  {
+    "episode": 59,
+    "num_steps": 69,
+    "error_sums": {
+      "greedy": 22.1784273351744,
+      "sample1": 22.181581208092013,
+      "random8": 22.172321636453155,
+      "medoid8": 22.184254752265,
+      "cs8": 22.182171279098412,
+      "sample1_greedy_gripper": 22.181581208092013,
+      "random8_greedy_gripper": 22.172321636453155,
+      "motion_medoid8_greedy_gripper": 22.184254752265,
+      "motion_cs8_greedy_gripper": 22.182171279098412
+    }
+  }
+]
