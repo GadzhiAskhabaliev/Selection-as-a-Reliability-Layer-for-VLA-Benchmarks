@@ -112,7 +112,7 @@ python experiments/online/summarize.py hf_artifacts/raw/libero_long_consensus
 
 The first command prints every audit number above (both fixes, constants, per-axis errors); the
 second prints the LIBERO success rates and paired McNemar tests. The dataset card shows a
-five-line `datasets.load_dataset` check of the fix-1 and fix-2 reductions.
+short `datasets.load_dataset` check of the fix-1 and fix-2 reductions.
 
 **CPU, from this repository only:**
 

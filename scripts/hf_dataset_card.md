@@ -71,7 +71,9 @@ control steps; the selector adds 0.37 ms per step to a policy call of about 580 
 
 ![LIBERO-Long pilot](figures/libero_long_pilot.png)
 
-## Verify the audit in five seconds
+## Verify the audit in a few seconds
+
+After `pip install datasets`:
 
 ```python
 from datasets import load_dataset
