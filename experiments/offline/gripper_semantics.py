@@ -138,9 +138,6 @@ def report(path):
         'timesteps': len(rows), 'target_dim': len(original[0]),
         'no_change_target_share': no_change,
         'predicted_gripper_values': predicted_gripper_values[:10],
-        'per_dimension_mse_multinet_targets': {
-            **{m: per_dimension_mse(p, original) for m, p in methods.items()},
-            'zeros': per_dimension_mse([[0.0] * len(original[0])] * len(rows), original)},
         'multinet_targets': {m: score(p, original) for m, p in methods.items()},
         'openvla_semantics_targets': {m: score(p, corrected) for m, p in methods.items()},
         'constant_predictors': {'multinet_targets': constants(original),
