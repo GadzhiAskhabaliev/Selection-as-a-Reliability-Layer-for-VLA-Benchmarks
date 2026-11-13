@@ -22,6 +22,23 @@ collapsed (4.7 distinct actions of 8 on average).
 All numbers can be recomputed on a CPU in under 30 seconds from the
 [Hugging Face artifacts](https://huggingface.co/hackhackhack66666/vla-test-time-and-multinet-audit).
 
+## Artifacts (Hugging Face)
+
+Per-step data behind every reported number, with a dataset card documenting the schema:
+[**hackhackhack66666/vla-test-time-and-multinet-audit**](https://huggingface.co/hackhackhack66666/vla-test-time-and-multinet-audit)
+
+| Artifact | Contents |
+| --- | --- |
+| [`multinet_audit/`](https://huggingface.co/hackhackhack66666/vla-test-time-and-multinet-audit/tree/main/multinet_audit) | Per-step OpenVLA predictions, original and aligned targets, observed gripper state for Jaco Play, Berkeley UR5 and NYU Door Opening (Parquet), target statistics for five datasets |
+| [`multinet_audit/summary_metrics.json`](https://huggingface.co/hackhackhack66666/vla-test-time-and-multinet-audit/blob/main/multinet_audit/summary_metrics.json) | Every audit number in this README and in `docs/MULTINET_AUDIT.md` |
+| [`libero_long_consensus/`](https://huggingface.co/hackhackhack66666/vla-test-time-and-multinet-audit/tree/main/libero_long_consensus) | Episode and step logs of the 400 LIBERO-Long rollouts (Parquet), paired statistics, candidate diversity |
+| [`raw/`](https://huggingface.co/hackhackhack66666/vla-test-time-and-multinet-audit/tree/main/raw) | The same data as JSONL, in the layout read by the scripts in this repository |
+| [`environment/`](https://huggingface.co/hackhackhack66666/vla-test-time-and-multinet-audit/tree/main/environment) | Pinned package lists and upstream revisions |
+| [`MANIFEST.json`](https://huggingface.co/hackhackhack66666/vla-test-time-and-multinet-audit/blob/main/MANIFEST.json) | Size, row count and SHA-256 of every file |
+
+The release is rebuilt from this repository with `scripts/build_hf_release.py` and uploaded with
+`scripts/upload_to_hf.py`.
+
 ## (B) MultiNet v0.1 gripper-semantics audit
 
 ![OpenVLA AMSE on the three affected MultiNet datasets](assets/gripper_semantics_comparison.png)
@@ -42,8 +59,8 @@ gripper dimension, and `ucsd_pick_and_place` compares torque with state (noted i
 | Reproduced AMSE (MultiNet pipeline, greedy) | 0.2380 (-0.28%) | 0.1424 (+0.001%) | 0.1209 (-0.03%) |
 | Gripper share of AMSE | 98.0% | 99.9% | 99.7% |
 | All-zeros predictor (MultiNet targets) | 0.0699 | 0.0023 | 0.0013 |
-| Fix 1: targets converted to states (`rel2abs`) | 0.1508 (-37%) | 0.0222 (-84%) | 0.0458 (-62%) |
-| MSE-optimal constant on fix-1 targets | 0.2370 | 0.1332 | 0.1402 |
+| Fix 1: targets converted to states (`rel2abs`) | 0.1508 (-37%) | 0.0222 (-84%) | 0.0345 (-71%) |
+| MSE-optimal constant on fix-1 targets | 0.2370 | 0.1332 | 0.1381 |
 | Fix 2: model states converted to commands | 0.0709 (-70%) | 0.0190 (-87%) | n/a (no robot state) |
 
 Fix 2 keeps MultiNet's targets and converts the predicted state into a command against the

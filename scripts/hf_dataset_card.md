@@ -55,8 +55,8 @@ Code, documentation and the full 20-dataset audit table:
 | Reproduced AMSE (MultiNet pipeline, greedy) | 0.2380 (-0.28%) | 0.1424 (+0.001%) | 0.1209 (-0.03%) |
 | Gripper share of AMSE | 98.0% | 99.9% | 99.7% |
 | All-zeros predictor, MultiNet targets | 0.0699 | 0.0023 | 0.0013 |
-| Fix 1: targets converted to states (`rel2abs`) | 0.1508 (-37%) | 0.0222 (-84%) | 0.0458 (-62%) |
-| MSE-optimal constant on fix-1 targets | 0.2370 | 0.1332 | 0.1402 |
+| Fix 1: targets converted to states (`rel2abs`) | 0.1508 (-37%) | 0.0222 (-84%) | 0.0345 (-71%) |
+| MSE-optimal constant on fix-1 targets | 0.2370 | 0.1332 | 0.1381 |
 | Fix 2: model states converted to commands | 0.0709 (-70%) | 0.0190 (-87%) | not possible (no robot state) |
 
 | LIBERO-Long, 100 paired episodes | Success | vs. greedy |
@@ -97,7 +97,7 @@ Expected output:
 ```text
 jaco_play: 0.2380 -> fix 1 0.1508 (-37%), fix 2 0.0709 (-70%)
 berkeley_autolab_ur5: 0.1424 -> fix 1 0.0222 (-84%), fix 2 0.0190 (-87%)
-nyu_door_opening_surprising_effectiveness: 0.1209 -> fix 1 0.0458 (-62%)
+nyu_door_opening_surprising_effectiveness: 0.1209 -> fix 1 0.0345 (-71%)
 ```
 
 ## Files
@@ -123,8 +123,9 @@ nyu_door_opening_surprising_effectiveness: 0.1209 -> fix 1 0.0458 (-62%)
 | Column | Type | Description |
 | --- | --- | --- |
 | `dataset` | string | MultiNet dataset name |
-| `episode_id` | int64 | Episode index in MultiNet's loader order (the loader splits UR5 and NYU Door episodes into two segments) |
-| `step_id` | int64 | Step index within the loader episode, from 0 |
+| `episode_id` | int64 | Source episode (TFDS record) index |
+| `step_id` | int64 | Step index within the source episode, from 0 |
+| `loader_episode_id` | int64 | Episode index in MultiNet's loader, which splits the last step of every UR5 and NYU Door record into a separate episode (duplicated `is_last` markers) |
 | `instruction` | string | Language instruction |
 | `image_sha256` | string | SHA-256 of the input image |
 | `raw_openvla_7d` | list[float64], 7 | OpenVLA output after un-normalization: x, y, z, roll, pitch, yaw, gripper (OpenVLA convention: 1 open, 0 closed) |

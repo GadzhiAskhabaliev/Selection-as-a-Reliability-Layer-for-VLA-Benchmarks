@@ -27,9 +27,19 @@ needed to verify the published snapshot. Expected: all unit tests pass; the SHA-
 the baseline check and the CS check print `PASS`. GitHub Actions runs the same checks and verifies
 the source hashes of the rebuildable Kaggle bundles.
 
-The LIBERO-Long rollout logs and the per-step audit tables are published on Hugging Face (see the
-README); `experiments/online/summarize.py RUN_DIR` recomputes the paired success statistics from
-the episode logs.
+The LIBERO-Long rollout logs and the per-step audit tables are published on Hugging Face at
+<https://huggingface.co/hackhackhack66666/vla-test-time-and-multinet-audit>:
+
+```sh
+huggingface-cli download hackhackhack66666/vla-test-time-and-multinet-audit --local-dir hf_artifacts
+python experiments/offline/gripper_semantics.py hf_artifacts/raw/multinet_audit/*/predictions.jsonl
+python experiments/online/summarize.py hf_artifacts/raw/libero_long_consensus
+python experiments/online/plot_libero_pilot.py hf_artifacts/raw/libero_long_consensus   # needs matplotlib
+python scripts/build_hf_release.py --libero-dir hf_artifacts/raw/libero_long_consensus --out /tmp/rebuild  # needs pandas, pyarrow
+```
+
+The last command rebuilds the release from the downloaded data; table contents and all JSON files
+match the published ones (Parquet bytes can differ across pyarrow versions).
 
 ## 2. Where the data is
 
@@ -77,8 +87,9 @@ python experiments/offline/multinet_gripper_state.py SCRATCH/flat_targets_berkel
     berkeley_autolab_ur5 runs/gripper_state/berkeley_autolab_ur5.json         # observed gripper state, CPU
 ```
 
-The baseline reports `coverage_mismatch` for UR5, NYU Door and PushT only because MultiNet's loader
-splits each of their episodes into two segments; all test steps are evaluated and the step counts
+The baseline reports `coverage_mismatch` for UR5, NYU Door and PushT only because their records end
+with two `is_last=True` steps, which MultiNet's loader turns into an extra one-step episode per record
+(see `docs/MULTINET_AUDIT.md`); all test steps are evaluated and the step counts
 match the published ones. Peak GPU memory is about 16 GB in BF16.
 
 ## 5. Closed-loop LIBERO-Long

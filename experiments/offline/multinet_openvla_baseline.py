@@ -5,9 +5,9 @@ already-downloaded files are reused, and this process is capped to a fixed share
 that it cannot grow into memory used by other jobs on a shared GPU. Requires the Python 3.11
 environment pinned in ``baseline.bootstrap()``.
 
-The baseline marks the result ``coverage_mismatch`` when MultiNet's loader splits episodes into
-several segments (UR5, NYU Door, PushT); the per-step predictions are complete in that case and
-the step count equals the published one.
+The baseline marks the result ``coverage_mismatch`` for UR5, NYU Door and PushT, whose records end
+with two ``is_last=True`` steps that MultiNet's loader turns into an extra one-step episode; the
+per-step predictions are complete in that case and the step count equals the published one.
 
 Usage:
     python multinet_openvla_baseline.py DATASET --expected-steps N --scratch DIR --out DIR --hf-home DIR

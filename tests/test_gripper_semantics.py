@@ -43,6 +43,14 @@ class GripperSemanticsTest(unittest.TestCase):
         states = gs.observed_states([0.0, 1.0, 1.0], 0.5)
         self.assertEqual(gs.state_to_command(predictions, states), [[1, 0.5], [0, 0.5], [-1, 0.5]])
 
+    def test_source_episodes_merge_one_step_loader_segments(self):
+        rows = [{'episode': e, 'step': s, 'target': [0.0]} for e, n in enumerate([3, 1, 2, 1]) for s in range(n)]
+        merged = gs.source_episodes(rows, 2)
+        self.assertEqual([(r['episode'], r['step']) for r in merged],
+                         [(0, 0), (0, 1), (0, 2), (0, 3), (1, 0), (1, 1), (1, 2)])
+        with self.assertRaises(ValueError):
+            gs.source_episodes(rows, 4)
+
     def test_constant_predictors(self):
         result = gs.constants([[1, 0.0], [0, 0.0]])
         self.assertAlmostEqual(result['zeros'], 1 / 2 / 2)

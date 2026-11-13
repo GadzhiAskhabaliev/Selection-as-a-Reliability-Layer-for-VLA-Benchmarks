@@ -6,9 +6,9 @@ reports the gripper target distribution, the AMSE of an all-zeros predictor, the
 of "no change" frames for any +/-1 gripper prediction, and the gripper command blocks per
 instruction. It also writes the flattened steps reused by `multinet_gripper_state.py`.
 
-MultiNet's loader splits some episodes into several segments (e.g. UR5, NYU Door, PushT), so the
-number of loader segments can exceed the number of official episodes; coverage is checked on the
-number of steps.
+In UR5, NYU Door and PushT the last two steps of each record carry ``is_last=True``, so MultiNet's
+loader emits an extra one-step episode per record and the number of loader episodes exceeds the
+number of official episodes; coverage is therefore checked on the number of steps.
 
 Usage:
     python multinet_targets.py DATASET --scratch DIR --out DIR [--expected-steps N]

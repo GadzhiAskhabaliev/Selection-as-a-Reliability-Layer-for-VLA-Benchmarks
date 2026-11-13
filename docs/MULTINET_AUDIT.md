@@ -80,8 +80,8 @@ statistics computed, no model run; *code* = from code and descriptions only.
 | OpenVLA gripper outputs after `convert_action` | +/-1 only | +/-1 only | continuous (not trained on this dataset) |
 | Gripper share of OpenVLA's AMSE | 98.0% | 99.9% | 99.7% |
 | All-zeros predictor, MultiNet targets | 0.0699 | 0.0023 | 0.0013 |
-| Fix 1: OpenVLA AMSE, targets converted to states | 0.1508 (-37%) | 0.0222 (-84%) | 0.0458 (-62%) |
-| Best constant (per-dimension mean) on the converted targets | 0.2370 | 0.1332 | 0.1402 |
+| Fix 1: OpenVLA AMSE, targets converted to states | 0.1508 (-37%) | 0.0222 (-84%) | 0.0345 (-71%) |
+| Best constant (per-dimension mean) on the converted targets | 0.2370 | 0.1332 | 0.1381 |
 | Fix 2: OpenVLA states converted to commands, MultiNet targets | 0.0709 (-70%) | 0.0190 (-87%) | not possible |
 | Observed gripper state used by fix 2 | finger joint `joint_pos[6]` > 0.741 | `robot_state[13]` (`gripper_is_closed`) | none in observations |
 
@@ -112,9 +112,16 @@ every pose axis.
 GPT-4o and JAT cannot be re-scored: their per-step predictions are not available, although their
 published Jaco AMSE (0.288, 1.237) is also above the all-zeros predictor (0.070).
 
-The re-runs report `coverage_mismatch` only because MultiNet's loader splits each UR5, NYU Door and
-PushT episode into two segments (208/104, 98/49, 28/14 segments/episodes); every test step is
-evaluated exactly once and the step counts match the published ones.
+Episode boundaries (a second, independent loader issue). In Berkeley UR5, NYU Door Opening and
+Columbia PushT, the last two steps of every record carry `is_last=True`. MultiNet's loader flattens
+the steps and splits on `is_last`, so the final step of each record becomes a separate one-step
+episode (208/104, 98/49 and 28/14 loader episodes/records). Stepan Ivanov identified the duplicated
+markers in NYU Door; the merged lengths match the source TFDS records exactly. Per-step AMSE is
+unaffected, which is why the published numbers are reproduced and why our re-runs report
+`coverage_mismatch` while evaluating every test step exactly once. Episode-level quantities are
+affected: MultiNet's final-action completion rate is computed over loader episodes, and fix 1, which
+converts targets episode by episode, is computed on the source records (scoring the spurious
+one-step episodes separately gives 0.0458 instead of 0.0345 on NYU Door and no change on UR5).
 
 ## Reproduce
 
@@ -128,6 +135,9 @@ python experiments/offline/multinet_targets.py berkeley_autolab_ur5 --scratch DI
 python experiments/offline/multinet_openvla_baseline.py berkeley_autolab_ur5 --expected-steps 10156 \
     --scratch DIR --out DIR --hf-home HF_CACHE
 ```
+
+Per-step tables with both alignments and all summary metrics are published on Hugging Face:
+<https://huggingface.co/hackhackhack66666/vla-test-time-and-multinet-audit/tree/main/multinet_audit>.
 
 Archived outputs: `artifacts/baseline_audit/` (Jaco), `artifacts/multinet_audit/` (UR5, NYU Door,
 target statistics for Jaco, UR5, NYU Door, VIOLA, PushT, and step-aligned observed gripper states

@@ -77,8 +77,10 @@ def write_jsonl(path: Path, rows: list[dict]) -> None:
     path.write_text(''.join(json.dumps(r) + '\n' for r in rows))
 
 
-def audit_table(dataset: str, rows: list[dict]) -> pd.DataFrame:
+def audit_table(dataset: str, loader_rows: list[dict]) -> pd.DataFrame:
     """Per-step audit table with both gripper alignments for one dataset."""
+    rows = (gs.source_episodes(loader_rows, gs.SPLIT_EPISODE_DATASETS[dataset])
+            if dataset in gs.SPLIT_EPISODE_DATASETS else loader_rows)
     corrected = gs.corrected_targets(rows)
     predictions = [r['prediction'] for r in rows]
     raw_state, state, aligned_pred = [None] * len(rows), [None] * len(rows), [None] * len(rows)
@@ -92,6 +94,7 @@ def audit_table(dataset: str, rows: list[dict]) -> pd.DataFrame:
         'dataset': dataset,
         'episode_id': [r['episode'] for r in rows],
         'step_id': [r['step'] for r in rows],
+        'loader_episode_id': [r['episode'] for r in loader_rows],
         'instruction': [r['instruction'] for r in rows],
         'image_sha256': [r['image_sha256'] for r in rows],
         'raw_openvla_7d': [r['raw_prediction'] for r in rows],
@@ -165,6 +168,15 @@ def final_attempt_steps(steps: list[dict], episodes: list[dict]) -> list[dict]:
     return sorted(kept, key=lambda s: (s['task_id'], s['trial'], s['t']))
 
 
+def infra_failed_episodes(libero_dir: Path) -> list[dict]:
+    """Episodes lost to infrastructure errors, from the original run or a downloaded release."""
+    original = libero_dir / 'sample' / 'episodes.with_infra_errors.jsonl'
+    if original.exists():
+        return [e for e in read_jsonl(original) if e.get('error')]
+    published = libero_dir.parents[1] / 'libero_long_consensus' / 'infra_failed_episodes.jsonl'
+    return read_jsonl(published) if published.exists() else []
+
+
 def build_libero(libero_dir: Path, out: Path) -> None:
     raw = out / 'raw/libero_long_consensus'
     episode_frames, step_frames, diversity = [], [], {}
@@ -182,8 +194,7 @@ def build_libero(libero_dir: Path, out: Path) -> None:
             diversity[method] = {'steps': len(steps), 'mean_distinct_of_8': sum(unique) / len(unique),
                                  'all_8_identical_share': sum(s.get('fallback') == 'single_unique' for s in steps) / len(steps),
                                  'distinct_count_histogram': dict(sorted(collections.Counter(unique).items()))}
-    infra = [e for e in read_jsonl(libero_dir / 'sample' / 'episodes.with_infra_errors.jsonl') if e.get('error')]
-    write_jsonl(out / 'libero_long_consensus/infra_failed_episodes.jsonl', infra)
+    write_jsonl(out / 'libero_long_consensus/infra_failed_episodes.jsonl', infra_failed_episodes(libero_dir))
     pd.concat(episode_frames).to_parquet(out / 'libero_long_consensus/episodes.parquet', index=False)
     pd.concat(step_frames).to_parquet(out / 'libero_long_consensus/steps.parquet', index=False)
     report = summarize.summarize(raw, 'greedy')

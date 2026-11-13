@@ -19,6 +19,12 @@ Two alignments are computed; all non-gripper dimensions are left unchanged in bo
 
 The gripper is the first coordinate of every MultiNet target and prediction used here.
 
+Episode boundaries: in Berkeley UR5 and NYU Door Opening, the last two steps of every record carry
+``is_last=True``, and MultiNet's loader (flatten, then split on ``is_last``) turns the final step of
+each record into a separate one-step episode. Per-step metrics are unaffected, but the episode-wise
+rel2abs conversion of fix 1 must run on the source records, so one-step segments are merged back
+into the preceding segment and the result is checked against the official episode count.
+
 Input files are MultiNet baseline ``predictions.jsonl`` (``episode``, ``step``, ``prediction``,
 ``target``) or the archived offline CS pilot ``candidates.jsonl`` (per-method ``predictions``).
 CPU only, standard library only.
@@ -44,6 +50,8 @@ DEFAULT_FILES = [
 THRESHOLD = 0.1
 STATE_DIR = ROOT / 'artifacts/multinet_audit/gripper_state'
 OBSERVED_STATE = {'jaco_play': 'joint_pos[6]', 'berkeley_autolab_ur5': 'robot_state[13]'}
+# Official test-split episode counts of the datasets whose loader episodes are split in two.
+SPLIT_EPISODE_DATASETS = {'berkeley_autolab_ur5': 104, 'nyu_door_opening_surprising_effectiveness': 49}
 
 Action = Sequence[float]
 
@@ -67,6 +75,31 @@ def rel2abs(commands: Sequence[float]) -> list[int]:
             state = t
         absolute.append(-state)
     return absolute
+
+
+def source_episodes(rows: Sequence[dict[str, Any]], expected_episodes: int) -> list[dict[str, Any]]:
+    """Merge MultiNet's spurious one-step loader episodes back into their source records.
+
+    Args:
+        rows: Prediction records sorted by loader episode and step.
+        expected_episodes: Official number of episodes in the split.
+
+    Returns:
+        Copies of ``rows`` with ``episode`` and ``step`` renumbered by source record.
+
+    Raises:
+        ValueError: If the merged episode count differs from ``expected_episodes``.
+    """
+    segments = [list(group) for _, group in groupby(rows, key=lambda r: r['episode'])]
+    episodes: list[list[dict[str, Any]]] = []
+    for segment in segments:
+        if len(segment) == 1 and episodes:
+            episodes[-1].extend(segment)
+        else:
+            episodes.append(list(segment))
+    if len(episodes) != expected_episodes:
+        raise ValueError(f'{len(episodes)} merged episodes, expected {expected_episodes}')
+    return [{**r, 'episode': e, 'step': s} for e, episode in enumerate(episodes) for s, r in enumerate(episode)]
 
 
 def corrected_targets(rows: Sequence[dict[str, Any]]) -> list[list[float]]:
@@ -200,6 +233,9 @@ def report(path: Path | str) -> dict[str, Any]:
     """
     rows = sorted((json.loads(line) for line in Path(path).read_text().splitlines()),
                   key=lambda r: (r['episode'], r['step']))
+    dataset = dataset_of(path)
+    if dataset in SPLIT_EPISODE_DATASETS:
+        rows = source_episodes(rows, SPLIT_EPISODE_DATASETS[dataset])
     original = [r['target'] for r in rows]
     corrected = corrected_targets(rows)
     no_change = sum(abs(t[0]) < THRESHOLD for t in original) / len(rows)
@@ -212,7 +248,8 @@ def report(path: Path | str) -> dict[str, Any]:
                  if 'openvla_greedy' in methods else None)
     return {
         'file': str(Path(path).relative_to(ROOT)) if Path(path).is_relative_to(ROOT) else str(path),
-        'dataset': dataset_of(path),
+        'dataset': dataset,
+        'episodes': len({r['episode'] for r in rows}),
         'state_to_command_alignment': symmetric,
         'timesteps': len(rows), 'target_dim': len(original[0]),
         'no_change_target_share': no_change,
