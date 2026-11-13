@@ -1,0 +1,19 @@
+{
+  "description": "Exact upstream revisions used for the reported numbers. ${RM} denotes the user-space install root of experiments/online/setup (default ~/rm_bench).",
+  "multinet": {"repository": "https://github.com/ManifoldRG/MultiNet", "commit": "546a1c77f9a4cc0544c5e4b41565949778d32441"},
+  "openvla_model": {"repository": "openvla/openvla-7b", "revision": "47a0ec7fc4ec123775a391911046cf33cf9ed83f"},
+  "openvla_libero_model": {"repository": "openvla/openvla-7b-finetuned-libero-10", "revision": "80970322773f81baa2e22fe495d0487b93a05cfa"},
+  "openvla_code": {"repository": "https://github.com/openvla/openvla", "commit": "c8f03f48af692657d3060c19588038c7220e9af9"},
+  "libero": {"repository": "https://github.com/Lifelong-Robot-Learning/LIBERO", "commit": "8f1084e3132a39270c3a13ebe37270a43ece2a01"},
+  "robomonkey": {"repository": "https://github.com/robomonkey-vla/RoboMonkey", "commit": "db9f8d314ea78e986f515617ac43afc58f984a53",
+                 "submodules": {"SimplerEnv": "4ab7178e83e84ee06894034ec6dbf9e7aad1e882", "openvla-mini": "8038e8edb0b0c590c777ba303d54b06628fdb8be", "sglang-vla": "66160f1f9d1f6c7aa5e4d2c5b40a64ebe7fa1751"}},
+  "robomonkey_verifier": {"repository": "robomonkey-vla/monkey-verifier-7b"},
+  "clip": {"repository": "openai/clip-vit-large-patch14-336", "revision": "ce19dc912ca5cd21c8a653c79e251e808ccabcd1"},
+  "environments": {
+    "requirements-mn.txt": "Python 3.11.16; MultiNet baseline re-runs and target statistics (pins of kaggle/openvla_baseline/baseline.py)",
+    "requirements-vla.txt": "Python 3.10.21; OpenVLA sampling server (experiments/online/vla_server.py)",
+    "requirements-libero.txt": "Python 3.10.21; LIBERO-10 client (experiments/online/libero/run_eval.py)",
+    "requirements-sim.txt": "Python 3.10.21; SIMPLER client (not run: requires Vulkan graphics)",
+    "requirements-verifier.txt": "Python 3.10.21; RoboMonkey verifier server (not run)"
+  }
+}

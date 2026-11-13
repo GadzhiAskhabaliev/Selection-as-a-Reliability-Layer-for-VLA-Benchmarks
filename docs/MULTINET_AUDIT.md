@@ -31,7 +31,7 @@ Preprocessing it to be the action state [...] could make the policy easier to le
 conversion OpenVLA applies. The UR5 TFDS feature description reads "1 if close gripper, -1 if open
 gripper, 0 if no change".
 
-![OpenVLA AMSE on the three affected datasets](figures/multinet_gripper_audit.png)
+![OpenVLA AMSE on the three affected datasets](../assets/gripper_semantics_comparison.png)
 
 ## All 20 datasets
 

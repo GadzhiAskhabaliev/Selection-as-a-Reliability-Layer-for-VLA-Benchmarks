@@ -1,11 +1,19 @@
 """Run the archived MultiNet/OpenVLA baseline (kaggle/openvla_baseline/baseline.py) on another dataset.
 
 The baseline module is executed unchanged; only its dataset constants and directories are set,
-already-downloaded files are reused, and this process is capped to a fixed share of GPU memory
-so that it cannot grow into memory used by other jobs on a shared GPU. Requires the Python 3.11
-environment pinned in baseline.bootstrap().
-Usage: python multinet_openvla_baseline.py DATASET --expected-steps N --scratch DIR --out DIR
+already-downloaded files are reused, and this process is capped to a fixed share of GPU memory so
+that it cannot grow into memory used by other jobs on a shared GPU. Requires the Python 3.11
+environment pinned in ``baseline.bootstrap()``.
+
+The baseline marks the result ``coverage_mismatch`` when MultiNet's loader splits episodes into
+several segments (UR5, NYU Door, PushT); the per-step predictions are complete in that case and
+the step count equals the published one.
+
+Usage:
+    python multinet_openvla_baseline.py DATASET --expected-steps N --scratch DIR --out DIR --hf-home DIR
 """
+from __future__ import annotations
+
 import argparse
 import json
 import os
@@ -17,15 +25,15 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from multinet_targets import load_baseline  # noqa: E402
 
 
-def main():
-    p = argparse.ArgumentParser()
+def main() -> None:
+    p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument('dataset')
-    p.add_argument('--expected-steps', type=int, required=True)
+    p.add_argument('--expected-steps', type=int, required=True, help='published number of evaluated steps')
     p.add_argument('--version', default='0.1.0')
-    p.add_argument('--scratch', type=Path, required=True)
+    p.add_argument('--scratch', type=Path, required=True, help='same directory as for multinet_targets.py')
     p.add_argument('--out', type=Path, required=True)
     p.add_argument('--hf-home', type=Path, required=True, help='existing cache with the pinned model revision')
-    p.add_argument('--max-gpu-gib', type=float, default=22.0)
+    p.add_argument('--max-gpu-gib', type=float, default=22.0, help='hard cap on this process\'s GPU memory')
     args = p.parse_args()
 
     baseline = load_baseline(args.scratch, args.out)

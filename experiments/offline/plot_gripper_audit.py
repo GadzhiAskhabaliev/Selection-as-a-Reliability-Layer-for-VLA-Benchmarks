@@ -3,7 +3,7 @@
 Per dataset: all-zeros predictor and OpenVLA on MultiNet's targets, and OpenVLA on targets in
 OpenVLA's gripper semantics; OpenVLA bars are split into gripper and other-dimension error, and
 the best constant predictor on the aligned targets is marked. Requires matplotlib.
-Usage: python plot_gripper_audit.py [--out docs/figures/multinet_gripper_audit.png]
+Usage: python plot_gripper_audit.py [--out assets/gripper_semantics_comparison.png]
 """
 import argparse
 from pathlib import Path
@@ -20,11 +20,11 @@ GRIPPER, OTHER, ZEROS, ALIGNED = '#c0392b', '#7f8c8d', '#95a5a6', '#2471a3'
 
 def main():
     p = argparse.ArgumentParser()
-    p.add_argument('--out', type=Path, default=ROOT / 'docs/figures/multinet_gripper_audit.png')
+    p.add_argument('--out', type=Path, default=ROOT / 'assets/gripper_semantics_comparison.png')
     args = p.parse_args()
     reports = [report(f) for f in DEFAULT_FILES[:3]]
 
-    fig, ax = plt.subplots(figsize=(9, 4.8), dpi=200)
+    fig, ax = plt.subplots(figsize=(9, 4.8), dpi=300)
     width = 0.26
     for i, (name, r) in enumerate(zip(DATASETS, reports)):
         original = r['multinet_targets']['openvla_greedy']

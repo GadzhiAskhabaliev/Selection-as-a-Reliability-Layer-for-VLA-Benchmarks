@@ -1,11 +1,20 @@
-"""Ground-truth action statistics of one MultiNet v0.1 Open-X test split; no model, CPU only.
+"""Ground-truth action statistics of one MultiNet v0.1 Open-X test split (no model, CPU only).
 
 Targets are produced exactly as in the archived baseline (kaggle/openvla_baseline/baseline.py):
-official TFDS shards, the pinned MultiNet dataloader and `drop_is_terminal_dim`. Reports the
-gripper target distribution, the AMSE of an all-zeros predictor, the AMSE contribution of
-"no change" frames for any +/-1 gripper prediction, and gripper command blocks per instruction.
-Usage: python multinet_targets.py DATASET --scratch DIR --out DIR [--expected-steps N]
+official TFDS shards, the pinned MultiNet data loader and `drop_is_terminal_dim`. The script
+reports the gripper target distribution, the AMSE of an all-zeros predictor, the AMSE contribution
+of "no change" frames for any +/-1 gripper prediction, and the gripper command blocks per
+instruction. It also writes the flattened steps reused by `multinet_gripper_state.py`.
+
+MultiNet's loader splits some episodes into several segments (e.g. UR5, NYU Door, PushT), so the
+number of loader segments can exceed the number of official episodes; coverage is checked on the
+number of steps.
+
+Usage:
+    python multinet_targets.py DATASET --scratch DIR --out DIR [--expected-steps N]
 """
+from __future__ import annotations
+
 import argparse
 import collections
 import importlib.util
@@ -14,12 +23,23 @@ import json
 import os
 import sys
 from pathlib import Path
+from types import ModuleType
+from typing import Sequence
 
 ROOT = Path(__file__).resolve().parents[2]
 BASELINE = ROOT / 'kaggle/openvla_baseline/baseline.py'
 
 
-def load_baseline(scratch, out):
+def load_baseline(scratch: Path, out: Path) -> ModuleType:
+    """Import the archived baseline module with its scratch and output directories redirected.
+
+    Args:
+        scratch: Directory for downloads, the MultiNet source tree and flattened steps.
+        out: Directory for outputs written by the baseline module.
+
+    Returns:
+        The loaded `kaggle/openvla_baseline/baseline.py` module.
+    """
     spec = importlib.util.spec_from_file_location('multinet_baseline', BASELINE)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
@@ -27,7 +47,19 @@ def load_baseline(scratch, out):
     return module
 
 
-def fetch_split(baseline, dataset, version, split, data_dir):
+def fetch_split(baseline: ModuleType, dataset: str, version: str, split: str, data_dir: Path) -> int:
+    """Download the official TFDS files of one split, skipping files that already exist.
+
+    Args:
+        baseline: Loaded baseline module (provides the retrying `download`).
+        dataset: Open-X dataset name.
+        version: TFDS version, e.g. ``0.1.0``.
+        split: Split name, e.g. ``test``.
+        data_dir: Destination directory.
+
+    Returns:
+        Number of episodes in the split according to ``dataset_info.json``.
+    """
     base = f'https://storage.googleapis.com/gresearch/robotics/{dataset}/{version}'
     for name in ('dataset_info.json', 'features.json'):
         if not (data_dir / name).exists():
@@ -42,24 +74,26 @@ def fetch_split(baseline, dataset, version, split, data_dir):
     return sum(map(int, lengths))
 
 
-def multinet_source(baseline, scratch):
+def multinet_source(baseline: ModuleType, scratch: Path) -> Path:
+    """Return the pinned MultiNet source tree, downloading it on first use."""
     root = scratch / 'MultiNet'
     return root if root.exists() else baseline.source_tree()
 
 
-def blocks(sequence):
+def blocks(sequence: Sequence[float]) -> str:
+    """Summarize nonzero gripper commands of one segment as blocks: C (+1), O (-1), ? (other)."""
     return ''.join({1.0: 'C', -1.0: 'O'}.get(v, '?') for v, _ in itertools.groupby(sequence) if v != 0) or '-'
 
 
-def main():
-    p = argparse.ArgumentParser()
+def main() -> None:
+    p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     p.add_argument('dataset')
     p.add_argument('--version', default='0.1.0')
     p.add_argument('--split', default='test')
     p.add_argument('--scratch', type=Path, required=True)
     p.add_argument('--out', type=Path, required=True)
     p.add_argument('--gripper-index', type=int, default=0, help='gripper position in the MultiNet target')
-    p.add_argument('--expected-steps', type=int)
+    p.add_argument('--expected-steps', type=int, help='published number of evaluated steps')
     args = p.parse_args()
     os.environ.setdefault('TF_CPP_MIN_LOG_LEVEL', '2')
     args.out.mkdir(parents=True, exist_ok=True)
@@ -117,8 +151,8 @@ def main():
     }
     (args.out / 'summary.json').write_text(json.dumps(summary, indent=2))
     print(json.dumps({k: v for k, v in summary.items() if k != 'gripper_blocks_by_instruction'}, indent=2))
-    if summary['episodes'] != episodes_expected or (args.expected_steps and m != args.expected_steps):
-        raise SystemExit('coverage differs from the official split / published step count')
+    if args.expected_steps and m != args.expected_steps:
+        raise SystemExit(f'{m} evaluated steps differ from the published {args.expected_steps}')
 
 
 if __name__ == '__main__':

@@ -54,3 +54,7 @@ artifacts/**
 !artifacts/cs_pilot/submitted_v2/multinet-openvla-jaco-cs8-pilot.py
 !artifacts/multinet_audit/
 !artifacts/multinet_audit/**
+
+# Hugging Face release staging (built by scripts/build_hf_release.py)
+hf_release/
+hf_artifacts/

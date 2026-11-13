@@ -1,29 +1,38 @@
-"""Re-score MultiNet v0.1 OpenVLA predictions with gripper targets in OpenVLA's training semantics.
+"""Re-score MultiNet v0.1 OpenVLA predictions with aligned gripper action semantics.
 
-Applies to the MultiNet datasets whose gripper targets are relative commands (change of gripper
-closedness; 0 = no change): Jaco Play, Berkeley UR5 and NYU Door Opening. OpenVLA's data pipeline
-converts exactly these datasets with `rel2abs_gripper_actions` (openvla/openvla,
-prismatic/vla/datasets/rlds/utils/data_utils.py; vendored in MultiNet at the same path), while
-MultiNet compares OpenVLA's absolute gripper output (+1 closed / -1 open after `convert_action`)
-with the raw relative targets. Here each episode's targets are converted with the same rel2abs
-rule (threshold 0.1) and sign convention, so prediction and target describe the same quantity.
-All other action dimensions are unchanged. The gripper is the first dimension of the MultiNet
-target and prediction for all three datasets.
+Three MultiNet v0.1 datasets (Jaco Play, Berkeley UR5, NYU Door Opening) store gripper targets as
+relative commands: the change of gripper closedness, with 0 meaning "no change". OpenVLA's data
+pipeline converts exactly these datasets to absolute gripper state with
+`rel2abs_gripper_actions` (openvla/openvla, prismatic/vla/datasets/rlds/utils/data_utils.py;
+vendored in MultiNet at the same path), while MultiNet compares OpenVLA's absolute output
+(+1 closed / -1 open after `convert_action`) with the raw relative targets.
 
-The symmetric alignment keeps MultiNet's targets and converts the model's predicted state into a
-relative command against the observed gripper state, a = clip(s_hat - s_obs, -1, 1). It needs a
-proprioceptive gripper state, available for UR5 (robot_state[13], `gripper_is_closed`, documented
-on the dataset page) and Jaco (finger joint joint_pos[6], binarized at the midpoint of its observed
-range) but not for NYU Door Opening, whose observations contain no robot state.
+Two alignments are computed; all non-gripper dimensions are left unchanged in both:
 
-Input: predictions.jsonl from the MultiNet baseline (episode, step, prediction, target) or the
-archived CS pilot candidates.jsonl (per-method `predictions`). CPU-only, standard library.
-Usage: python gripper_semantics.py FILE [FILE ...]
+* Fix 1 (targets -> states): each episode's gripper targets are converted with the same rel2abs
+  rule (threshold 0.1) and MultiNet's sign convention.
+* Fix 2 (model -> commands): MultiNet's targets are kept and the predicted state is converted into
+  a command against the observed gripper state, ``a = clip(s_hat - s_obs, -1, 1)``. This needs a
+  proprioceptive gripper state: UR5 ``robot_state[13]`` (``gripper_is_closed``) and the Jaco finger
+  joint ``joint_pos[6]`` (binarized at the midpoint of its observed range). NYU Door Opening
+  observations contain no robot state.
+
+The gripper is the first coordinate of every MultiNet target and prediction used here.
+
+Input files are MultiNet baseline ``predictions.jsonl`` (``episode``, ``step``, ``prediction``,
+``target``) or the archived offline CS pilot ``candidates.jsonl`` (per-method ``predictions``).
+CPU only, standard library only.
+
+Usage:
+    python gripper_semantics.py [FILE ...]
 """
+from __future__ import annotations
+
 import argparse
 import json
 from itertools import groupby
 from pathlib import Path
+from typing import Any, Sequence
 
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_FILES = [
@@ -36,9 +45,19 @@ THRESHOLD = 0.1
 STATE_DIR = ROOT / 'artifacts/multinet_audit/gripper_state'
 OBSERVED_STATE = {'jaco_play': 'joint_pos[6]', 'berkeley_autolab_ur5': 'robot_state[13]'}
 
+Action = Sequence[float]
 
-def rel2abs(commands):
-    """Port of OpenVLA rel2abs_gripper_actions, returned in MultiNet's sign (+1 closed, -1 open)."""
+
+def rel2abs(commands: Sequence[float]) -> list[int]:
+    """Port of OpenVLA's ``rel2abs_gripper_actions`` in MultiNet's sign convention.
+
+    Args:
+        commands: Relative gripper commands of one episode (+ closes, - opens, ~0 no change).
+
+    Returns:
+        Absolute gripper state per step: +1 closed, -1 open. The state before the first command is
+        the opposite of that command; an episode without commands is open throughout.
+    """
     thresholded = [1 if c < -THRESHOLD else (-1 if c > THRESHOLD else 0) for c in commands]
     first = next((t for t in thresholded if t != 0), 0)
     state = -first if first != 0 else 1
@@ -50,8 +69,15 @@ def rel2abs(commands):
     return absolute
 
 
-def corrected_targets(rows):
-    """Replace the gripper target of every row by the episode-wise absolute state."""
+def corrected_targets(rows: Sequence[dict[str, Any]]) -> list[list[float]]:
+    """Replace each row's gripper target by the episode-wise absolute state (fix 1).
+
+    Args:
+        rows: Prediction records sorted by episode and step, each with a ``target`` list.
+
+    Returns:
+        Targets with the gripper coordinate converted by :func:`rel2abs`, other coordinates as is.
+    """
     out = []
     for _, episode in groupby(rows, key=lambda r: r['episode']):
         episode = sorted(episode, key=lambda r: r['step'])
@@ -60,7 +86,17 @@ def corrected_targets(rows):
     return out
 
 
-def score(predictions, targets):
+def score(predictions: Sequence[Action], targets: Sequence[Action]) -> dict[str, float]:
+    """MultiNet AMSE split into the gripper and the remaining coordinates.
+
+    Args:
+        predictions: Per-step predictions, gripper first.
+        targets: Per-step targets of the same dimension, gripper first.
+
+    Returns:
+        ``amse``, its ``gripper_part`` and ``other_dims_part``, and the share of steps whose gripper
+        prediction differs from the target (``gripper_mismatch_rate``).
+    """
     m, dim = len(targets), len(targets[0])
     gripper = sum((p[0] - t[0]) ** 2 for p, t in zip(predictions, targets))
     motion = sum(sum((a - b) ** 2 for a, b in zip(p[1:], t[1:])) for p, t in zip(predictions, targets))
@@ -69,8 +105,16 @@ def score(predictions, targets):
             'other_dims_part': motion / m / dim, 'gripper_mismatch_rate': mismatch / m}
 
 
-def constants(targets):
-    """AMSE of constant predictors; `per_dimension_mean` is the MSE-optimal constant."""
+def constants(targets: Sequence[Action]) -> dict[str, float]:
+    """AMSE of constant predictors.
+
+    Args:
+        targets: Per-step targets.
+
+    Returns:
+        AMSE of the all-zeros, always-closed and always-open predictors, and of the per-dimension
+        mean of the targets (``per_dimension_mean``), which is the MSE-optimal constant.
+    """
     m, dim = len(targets), len(targets[0])
     mean = [sum(t[j] for t in targets) / m for j in range(dim)]
     result = {name: score([[g] + [0.0] * (dim - 1)] * m, targets)['amse']
@@ -79,21 +123,46 @@ def constants(targets):
     return result
 
 
-def per_dimension_mse(predictions, targets):
+def per_dimension_mse(predictions: Sequence[Action], targets: Sequence[Action]) -> list[float]:
+    """Mean squared error of each action coordinate over all steps."""
     dim = len(targets[0])
     return [sum((p[j] - t[j]) ** 2 for p, t in zip(predictions, targets)) / len(targets) for j in range(dim)]
 
 
-def observed_states(values, threshold):
-    """Observed gripper signal -> MultiNet sign (+1 closed, -1 open)."""
+def observed_states(values: Sequence[float], threshold: float) -> list[int]:
+    """Binarize an observed gripper signal into MultiNet's sign (+1 closed, -1 open)."""
     return [1 if v > threshold else -1 for v in values]
 
 
-def state_to_command(predictions, states):
+def state_to_command(predictions: Sequence[Action], states: Sequence[int]) -> list[list[float]]:
+    """Convert predicted gripper states into relative commands against observed states (fix 2).
+
+    Args:
+        predictions: Per-step predictions with the gripper state (+1 closed / -1 open) first.
+        states: Observed gripper state per step in the same sign convention.
+
+    Returns:
+        Predictions whose gripper coordinate is ``clip(predicted - observed, -1, 1)``.
+    """
     return [[max(-1, min(1, p[0] - s))] + list(p[1:]) for p, s in zip(predictions, states)]
 
 
-def symmetric_alignment(dataset, rows, predictions):
+def symmetric_alignment(dataset: str, rows: Sequence[dict[str, Any]],
+                        predictions: Sequence[Action]) -> dict[str, Any] | None:
+    """Score fix 2 for a dataset with an archived, step-aligned observed gripper state.
+
+    Args:
+        dataset: MultiNet dataset name.
+        rows: Prediction records sorted by episode and step.
+        predictions: Model predictions aligned with ``rows``.
+
+    Returns:
+        AMSE decomposition of fix 2, the state field and threshold used (and, for Jaco, the
+        threshold sensitivity), or ``None`` if no observed gripper state is available.
+
+    Raises:
+        ValueError: If the archived state export is not step-aligned with the predictions.
+    """
     path = STATE_DIR / f'{dataset}.json'
     if dataset not in OBSERVED_STATE or not path.exists():
         return None
@@ -112,13 +181,23 @@ def symmetric_alignment(dataset, rows, predictions):
     return result
 
 
-def dataset_of(path):
+def dataset_of(path: Path | str) -> str:
+    """Infer the MultiNet dataset name from an artifact path (Jaco Play by default)."""
     text = str(path)
     return next((d for d in ('berkeley_autolab_ur5', 'nyu_door_opening_surprising_effectiveness')
                  if d in text), 'jaco_play')
 
 
-def report(path):
+def report(path: Path | str) -> dict[str, Any]:
+    """Full gripper-semantics report for one predictions file.
+
+    Args:
+        path: MultiNet baseline ``predictions.jsonl`` or offline CS pilot ``candidates.jsonl``.
+
+    Returns:
+        Original and aligned AMSE per method, constant baselines, per-dimension errors and, where an
+        observed gripper state exists, fix 2.
+    """
     rows = sorted((json.loads(line) for line in Path(path).read_text().splitlines()),
                   key=lambda r: (r['episode'], r['step']))
     original = [r['target'] for r in rows]
@@ -148,9 +227,9 @@ def report(path):
     }
 
 
-def main():
-    p = argparse.ArgumentParser()
-    p.add_argument('files', nargs='*', type=Path)
+def main() -> None:
+    p = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    p.add_argument('files', nargs='*', type=Path, help='prediction files (default: archived files)')
     args = p.parse_args()
     files = args.files or [f for f in DEFAULT_FILES if f.exists()]
     print(json.dumps([report(f) for f in files], indent=2))
