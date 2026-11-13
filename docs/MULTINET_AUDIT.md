@@ -12,9 +12,24 @@ For exactly three of the 20 datasets, MultiNet compares OpenVLA's **absolute** g
 (open / closed) with **relative** gripper targets (change of closedness, 0 = no change). These are
 precisely the three datasets whose OpenVLA/Open-X data transform converts the raw gripper action
 with `rel2abs_gripper_actions`. On all three, the gripper dimension accounts for over 98% of
-OpenVLA's published AMSE and an all-zeros predictor scores better than the model. Scoring the same
-predictions against targets in OpenVLA's semantics lowers AMSE by 37-84%, and the model then beats
-every constant predictor. The other 17 datasets are not affected by this mismatch.
+OpenVLA's published AMSE and an all-zeros predictor scores better than the model. Aligning the two
+semantics in either direction removes most of the error: converting targets to OpenVLA's states
+lowers AMSE by 37-84%, and converting OpenVLA's states to commands against the observed gripper
+state lowers it by 70-87% where a gripper state is observed.
+
+Of the other 17 datasets, 13 use absolute gripper semantics on both sides, 3 have no gripper
+dimension in the MultiNet target (`berkeley_cable_routing`, `toto`, `eth_agent_affordances`), and
+`ucsd_pick_and_place` compares a gripper torque target with a state prediction, as MultiNet's own
+code comment notes (`multinet_openvla_utils.py` L88: "ucsd_pick_and_place is using velocity and
+torque for gripper not position"); that case is a different issue and is not counted here.
+
+The relative semantics is documented by the dataset authors. The Berkeley UR5 dataset page
+(<https://sites.google.com/view/berkeley-ur5/home>, linked from the TFDS feature description)
+states: "delta_gripper_closed is ternary: 1 if gripper closing needs to be triggered from an open
+state, -1 if gripper opening needs to be triggered from a closed state, 0 if no change. [...]
+Preprocessing it to be the action state [...] could make the policy easier to learn", which is the
+conversion OpenVLA applies. The UR5 TFDS feature description reads "1 if close gripper, -1 if open
+gripper, 0 if no change".
 
 ![OpenVLA AMSE on the three affected datasets](figures/multinet_gripper_audit.png)
 
@@ -65,15 +80,24 @@ statistics computed, no model run; *code* = from code and descriptions only.
 | OpenVLA gripper outputs after `convert_action` | +/-1 only | +/-1 only | continuous (not trained on this dataset) |
 | Gripper share of OpenVLA's AMSE | 98.0% | 99.9% | 99.7% |
 | All-zeros predictor, MultiNet targets | 0.0699 | 0.0023 | 0.0013 |
-| OpenVLA AMSE, targets in OpenVLA semantics | 0.1508 (-37%) | 0.0222 (-84%) | 0.0458 (-62%) |
-| Best constant, targets in OpenVLA semantics | 0.2592 | 0.1430 | 0.1431 |
+| Fix 1: OpenVLA AMSE, targets converted to states | 0.1508 (-37%) | 0.0222 (-84%) | 0.0458 (-62%) |
+| Best constant on the converted targets | 0.2592 | 0.1430 | 0.1431 |
+| Fix 2: OpenVLA states converted to commands, MultiNet targets | 0.0709 (-70%) | 0.0190 (-87%) | not possible |
+| Observed gripper state used by fix 2 | finger joint `joint_pos[6]` > 0.741 | `robot_state[13]` (`gripper_is_closed`) | none in observations |
 
-"Targets in OpenVLA semantics": each episode's gripper targets converted with the same
-`rel2abs_gripper_actions` rule (threshold 0.1) and MultiNet's sign (+1 closed, -1 open); all other
-dimensions unchanged. This is one way to align the two semantics; converting the model's states
-into commands is another and was not computed. GPT-4o and JAT cannot be re-scored: their per-step
-predictions are not available, although their published Jaco AMSE (0.288, 1.237) is also above the
-all-zeros predictor (0.070).
+Fix 1 converts each episode's gripper targets with the same `rel2abs_gripper_actions` rule
+(threshold 0.1) and MultiNet's sign (+1 closed, -1 open). Fix 2 keeps MultiNet's targets and
+converts the model's predicted state into a command against the observed gripper state,
+a = clip(s_hat - s_obs, -1, 1). For UR5 the observed state is the documented `gripper_is_closed`
+flag (it lags the command by a few steps, which costs fix 2 some error around each command). Jaco
+has no binary gripper flag; the finger joint is binarized at the midpoint of its observed range
+(0.741), and fix 2 gives 0.090 / 0.071 / 0.102 for thresholds 0.5 / 0.75 / 1.0. The
+`end_effector_cartesian_pos[6]` field that OpenVLA reads as proprioceptive gripper state does not
+respond to gripper commands in this split and was not used. NYU Door Opening observations contain
+no robot state, so only fix 1 applies. All other dimensions are unchanged in both fixes.
+
+GPT-4o and JAT cannot be re-scored: their per-step predictions are not available, although their
+published Jaco AMSE (0.288, 1.237) is also above the all-zeros predictor (0.070).
 
 The re-runs report `coverage_mismatch` only because MultiNet's loader splits each UR5, NYU Door and
 PushT episode into two segments (208/104, 98/49, 28/14 segments/episodes); every test step is
@@ -93,4 +117,5 @@ python experiments/offline/multinet_openvla_baseline.py berkeley_autolab_ur5 --e
 ```
 
 Archived outputs: `artifacts/baseline_audit/` (Jaco), `artifacts/multinet_audit/` (UR5, NYU Door,
-target statistics for Jaco, UR5, NYU Door, VIOLA, PushT).
+target statistics for Jaco, UR5, NYU Door, VIOLA, PushT, and step-aligned observed gripper states
+for Jaco and UR5 exported with `experiments/offline/multinet_gripper_state.py`).

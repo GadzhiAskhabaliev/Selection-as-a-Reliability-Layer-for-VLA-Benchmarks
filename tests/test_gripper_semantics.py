@@ -37,6 +37,12 @@ class GripperSemanticsTest(unittest.TestCase):
         result = gs.score([[1] + [0.0] * 6], [[-1] + [0.0] * 6])
         self.assertAlmostEqual(result['amse'], 4 / 7)
 
+    def test_state_to_command_against_observed_state(self):
+        # predicted closed while observed open -> close (+1); same state -> no change; closed -> open (-1)
+        predictions = [[1, 0.5], [1, 0.5], [-1, 0.5]]
+        states = gs.observed_states([0.0, 1.0, 1.0], 0.5)
+        self.assertEqual(gs.state_to_command(predictions, states), [[1, 0.5], [0, 0.5], [-1, 0.5]])
+
     def test_constant_zero_predictor(self):
         self.assertAlmostEqual(gs.constants([[1, 0.0], [0, 0.0]])['zeros'], 1 / 2 / 2)
 
