@@ -30,7 +30,7 @@ def main():
         original = r['multinet_targets']['openvla_greedy']
         aligned = r['openvla_semantics_targets']['openvla_greedy']
         zeros = r['constant_predictors']['multinet_targets']['zeros']
-        best_constant = min(r['constant_predictors']['openvla_semantics_targets'].values())
+        best_constant = r['constant_predictors']['openvla_semantics_targets']['per_dimension_mean']
         x0, x1, x2 = i - width, i, i + width
 
         ax.bar(x0, zeros, width, color=ZEROS, edgecolor='black', linewidth=0.5)
@@ -65,7 +65,7 @@ def main():
     ]
     labels = ['All-zeros predictor (MultiNet targets)', 'OpenVLA, MultiNet targets: gripper error',
               'OpenVLA, MultiNet targets: other dimensions', 'OpenVLA, targets in OpenVLA gripper semantics',
-              'Best constant predictor, aligned targets']
+              'Best constant (per-dimension mean), aligned targets']
     ax.legend(handles, labels, fontsize=7.5, loc='upper right', frameon=False)
     ax.spines[['top', 'right']].set_visible(False)
     fig.text(0.01, 0.01, 'Greedy OpenVLA-7B through the MultiNet v0.1 pipeline (commit 546a1c7); '

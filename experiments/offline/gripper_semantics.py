@@ -70,9 +70,18 @@ def score(predictions, targets):
 
 
 def constants(targets):
+    """AMSE of constant predictors; `per_dimension_mean` is the MSE-optimal constant."""
+    m, dim = len(targets), len(targets[0])
+    mean = [sum(t[j] for t in targets) / m for j in range(dim)]
+    result = {name: score([[g] + [0.0] * (dim - 1)] * m, targets)['amse']
+              for name, g in (('zeros', 0.0), ('always_closed', 1.0), ('always_open', -1.0))}
+    result['per_dimension_mean'] = score([mean] * m, targets)['amse']
+    return result
+
+
+def per_dimension_mse(predictions, targets):
     dim = len(targets[0])
-    return {name: score([[g] + [0.0] * (dim - 1)] * len(targets), targets)['amse']
-            for name, g in (('zeros', 0.0), ('always_closed', 1.0), ('always_open', -1.0))}
+    return [sum((p[j] - t[j]) ** 2 for p, t in zip(predictions, targets)) / len(targets) for j in range(dim)]
 
 
 def observed_states(values, threshold):
@@ -129,10 +138,16 @@ def report(path):
         'timesteps': len(rows), 'target_dim': len(original[0]),
         'no_change_target_share': no_change,
         'predicted_gripper_values': predicted_gripper_values[:10],
+        'per_dimension_mse_multinet_targets': {
+            **{m: per_dimension_mse(p, original) for m, p in methods.items()},
+            'zeros': per_dimension_mse([[0.0] * len(original[0])] * len(rows), original)},
         'multinet_targets': {m: score(p, original) for m, p in methods.items()},
         'openvla_semantics_targets': {m: score(p, corrected) for m, p in methods.items()},
         'constant_predictors': {'multinet_targets': constants(original),
                                 'openvla_semantics_targets': constants(corrected)},
+        'per_dimension_mse_multinet_targets': {
+            **{m: per_dimension_mse(p, original) for m, p in methods.items()},
+            'zeros': per_dimension_mse([[0.0] * len(original[0])] * len(rows), original)},
     }
 
 

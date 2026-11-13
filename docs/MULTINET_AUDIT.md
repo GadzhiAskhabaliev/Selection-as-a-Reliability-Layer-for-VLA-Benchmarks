@@ -81,7 +81,7 @@ statistics computed, no model run; *code* = from code and descriptions only.
 | Gripper share of OpenVLA's AMSE | 98.0% | 99.9% | 99.7% |
 | All-zeros predictor, MultiNet targets | 0.0699 | 0.0023 | 0.0013 |
 | Fix 1: OpenVLA AMSE, targets converted to states | 0.1508 (-37%) | 0.0222 (-84%) | 0.0458 (-62%) |
-| Best constant on the converted targets | 0.2592 | 0.1430 | 0.1431 |
+| Best constant (per-dimension mean) on the converted targets | 0.2370 | 0.1332 | 0.1402 |
 | Fix 2: OpenVLA states converted to commands, MultiNet targets | 0.0709 (-70%) | 0.0190 (-87%) | not possible |
 | Observed gripper state used by fix 2 | finger joint `joint_pos[6]` > 0.741 | `robot_state[13]` (`gripper_is_closed`) | none in observations |
 
@@ -95,6 +95,19 @@ has no binary gripper flag; the finger joint is binarized at the midpoint of its
 `end_effector_cartesian_pos[6]` field that OpenVLA reads as proprioceptive gripper state does not
 respond to gripper commands in this split and was not used. NYU Door Opening observations contain
 no robot state, so only fix 1 applies. All other dimensions are unchanged in both fixes.
+
+"Best constant" is the MSE-optimal constant predictor, the per-dimension mean of the targets. On
+MultiNet's original targets it scores 0.0694 / 0.0023 / 0.0012, marginally below the all-zeros
+predictor.
+
+Pose dimensions. The gap between OpenVLA and the all-zeros predictor is carried by the gripper:
+pose dimensions account for -2.6%, -0.02% and +0.04% of that gap (Jaco, UR5, NYU Door) and for
+2.0%, 0.05% and 0.27% of OpenVLA's AMSE. Per axis, OpenVLA's pose error is below the all-zeros
+predictor on all three Jaco axes (XYZ; the Jaco target has no rotation) and on 5 of 6 UR5 axes
+(roll: 1.11x the zeros error). On NYU Door Opening, a dataset outside OpenVLA's training mixture,
+its pose error is 1.15x that of the zeros predictor in total (worse on pitch, yaw and x). So the
+anomaly is isolated to the gripper in magnitude, but OpenVLA does not beat the zeros predictor on
+every pose axis.
 
 GPT-4o and JAT cannot be re-scored: their per-step predictions are not available, although their
 published Jaco AMSE (0.288, 1.237) is also above the all-zeros predictor (0.070).

@@ -43,8 +43,12 @@ class GripperSemanticsTest(unittest.TestCase):
         states = gs.observed_states([0.0, 1.0, 1.0], 0.5)
         self.assertEqual(gs.state_to_command(predictions, states), [[1, 0.5], [0, 0.5], [-1, 0.5]])
 
-    def test_constant_zero_predictor(self):
-        self.assertAlmostEqual(gs.constants([[1, 0.0], [0, 0.0]])['zeros'], 1 / 2 / 2)
+    def test_constant_predictors(self):
+        result = gs.constants([[1, 0.0], [0, 0.0]])
+        self.assertAlmostEqual(result['zeros'], 1 / 2 / 2)
+        # Per-dimension mean is the MSE-optimal constant: (0.5^2 + 0.5^2) / 2 points / 2 dims.
+        self.assertAlmostEqual(result['per_dimension_mean'], 0.25 / 2)
+        self.assertLessEqual(result['per_dimension_mean'], min(result.values()))
 
 
 if __name__ == '__main__':
