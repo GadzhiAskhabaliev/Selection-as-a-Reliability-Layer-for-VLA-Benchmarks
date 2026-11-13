@@ -16,6 +16,8 @@ OpenVLA's published AMSE and an all-zeros predictor scores better than the model
 predictions against targets in OpenVLA's semantics lowers AMSE by 37-84%, and the model then beats
 every constant predictor. The other 17 datasets are not affected by this mismatch.
 
+![OpenVLA AMSE on the three affected datasets](figures/multinet_gripper_audit.png)
+
 ## All 20 datasets
 
 Sources: MultiNet target = `definitions/openx.py` (action-space description, line given);
@@ -82,6 +84,7 @@ evaluated exactly once and the step counts match the published ones.
 ```sh
 # CPU, from archived predictions: decomposition and re-scoring for all three datasets
 python experiments/offline/gripper_semantics.py
+python experiments/offline/plot_gripper_audit.py   # figure above (needs matplotlib)
 # Target statistics of any split (downloads the official test split; CPU)
 python experiments/offline/multinet_targets.py berkeley_autolab_ur5 --scratch DIR --out DIR --expected-steps 10156
 # Model re-run with the archived baseline code (GPU, Python 3.11 pinned environment)
