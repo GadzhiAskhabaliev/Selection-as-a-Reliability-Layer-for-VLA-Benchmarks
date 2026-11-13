@@ -1,0 +1,23 @@
+{
+  "dataset": "columbia_cairlab_pusht_real",
+  "episodes": 28,
+  "episodes_expected": 14,
+  "timesteps": 2884,
+  "timesteps_expected": 2884,
+  "target_dim": 7,
+  "gripper_target_counts": {
+    "0.0": 2884
+  },
+  "no_change_share": 1.0,
+  "zeros_predictor_amse": 4.6262316698214425e-05,
+  "no_change_contribution_for_pm1_predictions": 0.14285714285714285,
+  "published_openvla_amse_NOT_OUR_RESULT": 0.11761494947436585,
+  "no_change_contribution_share_of_published_amse": 1.2146172191170181,
+  "gripper_blocks_by_instruction": [
+    {
+      "instruction": "The task requires pushing a T-shaped block (gray) to a fixed target (green) with a circular end-effector (blue). Both observation and control frequencies are 10Hz.",
+      "blocks": "-",
+      "episodes": 28
+    }
+  ]
+}

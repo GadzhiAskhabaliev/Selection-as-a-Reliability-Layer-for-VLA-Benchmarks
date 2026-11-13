@@ -1,0 +1,345 @@
+{
+  "dataset": "jaco_play",
+  "episodes": 109,
+  "episodes_expected": 109,
+  "timesteps": 7838,
+  "timesteps_expected": 7838,
+  "target_dim": 4,
+  "gripper_target_counts": {
+    "-1.0": 787,
+    "0.0": 5935,
+    "1.0": 1116
+  },
+  "no_change_share": 0.7572084715488645,
+  "zeros_predictor_amse": 0.06990037770746621,
+  "no_change_contribution_for_pm1_predictions": 0.18930211788721613,
+  "published_openvla_amse_NOT_OUR_RESULT": 0.23864495486236428,
+  "no_change_contribution_share_of_published_amse": 0.7932374602111071,
+  "gripper_blocks_by_instruction": [
+    {
+      "instruction": "pick up the butter dairy",
+      "blocks": "C",
+      "episodes": 5
+    },
+    {
+      "instruction": "pick up the orange fruit",
+      "blocks": "C",
+      "episodes": 5
+    },
+    {
+      "instruction": "pick up the long bread",
+      "blocks": "C",
+      "episodes": 5
+    },
+    {
+      "instruction": "place the butter dairy in the sink",
+      "blocks": "O",
+      "episodes": 5
+    },
+    {
+      "instruction": "pick up the long bread",
+      "blocks": "CC",
+      "episodes": 4
+    },
+    {
+      "instruction": "place the long bread in the oven",
+      "blocks": "O",
+      "episodes": 4
+    },
+    {
+      "instruction": "place the orange fruit in the sink",
+      "blocks": "O",
+      "episodes": 4
+    },
+    {
+      "instruction": "place the long bread in the table",
+      "blocks": "O",
+      "episodes": 3
+    },
+    {
+      "instruction": "pick up the orange fruit",
+      "blocks": "CC",
+      "episodes": 3
+    },
+    {
+      "instruction": "pick up the yellow cup",
+      "blocks": "C",
+      "episodes": 3
+    },
+    {
+      "instruction": "pick up the milk dairy",
+      "blocks": "C",
+      "episodes": 2
+    },
+    {
+      "instruction": "place the orange fruit in the table",
+      "blocks": "O",
+      "episodes": 2
+    },
+    {
+      "instruction": "place the burger meat in the oven",
+      "blocks": "O",
+      "episodes": 2
+    },
+    {
+      "instruction": "pick up the square bread",
+      "blocks": "C",
+      "episodes": 2
+    },
+    {
+      "instruction": "pick up the gray bowl",
+      "blocks": "C",
+      "episodes": 2
+    },
+    {
+      "instruction": "pick up the burger meat",
+      "blocks": "C",
+      "episodes": 2
+    },
+    {
+      "instruction": "pick up the green cup",
+      "blocks": "C",
+      "episodes": 2
+    },
+    {
+      "instruction": "place the yellow cup in the table",
+      "blocks": "O",
+      "episodes": 2
+    },
+    {
+      "instruction": "place the steak meat in the table",
+      "blocks": "O",
+      "episodes": 2
+    },
+    {
+      "instruction": "place the black bowl in the oven",
+      "blocks": "O",
+      "episodes": 2
+    },
+    {
+      "instruction": "place the gray bowl in the dish rack",
+      "blocks": "O",
+      "episodes": 2
+    },
+    {
+      "instruction": "place the burger meat in the blue bowl",
+      "blocks": "O",
+      "episodes": 2
+    },
+    {
+      "instruction": "pick up the black bowl",
+      "blocks": "C",
+      "episodes": 2
+    },
+    {
+      "instruction": "place the green cup in the table",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the burger meat",
+      "blocks": "OCC",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the long bread",
+      "blocks": "OC",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the burger meat in the table",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the yellow cup in the dish rack",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the apple fruit",
+      "blocks": "CCOC",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the long bread in the gray bowl",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the burger meat",
+      "blocks": "OCOOC",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the milk dairy",
+      "blocks": "CC",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the orange fruit in the blue bowl",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the burger meat",
+      "blocks": "CC",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the yellow cup in the white plate",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the butter dairy in the blue bowl",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the black bowl",
+      "blocks": "CC",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the steak meat",
+      "blocks": "C",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the milk dairy in the table",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the burger meat",
+      "blocks": "COC",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the gray bowl in the gray plate",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the yellow cup",
+      "blocks": "CC",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the yellow cup",
+      "blocks": "CCCC",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the orange fruit in the white plate",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the long bread",
+      "blocks": "CCC",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the orange fruit in the gray plate",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the green cup in the dish rack",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the long bread in the sink",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the steak meat",
+      "blocks": "CC",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the apple fruit",
+      "blocks": "OC",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the milk dairy",
+      "blocks": "CCC",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the burger meat",
+      "blocks": "CCOC",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the burger meat",
+      "blocks": "OC",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the yellow cup in the oven",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the long bread in the black bowl",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the square bread in the sink",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the square bread in the oven",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the steak meat in the gray plate",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the milk dairy in the black bowl",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the steak meat",
+      "blocks": "OCC",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the burger meat in the gray plate",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the gray bowl",
+      "blocks": "CC",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the orange fruit",
+      "blocks": "CCC",
+      "episodes": 1
+    },
+    {
+      "instruction": "place the steak meat in the oven",
+      "blocks": "O",
+      "episodes": 1
+    },
+    {
+      "instruction": "pick up the butter dairy",
+      "blocks": "CC",
+      "episodes": 1
+    }
+  ]
+}

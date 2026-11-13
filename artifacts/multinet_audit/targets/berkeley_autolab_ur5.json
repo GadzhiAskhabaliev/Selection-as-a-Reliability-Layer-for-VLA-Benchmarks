@@ -1,0 +1,55 @@
+{
+  "dataset": "berkeley_autolab_ur5",
+  "episodes": 208,
+  "episodes_expected": 104,
+  "timesteps": 10156,
+  "timesteps_expected": 10156,
+  "target_dim": 7,
+  "gripper_target_counts": {
+    "-1.0": 78,
+    "0.0": 10000,
+    "1.0": 78
+  },
+  "no_change_share": 0.9846396218983852,
+  "zeros_predictor_amse": 0.002304501940152109,
+  "no_change_contribution_for_pm1_predictions": 0.14066280312834073,
+  "published_openvla_amse_NOT_OUR_RESULT": 0.1424268017939265,
+  "no_change_contribution_share_of_published_amse": 0.9876147000187644,
+  "gripper_blocks_by_instruction": [
+    {
+      "instruction": "sweep the green cloth to the left side of the table",
+      "blocks": "-",
+      "episodes": 52
+    },
+    {
+      "instruction": "pick up the blue cup and put it into the brown cup. ",
+      "blocks": "CO",
+      "episodes": 26
+    },
+    {
+      "instruction": "pick up the blue cup and put it into the brown cup. ",
+      "blocks": "-",
+      "episodes": 26
+    },
+    {
+      "instruction": "take the tiger out of the red bowl and put it in the grey bowl",
+      "blocks": "CO",
+      "episodes": 26
+    },
+    {
+      "instruction": "take the tiger out of the red bowl and put it in the grey bowl",
+      "blocks": "-",
+      "episodes": 26
+    },
+    {
+      "instruction": "put the ranch bottle into the pot",
+      "blocks": "CO",
+      "episodes": 26
+    },
+    {
+      "instruction": "put the ranch bottle into the pot",
+      "blocks": "-",
+      "episodes": 26
+    }
+  ]
+}

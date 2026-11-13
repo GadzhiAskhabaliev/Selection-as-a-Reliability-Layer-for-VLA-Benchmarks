@@ -52,3 +52,5 @@ artifacts/**
 !artifacts/cs_pilot/submitted_v2/
 !artifacts/cs_pilot/submitted_v2/kernel-metadata.json
 !artifacts/cs_pilot/submitted_v2/multinet-openvla-jaco-cs8-pilot.py
+!artifacts/multinet_audit/
+!artifacts/multinet_audit/**

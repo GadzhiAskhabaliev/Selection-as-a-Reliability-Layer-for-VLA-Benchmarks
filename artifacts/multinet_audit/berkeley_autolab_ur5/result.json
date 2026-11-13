@@ -1,0 +1,15 @@
+{
+  "num_timesteps": 10156,
+  "amse": 0.14242808367788135,
+  "namse": 0.2489397213552176,
+  "namse_defined": true,
+  "min_mse": 8.015022635644652e-10,
+  "max_mse": 0.57213883867362,
+  "status": "coverage_mismatch",
+  "complete_episodes": 208,
+  "elapsed_seconds": 2483.4007068169303,
+  "offline_final_action_exact_match_percent": 0.0,
+  "peak_gpu_bytes": [
+    15507530752
+  ]
+}

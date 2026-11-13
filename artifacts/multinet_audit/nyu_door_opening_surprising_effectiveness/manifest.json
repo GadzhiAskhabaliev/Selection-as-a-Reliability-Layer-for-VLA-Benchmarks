@@ -1,0 +1,89 @@
+{
+  "status": "evaluating",
+  "kind": "baseline_only",
+  "multinet_commit": "546a1c77f9a4cc0544c5e4b41565949778d32441",
+  "model": "openvla/openvla-7b",
+  "revision": "47a0ec7fc4ec123775a391911046cf33cf9ed83f",
+  "dataset": "nyu_door_opening_surprising_effectiveness",
+  "version": "0.1.0",
+  "split": "test",
+  "seed": 7,
+  "expected_episodes": 49,
+  "expected_steps": 2209,
+  "python": "3.11.16",
+  "sampling": false,
+  "quantization": null,
+  "center_crop_area": 0.9,
+  "scope": "one dataset of 20; not a full benchmark",
+  "exact_paper_reproduction": false,
+  "qualification": "Kaggle runtime adaptation; compare with pinned upstream reference",
+  "dtype": "torch.bfloat16",
+  "attention": "eager",
+  "gpus": [
+    {
+      "name": "NVIDIA H100 80GB HBM3",
+      "bytes": 85520809984
+    }
+  ],
+  "packages": {
+    "torch": "2.2.0+cu121",
+    "torchvision": "0.17.0+cu121",
+    "transformers": "4.40.1",
+    "timm": "0.9.10",
+    "tensorflow-datasets": "4.9.3"
+  },
+  "statistics_sha256": "3bcf7ec112d2442f7fcc859c812d704a88f9b736faf0415a00d1f998ebcf89db",
+  "source_sha256": {
+    "experiments/robot/multinet_openvla_utils.py": "3a622112491b17ebadb3ff986d8154f7771e4787c49dea1fb0e2f0115613edf4",
+    "experiments/robot/openvla_openx_dataloader.py": "7a7bd22602bd2f02261a020a5568c9868455b3e0245b40ffffaac65d02db8302",
+    "experiments/robot/openvla_openx_eval.py": "122282e00a51a6a8a528066f212d9d297ce9971e014e2e494e0672ebf0d85ded",
+    "experiments/robot/openvla_openx_profiling.py": "27d08dc98f0a8109c2e10ad40b5a7f3e87a4e8f3f6adc82125ed0f767b106a88",
+    "experiments/robot/openvla_utils.py": "25cce80ba9761fdcac11fd99dccd87eb2df681bdd468b575c77332a588674ad0",
+    "experiments/robot/robot_utils.py": "1d780ad3a2da8b5b4ba95630d38033b90cbb430f46b53ad9fb3a45ad7c9043f8"
+  },
+  "data_files": [
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00000-of-00008",
+      "bytes": 26838587,
+      "sha256": "91d62fdf4ca615e36936674a85428e8b0e482e04e189f765c751a9697b7a2f61"
+    },
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00001-of-00008",
+      "bytes": 106607625,
+      "sha256": "9ca9feda61f11d3c2999a587a5164be7aa10632ce7cd859896b63baf64f72201"
+    },
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00002-of-00008",
+      "bytes": 114514239,
+      "sha256": "ff508ae1ea0497dcd18aa8a0a144c9648212c62e6ce91cf940eec8df4e1bc014"
+    },
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00003-of-00008",
+      "bytes": 134654380,
+      "sha256": "5c414d2b6776a18db20a42cf6214836b0ffa241d3203401a8cbf740f1f217049"
+    },
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00004-of-00008",
+      "bytes": 184479346,
+      "sha256": "3e6439aa59ade3ee9df1d1c21cf52ba78ff46131479e48566e42ff00122dd3aa"
+    },
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00005-of-00008",
+      "bytes": 113796447,
+      "sha256": "e1014b24808407059efd3008e5c31ba7f3ea127c2849d4138724241127c5005e"
+    },
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00006-of-00008",
+      "bytes": 83012560,
+      "sha256": "dcf96432f45f5ac755cbf8936ef6ff82695e59110e7c2222ae7d49992c86b36f"
+    },
+    {
+      "name": "nyu_door_opening_surprising_effectiveness-test.tfrecord-00007-of-00008",
+      "bytes": 140911916,
+      "sha256": "ed2ab275e871e464522e58a20fbeccac2e72136f415e5c41adc80fe940534ca7"
+    }
+  ],
+  "device_map": {
+    "": "0"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "dataset": "viola",
+  "episodes": 15,
+  "episodes_expected": 15,
+  "timesteps": 7411,
+  "timesteps_expected": 7411,
+  "target_dim": 7,
+  "gripper_target_counts": {
+    "-1.0": 5406,
+    "1.0": 2005
+  },
+  "no_change_share": 0.0,
+  "zeros_predictor_amse": 0.21479314685621495,
+  "no_change_contribution_for_pm1_predictions": 0.0,
+  "published_openvla_amse_NOT_OUR_RESULT": 0.06091380317581252,
+  "no_change_contribution_share_of_published_amse": 0.0,
+  "gripper_blocks_by_instruction": [
+    {
+      "instruction": "arrange plate and fork",
+      "blocks": "OCO",
+      "episodes": 5
+    },
+    {
+      "instruction": "pick up the bowl from the lazy Susan and put bowl on the plate",
+      "blocks": "OCO",
+      "episodes": 5
+    },
+    {
+      "instruction": "make coffee",
+      "blocks": "OCO",
+      "episodes": 5
+    }
+  ]
+}

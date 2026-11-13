@@ -23,11 +23,22 @@ class GripperSemanticsTest(unittest.TestCase):
                 {'episode': 1, 'step': 0, 'target': [0.0, 0.3, 0, 0]}]
         self.assertEqual(gs.corrected_targets(rows), [[1, 0.1, 0, 0], [1, 0.2, 0, 0], [-1, 0.3, 0, 0]])
 
-    def test_score_separates_gripper_and_motion(self):
+    def test_continuous_relative_targets_use_the_openvla_threshold(self):
+        # NYU Door style: noise around 0 is "no change"; a spike above 0.1 is a closing command.
+        self.assertEqual(gs.rel2abs([0.004, -0.01, 0.19, 0.77, 0.01, -0.002]), [-1, -1, 1, 1, 1, 1])
+
+    def test_score_separates_gripper_and_other_dimensions(self):
         result = gs.score([[1, 0.0, 0, 0], [-1, 0.0, 0, 0]], [[1, 0.2, 0, 0], [1, 0.0, 0, 0]])
         self.assertAlmostEqual(result['gripper_part'], 4 / 2 / 4)
-        self.assertAlmostEqual(result['motion_part'], 0.04 / 2 / 4)
-        self.assertAlmostEqual(result['gripper_state_error_rate'], 0.5)
+        self.assertAlmostEqual(result['other_dims_part'], 0.04 / 2 / 4)
+        self.assertAlmostEqual(result['gripper_mismatch_rate'], 0.5)
+
+    def test_score_uses_the_target_dimension(self):
+        result = gs.score([[1] + [0.0] * 6], [[-1] + [0.0] * 6])
+        self.assertAlmostEqual(result['amse'], 4 / 7)
+
+    def test_constant_zero_predictor(self):
+        self.assertAlmostEqual(gs.constants([[1, 0.0], [0, 0.0]])['zeros'], 1 / 2 / 2)
 
 
 if __name__ == '__main__':

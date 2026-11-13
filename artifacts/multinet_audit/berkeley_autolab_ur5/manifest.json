@@ -1,0 +1,299 @@
+{
+  "status": "evaluating",
+  "kind": "baseline_only",
+  "multinet_commit": "546a1c77f9a4cc0544c5e4b41565949778d32441",
+  "model": "openvla/openvla-7b",
+  "revision": "47a0ec7fc4ec123775a391911046cf33cf9ed83f",
+  "dataset": "berkeley_autolab_ur5",
+  "version": "0.1.0",
+  "split": "test",
+  "seed": 7,
+  "expected_episodes": 104,
+  "expected_steps": 10156,
+  "python": "3.11.16",
+  "sampling": false,
+  "quantization": null,
+  "center_crop_area": 0.9,
+  "scope": "one dataset of 20; not a full benchmark",
+  "exact_paper_reproduction": false,
+  "qualification": "Kaggle runtime adaptation; compare with pinned upstream reference",
+  "dtype": "torch.bfloat16",
+  "attention": "eager",
+  "gpus": [
+    {
+      "name": "NVIDIA H100 80GB HBM3",
+      "bytes": 85520809984
+    }
+  ],
+  "packages": {
+    "torch": "2.2.0+cu121",
+    "torchvision": "0.17.0+cu121",
+    "transformers": "4.40.1",
+    "timm": "0.9.10",
+    "tensorflow-datasets": "4.9.3"
+  },
+  "statistics_sha256": "3bcf7ec112d2442f7fcc859c812d704a88f9b736faf0415a00d1f998ebcf89db",
+  "source_sha256": {
+    "experiments/robot/multinet_openvla_utils.py": "3a622112491b17ebadb3ff986d8154f7771e4787c49dea1fb0e2f0115613edf4",
+    "experiments/robot/openvla_openx_dataloader.py": "7a7bd22602bd2f02261a020a5568c9868455b3e0245b40ffffaac65d02db8302",
+    "experiments/robot/openvla_openx_eval.py": "122282e00a51a6a8a528066f212d9d297ce9971e014e2e494e0672ebf0d85ded",
+    "experiments/robot/openvla_openx_profiling.py": "27d08dc98f0a8109c2e10ad40b5a7f3e87a4e8f3f6adc82125ed0f767b106a88",
+    "experiments/robot/openvla_utils.py": "25cce80ba9761fdcac11fd99dccd87eb2df681bdd468b575c77332a588674ad0",
+    "experiments/robot/robot_utils.py": "1d780ad3a2da8b5b4ba95630d38033b90cbb430f46b53ad9fb3a45ad7c9043f8"
+  },
+  "data_files": [
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00000-of-00050",
+      "bytes": 180162145,
+      "sha256": "c4a8238f1b929279e92bd34ac3da54df339ef537a2796519077320a7fa3230f7"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00001-of-00050",
+      "bytes": 257771170,
+      "sha256": "8c759faa50043f9a8654ba46bd6cb4600035e9d247b818ac5b7c380eebefdc28"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00002-of-00050",
+      "bytes": 135637859,
+      "sha256": "fcf68edee66c014c6039954cab394ba77036a6525097af183498d64a5b42924c"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00003-of-00050",
+      "bytes": 83977269,
+      "sha256": "8ceca79ace180a255b818766ff44d95db6dee946b193e21fb0112d705133931c"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00004-of-00050",
+      "bytes": 55953652,
+      "sha256": "a7359a07a37b51f65d3158d12d1232177a802f1eb6bbff07100f33f79a22e869"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00005-of-00050",
+      "bytes": 239284758,
+      "sha256": "f2a886252011dea4b0a7b7e1cfefc93a76ee0b2c3e2b94e8e67e15eb8ba20367"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00006-of-00050",
+      "bytes": 63483478,
+      "sha256": "5d51daf060aee9a1bee51b29d47701d8c5290035f353962466e9f15368a8a2ac"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00007-of-00050",
+      "bytes": 175452388,
+      "sha256": "56dff6d6b01d0b74d5dbf07e35be982d702706864ff5f3072196fe8b8e0bde00"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00008-of-00050",
+      "bytes": 67780199,
+      "sha256": "6b59713658ee392eaebe0482328b3d4e0b7ef338ab11c5a8c8b1380f7fb2a3cf"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00009-of-00050",
+      "bytes": 93178180,
+      "sha256": "f6f91edd47422540eafc88abf1bd48081bcb05b02396142a45a217f91df88ec4"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00010-of-00050",
+      "bytes": 199264204,
+      "sha256": "fac726eefe06b7b0eb25d61a33f360fc8b3e665682bdf4a0dd037ed72c9cff51"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00011-of-00050",
+      "bytes": 198385534,
+      "sha256": "97fa519305d0e96bebfaf60e380fc81562707657f885d4da3815cb20af25a4cb"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00012-of-00050",
+      "bytes": 81621633,
+      "sha256": "5c07a45e651f46021a23027f2de8a292937aafbac05499ed17ce2f9058192508"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00013-of-00050",
+      "bytes": 196592542,
+      "sha256": "5bc2b7b866c56392102cce3e025e70f0ae43dc2f57441252f6c271712bf5fe40"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00014-of-00050",
+      "bytes": 156130149,
+      "sha256": "0273301d3c86f5165067013cc362fd8ffe6105f0f56177afff54f4cfc9939ef9"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00015-of-00050",
+      "bytes": 279525930,
+      "sha256": "58561f0fc0cb3f501891ef225a7e14c786b96c0b217ddee76f7e41186cd197a4"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00016-of-00050",
+      "bytes": 137659266,
+      "sha256": "e397fcca3c36874c1599ae395943bd6e960ff489c182a79be23865902009a63b"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00017-of-00050",
+      "bytes": 141269634,
+      "sha256": "98bc9ce2c2006c29b3705bd0b10387b12e7c31139a71f302c5f65da2ff64fd76"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00018-of-00050",
+      "bytes": 97958206,
+      "sha256": "12269d5a8714926cc3576fc7b7287542ed15f59ea49a8e9cbf31679fb37f2c44"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00019-of-00050",
+      "bytes": 174945541,
+      "sha256": "5f578fd6e279243bcb07a2fd31513b2f9fdd4fdf8eeeeb5b7f181b9cacd3c48e"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00020-of-00050",
+      "bytes": 234696248,
+      "sha256": "3268b2c613a47a1cb62d00b15d670bdb55eb7a9ad6294d3e26120472be221a6e"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00021-of-00050",
+      "bytes": 93749858,
+      "sha256": "cbaf974edcd8af6603db30a4ce7365eeb0d2278caeb58a32775f1f07d66ef66c"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00022-of-00050",
+      "bytes": 61312243,
+      "sha256": "a65c532df625d6f2ecf1011551bdedbb20d92dda8185f9dd84c05af9d298a6b8"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00023-of-00050",
+      "bytes": 257219228,
+      "sha256": "aa3911fbaf246631f03f5a050da23695f32a6f10fe5d207763c2f0521a5b9a94"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00024-of-00050",
+      "bytes": 76188432,
+      "sha256": "d74be683f05cb296c434ed6c3a364fc3b42e2060a60595b7d40a91bedb74766e"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00025-of-00050",
+      "bytes": 299144356,
+      "sha256": "2c5641936eb7411ff80657318132784fa40ceefb03db7d47afacf6298da662d1"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00026-of-00050",
+      "bytes": 92428491,
+      "sha256": "ddcb2650b0fa3ea97de373dd3a12dcb80acf8349fadbf9646e74ab60849855a4"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00027-of-00050",
+      "bytes": 250090819,
+      "sha256": "e8bfcb1902d64583e8434b59d45b456f24d1d07adcbfd778f7416d4643b8c6dd"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00028-of-00050",
+      "bytes": 93097536,
+      "sha256": "420945fe62f85d645e37b9ad665439c9ce5b56f1724340760ee899e372d4d654"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00029-of-00050",
+      "bytes": 178675644,
+      "sha256": "e310b3aeced13f4c621910f112f74e8ea0789b2d24d3d7b884b35239339b4c16"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00030-of-00050",
+      "bytes": 76539147,
+      "sha256": "33ebf116ab73e9389aab6982a032970d40ba96cda8540f23cf973f6987230521"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00031-of-00050",
+      "bytes": 290514562,
+      "sha256": "f8654783c30cdef4289ea51a4bebde7d93371b7b789ad5799295ca7f62eef125"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00032-of-00050",
+      "bytes": 328203422,
+      "sha256": "528df783ca97f134f585774f6e1bba4e37ac5e7ad3adaed502f72e04d1ce21ba"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00033-of-00050",
+      "bytes": 88608597,
+      "sha256": "ea0a99da95db63a0a3cfbb622beb2b0e4375f332ca58b08a36e520079ef703ae"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00034-of-00050",
+      "bytes": 77256496,
+      "sha256": "d720f5b74ff6dc93158819bab5a0d30e04243c8445bbe24eeca47a0c4781469c"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00035-of-00050",
+      "bytes": 193203102,
+      "sha256": "6c49844c8c0cf4c30bd15c51310dba8135826a7f48d26c40e6e2b1efbadcbd56"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00036-of-00050",
+      "bytes": 367516824,
+      "sha256": "0827b907c4d0930497fb81b06021ef4aa769c810b816aa30f68617dc826006f5"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00037-of-00050",
+      "bytes": 106472954,
+      "sha256": "50cd294b6736b928e93cb7c153efd70040864d7e626632365c35355d2fc04f30"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00038-of-00050",
+      "bytes": 232583348,
+      "sha256": "e2f6c0002a350ee70f65468bd49a41206f57b4e0e06482c9fbf94b5c9c0dfc8f"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00039-of-00050",
+      "bytes": 273412074,
+      "sha256": "cac6b5ebc65586c64b90e2ef3fd5755a5dffc92808364212efd407b4cf58d3fd"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00040-of-00050",
+      "bytes": 59618326,
+      "sha256": "b289ad2c4e07133d316c127818cb4f729b44246f7303016d1041b1b4d82ce929"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00041-of-00050",
+      "bytes": 171007689,
+      "sha256": "487f41ccd97ca3816029591c75c8670e8ed7876264761d961cbb10280fb0f185"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00042-of-00050",
+      "bytes": 107772208,
+      "sha256": "440443de9804b48add3cd56d8329823f8334ac7e605ba6286dbc847dda417f9c"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00043-of-00050",
+      "bytes": 247781268,
+      "sha256": "75040517785b5939a6065932ba3bea059d8d9a4abf721a172ef5a1b027f2cdae"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00044-of-00050",
+      "bytes": 282383802,
+      "sha256": "f95e4fcbf934b05f03ef6c2dba7b69e024c1e7fcb069f1861580a9126b4035e5"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00045-of-00050",
+      "bytes": 183306200,
+      "sha256": "d2c53cf71e42877ba20424a363946f05a08f4a67f72434c0ce91414734e3ee72"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00046-of-00050",
+      "bytes": 340108135,
+      "sha256": "06d05b8fa9d43539c6a80f64f47d93da49afe1dbecadd9608c9075bb1d1f0c8f"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00047-of-00050",
+      "bytes": 148145614,
+      "sha256": "70ec8151dbfcc2ec0fda044ae20afde46899eb777156d14ad50706ff3d443c52"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00048-of-00050",
+      "bytes": 61735623,
+      "sha256": "ca0ad1dbd26d423a05ef2a0e7007629e1e6fdd1b89d8ec6a2eb0157f1e7a1595"
+    },
+    {
+      "name": "berkeley_autolab_ur5-test.tfrecord-00049-of-00050",
+      "bytes": 225122020,
+      "sha256": "62629b61548db5f216bf1342424688d7efb1d0332af03a83b91a2cb428fb0032"
+    }
+  ],
+  "device_map": {
+    "": "0"
+  }
+}
